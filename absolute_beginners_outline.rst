@@ -208,9 +208,9 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   .. image:: images/np_matrix_arithmetic.png
 
- You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
+You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
 
-  .. image:: images/np_matrix_broadcasting.png
+.. image:: images/np_matrix_broadcasting.png
 
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
@@ -243,7 +243,7 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
 
-.. image:: images/np_ones_zeros_matrix.png
+  .. image:: images/np_ones_zeros_matrix.png
 
 - How to get the unique items and the counts
 - How to get index locations that satisfy a given condition 
