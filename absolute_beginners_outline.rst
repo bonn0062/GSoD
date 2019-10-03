@@ -212,7 +212,14 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   - np.ones
 
- 
+- Creating Matrices
+
+  - You can pass Python lists of lists to create a matrix to represent them in NumPy.
+
+  `np.array([[1,2],[3,4]])`
+
+  .. image:: images/np_create_matrix.png
+
 
 - Random Number Generation (update below to numpy.random.Generator)
 
