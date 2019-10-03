@@ -44,6 +44,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
 
 .. image:: images/np_array.png
+    :width: 100%
 
 ::
 
