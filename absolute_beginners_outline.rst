@@ -38,7 +38,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
     - When you're accessing elements, remember that indexing starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
 
-- To make a NumPy array, you can use the function `np.array()`
+- To create a NumPy array, you can use the function `np.array()`
 
   - All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. You can find more information about data types `here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
@@ -52,6 +52,8 @@ This is a working outline for a future section introducing NumPy to absolute beg
     # print the first element of the array
     print(a[0])
     # this will print 1
+
+.. image:: images/np_array.png
  
 - More information about arrays
 
