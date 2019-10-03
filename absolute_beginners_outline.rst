@@ -128,6 +128,11 @@ This is a working outline for a future section introducing NumPy to absolute beg
 - How to check whether a list is empty or not
 - How to represent missing values and infinite values
 - Indexing and Slicing
+
+We can index and slice NumPy arrays in the same ways we can slice Python lists:
+
+.. image:: images/np_indexing.png
+
 - Basic array operations(np.sum, np.dot)
 
   - Operations on a single array
@@ -155,6 +160,10 @@ There are often times when you might want to carry out an operation between an a
 NumPy understood that the multiiplication should happen with each cess. That extremely useful concept is called *broadcasting*.
 
 - How to compute mean, median, minimum, maximum, std, var
+
+NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the relut of multiplying the elements together, `std` to get the standard deviation, and many more.
+
+.. image:: images/np_aggregation.png
   
   - (include row-wise and column-wise compute)
 
