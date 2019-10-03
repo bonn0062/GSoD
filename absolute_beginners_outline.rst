@@ -138,6 +138,10 @@ you can simply add them together by using the plus sign.
 
 .. image:: images/np_data_plus_ones.png
 
+Of course, you can do more than just addition!
+
+.. image:: images/np_sub_mult_divide.png
+
   - Operations on a single array
 
   - Unary operators
