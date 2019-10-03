@@ -130,6 +130,12 @@ This is a working outline for a future section introducing NumPy to absolute beg
 - Indexing and Slicing
 - Basic array operations(np.sum, np.dot)
 
+  - Operations on a single array
+
+  - Unary operators
+
+  - Binary operators
+
   - Once you've created your arrays, you can start to work with them. For example, if you create two arrays, one called "data" and one called "ones" 
 
 .. image:: images/np_array_data_ones.png
@@ -142,11 +148,11 @@ Of course, you can do more than just addition!
 
 .. image:: images/np_sub_mult_divide.png
 
-  - Operations on a single array
+There are often times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). For example, you may our "data" array contains information about distance in miles and you want to convert it to kilometers. We can perform this operatioin with `data * 1.6`
 
-  - Unary operators
+.. image:: images/np_multiply_broadcasting.png
 
-  - Binary operators
+NumPy understood that the multiiplication should happen with each cess. That extremely useful concept is called *broadcasting*.
 
 - How to compute mean, median, minimum, maximum, std, var
   
