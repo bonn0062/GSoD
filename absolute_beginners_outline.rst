@@ -42,6 +42,9 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
   - All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. You can find more information about data types `here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
+
+.. image:: images/np_array.png
+
 ::
 
     import numpy as np
@@ -53,7 +56,6 @@ This is a working outline for a future section introducing NumPy to absolute beg
     print(a[0])
     # this will print 1
 
-.. image:: images/np_array.png
  
 - More information about arrays
 
@@ -128,6 +130,14 @@ This is a working outline for a future section introducing NumPy to absolute beg
 - Indexing and Slicing
 - Basic array operations(np.sum, np.dot)
 
+  - Once you've created your arrays, you can start to work with them. For example, if you create two arrays, one called "data" and one called "ones" 
+
+.. image:: images/np_array_data_ones.png
+
+you can simply add them together by using the plus sign.
+
+.. image:: images/np_data_plus_ones.png
+
   - Operations on a single array
 
   - Unary operators
@@ -168,15 +178,22 @@ This is a working outline for a future section introducing NumPy to absolute beg
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
 
+ 
+  There are often instances where we want NumPy to iinitialize the values of an array for us. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
+
+  .. image:: images/np_ones_zeros_random.png
+
   - np.linspace
   
   - np.logspace
+
+  - np.tile
   
   - np.zeros
 
   - np.ones
-  
-  - np.tile
+
+ 
 
 - Random Number Generation (update below to numpy.random.Generator)
 
