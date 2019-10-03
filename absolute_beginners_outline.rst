@@ -194,9 +194,17 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
     - np.lexsort
 
 - How to pass a list of lists to create a 2-D array
+
+- Creating Matrices
+
+  - You can pass Python lists of lists to create a matrix to represent them in NumPy.
+
+  `np.array([[1,2],[3,4]])`
+
+  .. image:: images/np_create_matrix.png
+  
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
-
  
   There are often instances where we want NumPy to iinitialize the values of an array for us. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
 
@@ -212,15 +220,6 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   - np.ones
 
-- Creating Matrices
-
-  - You can pass Python lists of lists to create a matrix to represent them in NumPy.
-
-  `np.array([[1,2],[3,4]])`
-
-  .. image:: images/np_create_matrix.png
-
-
 - Random Number Generation (update below to numpy.random.Generator)
 
   - np.random.randn
@@ -232,6 +231,10 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   - np.random.choice
   
   - np.random.RandomState, np.random.seed
+
+   - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
+
+.. image:: images/np_ones_zeros_matrix.png
 
 - How to get the unique items and the counts
 - How to get index locations that satisfy a given condition 
