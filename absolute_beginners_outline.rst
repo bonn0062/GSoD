@@ -265,5 +265,13 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   
   - np.histogram
 
-  *Image credits: Jay Alammar http://jalammar.github.io/*
+
+
+
+
+
+
+
+
+*Image credits: Jay Alammar http://jalammar.github.io/*
 
