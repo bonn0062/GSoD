@@ -158,7 +158,7 @@ There are often times when you might want to carry out an operation between an a
 
 .. image:: images/np_multiply_broadcasting.png
 
-NumPy understood that the multiiplication should happen with each cess. That extremely useful concept is called *broadcasting*.
+NumPy understood that the multiiplication should happen with each cell. That extremely useful concept is called *broadcasting*.
 
 - How to compute mean, median, minimum, maximum, std, var
 
@@ -203,6 +203,14 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   `np.array([[1,2],[3,4]])`
 
   .. image:: images/np_create_matrix.png
+
+  Once you've created your matrices, you can add and multiply them using aarithmetic operators if you have two matrices that are the same size.
+
+  .. image:: images/np_matrix_arithmetic.png
+
+ You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
+
+  .. image:: images/np_matrix_broadcasting.png
 
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
