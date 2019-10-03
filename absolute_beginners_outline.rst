@@ -148,11 +148,11 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
 you can simply add them together by using the plus sign.
 
-  .. image:: images/np_data_plus_ones.png
+.. image:: images/np_data_plus_ones.png
 
 Of course, you can do more than just addition!
 
-  .. image:: images/np_sub_mult_divide.png
+.. image:: images/np_sub_mult_divide.png
 
 There are often times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). For example, you may our "data" array contains information about distance in miles and you want to convert it to kilometers. We can perform this operatioin with `data * 1.6`
 
