@@ -202,7 +202,7 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   `np.array([[1,2],[3,4]])`
 
-  .. image:: images/np_create_matrix.png
+    .. image:: images/np_create_matrix.png
 
   Once you've created your matrices, you can add and multiply them using aarithmetic operators if you have two matrices that are the same size.
 
@@ -243,7 +243,7 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 
   - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
 
-  .. image:: images/np_ones_zeros_matrix.png
+    .. image:: images/np_ones_zeros_matrix.png
 
 - How to get the unique items and the counts
 - How to get index locations that satisfy a given condition 
