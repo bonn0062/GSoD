@@ -202,7 +202,7 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   `np.array([[1,2],[3,4]])`
 
   .. image:: images/np_create_matrix.png
-  
+
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
  
@@ -264,4 +264,6 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   - np.bincount
   
   - np.histogram
+
+  *Image credits: Jay Alammar http://jalammar.github.io/*
 
