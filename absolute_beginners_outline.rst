@@ -232,7 +232,7 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
   
   - np.random.RandomState, np.random.seed
 
-   - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
+  - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
 
 .. image:: images/np_ones_zeros_matrix.png
 
