@@ -42,10 +42,6 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
   - All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. You can find more information about data types `here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
-
-.. image:: images/np_array.png
-    :width: 100%
-
 ::
 
     import numpy as np
@@ -57,6 +53,9 @@ This is a working outline for a future section introducing NumPy to absolute beg
     print(a[0])
     # this will print 1
 
+
+.. image:: images/np_array.png
+    :width: 100%
  
 - More information about arrays
 
@@ -142,11 +141,11 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
   - Binary operators
 
-  - Once you've created your arrays, you can start to work with them. For example, if you create two arrays, one called "data" and one called "ones" 
+  - Once you've created your arrays, you can start to work with them. For example, if you create two arrays, one called "data" and one called "ones": 
 
 .. image:: images/np_array_data_ones.png
 
-you can simply add them together by using the plus sign.
+You can easily add them together with the plus sign.
 
 .. image:: images/np_data_plus_ones.png
     :width: 100%
@@ -156,19 +155,19 @@ Of course, you can do more than just addition!
 .. image:: images/np_sub_mult_divide.png
     :width: 100%
 
-There are often times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). For example, you may our "data" array contains information about distance in miles and you want to convert it to kilometers. We can perform this operatioin with `data * 1.6`
+There are often times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). For example, your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
 
 .. image:: images/np_multiply_broadcasting.png
 
-NumPy understood that the multiiplication should happen with each cell. That extremely useful concept is called *broadcasting*.
+NumPy understands that the multiplication should happen with each cell. That extremely useful concept is called *broadcasting*.
 
 - How to compute mean, median, minimum, maximum, std, var
 
-NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the relut of multiplying the elements together, `std` to get the standard deviation, and many more.
+NumPy also performs aggregations functions. In addition to `min`,  max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
 .. image:: images/np_aggregation.png
   
-  - (include row-wise and column-wise compute)
+- (include row-wise and column-wise compute)
 
 - Sorting an array
 
@@ -202,11 +201,13 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
   - You can pass Python lists of lists to create a matrix to represent them in NumPy.
 
-  `np.array([[1,2],[3,4]])`
+::
+
+  np.array([[1,2],[3,4]])
 
 .. image:: images/np_create_matrix.png
 
-- Indexing and slicing operations are even more useful when you're manipulating matrices
+- Indexing and slicing operations can be useful when you're manipulating matrices:
 
 .. image:: images/np_matrix_indexing.png
 
@@ -218,18 +219,18 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
 .. image:: images/np_matrix_aggregation_row.png
 
-  Once you've created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.
+- Once you've created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.
 
   .. image:: images/np_matrix_arithmetic.png
 
-You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
+- You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
 
 .. image:: images/np_matrix_broadcasting.png
 
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
  
-  There are often instances where we want NumPy to iinitialize the values of an array for us. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
+- There are often instances where we want NumPy to initialize the values of an array. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
 
   .. image:: images/np_ones_zeros_random.png
 
@@ -263,12 +264,12 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 - How to get index locations that satisfy a given condition 
 - It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
 
-  .. image:: images/np_transposing_reshaping.png
+.. image:: images/np_transposing_reshaping.png
       :width: 100%
 
-- You may need to switch the dimensions of a matrix, for example in a model that expects a certain shape of input that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix
+- You may need to switch the dimensions of a matrix. This can happen when, for example you have a model that expects a certain input shape that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix
 
-  .. image:: images/np_reshape.png
+.. image:: images/np_reshape.png
       :width: 100%
 
 - How to reverse
