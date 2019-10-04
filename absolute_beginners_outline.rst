@@ -206,7 +206,19 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
 .. image:: images/np_create_matrix.png
 
-  Once you've created your matrices, you can add and multiply them using aarithmetic operators if you have two matrices that are the same size.
+- Indexing and slicing operations are even more useful when you're manipulating matrices
+
+.. image:: images/np_matrix_indexing.png
+
+- You can aggregate matrices the same way you aggregated vectors:
+
+.. image:: images/np_matrix_aggregation.png
+
+- You can aggregate all the values in a matrix and you can aggregate them across columns or rows using the `axis` parameter:
+
+..image:: images/np_matrix_aggregation_row.png
+
+  Once you've created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.
 
   .. image:: images/np_matrix_arithmetic.png
 
@@ -249,6 +261,14 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 
 - How to get the unique items and the counts
 - How to get index locations that satisfy a given condition 
+- It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
+
+.. image:: images/np_transposing_reshaping.png
+
+- You may need to switch the dimensions of a matrix, for example in a model that expects a certain shape of input that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix
+
+.. image:: images/np_reshape.png
+
 - How to reverse
  
   - How to reverse the rows
