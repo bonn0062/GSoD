@@ -216,7 +216,7 @@ NumPy also gives us aggregations functiions. In addition to `min`,  max`, and `s
 
 - You can aggregate all the values in a matrix and you can aggregate them across columns or rows using the `axis` parameter:
 
-..image:: images/np_matrix_aggregation_row.png
+.. image:: images/np_matrix_aggregation_row.png
 
   Once you've created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.
 
