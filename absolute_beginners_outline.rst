@@ -263,11 +263,13 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 - How to get index locations that satisfy a given condition 
 - It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
 
-.. image:: images/np_transposing_reshaping.png
+  .. image:: images/np_transposing_reshaping.png
+      :width: 100%
 
 - You may need to switch the dimensions of a matrix, for example in a model that expects a certain shape of input that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix
 
-.. image:: images/np_reshape.png
+  .. image:: images/np_reshape.png
+      :width: 100%
 
 - How to reverse
  
