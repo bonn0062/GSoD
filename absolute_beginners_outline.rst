@@ -66,15 +66,19 @@ You can visualize your array this way:
 
   - What are the attributes of an array?
 
-  - How do you know the shape and size of an array?
+- What’s the difference between a Python List and a NumPy array? 
 
-    - **ndarray.ndim** will tell you the number of axes, or dimensions, of the array.
+  - Why use NumPy?
 
-    - **ndarray.shape** will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2D-array with 2 rows and 3 columns, the shape of your array is (2,3).
+- How do you know the shape and size of an array?
 
-    - **ndarray.size** will tell you the total number of elements of the array. This is, in other words, the product of the elements of the array's shape.
+  - **ndarray.ndim** will tell you the number of axes, or dimensions, of the array.
 
-    - For example:
+  - **ndarray.shape** will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2D-array with 2 rows and 3 columns, the shape of your array is (2,3).
+
+  - **ndarray.size** will tell you the total number of elements of the array. This is, in other words, the product of the elements of the array's shape.
+
+  - For example:
 
 ::
 
@@ -140,11 +144,6 @@ Optional parameters you can specify are:
 - **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
 
 - **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
-
-
-- What’s the difference between a Python List and a NumPy array? 
-
-  - Why use NumPy?
 
 - How to create an array from existing data
 
