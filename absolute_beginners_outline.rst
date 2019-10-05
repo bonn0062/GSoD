@@ -98,7 +98,13 @@ You can visualize your array this way:
 
 - Can you reshape an array?
   
-  - You can! `numpy.reshape` will give a new shape to an array without changing the data. 
+  - You can! 
+
+::
+
+  numpy.reshape() 
+
+will give a new shape to an array without changing the data. 
 
 For example:
 
@@ -200,7 +206,9 @@ Of course, you can do more than just addition!
 .. image:: images/np_sub_mult_divide.png
     :width: 100%
 
-There are often times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). For example, your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
+- Broadcasting
+
+  - There are times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
 
 .. image:: images/np_multiply_broadcasting.png
 
