@@ -120,15 +120,7 @@ You can visualize your array this way:
 
 - Can you reshape an array?
   
-  - You can! `numpy.reshape` will give a new shape to an array without changing the data. Optional parameters you can specify are:
-
-::
-
-  numpy.reshape(a, newshape, order)
-
-- **a** is the array to be reshaped.
-- **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
-- **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
+  - You can! `numpy.reshape` will give a new shape to an array without changing the data. 
 
 For example:
 
@@ -152,6 +144,16 @@ For example:
   [[0 1]
    [2 3]
    [4 5]]
+
+Optional parameters you can specify are:
+
+::
+
+  numpy.reshape(a, newshape, order)
+
+- **a** is the array to be reshaped.
+- **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
+- **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
 
 - What’s the difference between a Python List and a NumPy array? 
 
