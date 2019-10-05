@@ -4,7 +4,7 @@ This repository is where you can find work in progress for the new absolute begi
 
 Here's an exerpt from the Medium article introducing the project:
 
-**From [Medium]((https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375)**
+**From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375)**
 
 ## What do You Want to See in the NumPy Docs?
 ### Behind the scenes at NumPy and SciPy with Google Season of Docs
