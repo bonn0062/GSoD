@@ -115,7 +115,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
   - Binary operators
 
-  - Once you've created your arrays, you can start to work with them. For example, if you create two arrays, one called "data" and one called "ones": 
+Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
 .. image:: images/np_array_data_ones.png
 
@@ -133,11 +133,11 @@ There are often times when you might want to carry out an operation between an a
 
 .. image:: images/np_multiply_broadcasting.png
 
-NumPy understands that the multiplication should happen with each cell. That extremely useful concept is called *broadcasting*.
+NumPy understands that the multiplication should happen with each cell. That concept is called *broadcasting*.
 
 - How to compute mean, median, minimum, maximum, std, var
 
-NumPy also performs aggregations functions. In addition to `min`,  max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+NumPy also performs aggregations functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
 .. image:: images/np_aggregation.png
   
@@ -161,6 +161,9 @@ NumPy also performs aggregations functions. In addition to `min`,  max`, and `su
 
   # otherwise, select the columns you need
   x = pd.read_csv('filename.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
+    :width: 100%
 
 - How to create a new array from an existing array
 - How to specify the datatype
@@ -231,6 +234,34 @@ NumPy also performs aggregations functions. In addition to `min`,  max`, and `su
 
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
+- NumPy can do everything we've mentioned in any number of dimensions, that's why it's called an N-Dimensional array.
+
+Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. That means that 
+
+::
+
+  np.ones((4,3,2))
+
+will be printed:
+
+::
+
+  array([[[1., 1.],
+        [1., 1.],
+        [1., 1.]],
+
+       [[1., 1.],
+        [1., 1.],
+        [1., 1.]],
+
+       [[1., 1.],
+        [1., 1.],
+        [1., 1.]],
+
+       [[1., 1.],
+        [1., 1.],
+        [1., 1.]]])
+
  
 - There are often instances where we want NumPy to initialize the values of an array. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
 
@@ -301,6 +332,36 @@ NumPy also performs aggregations functions. In addition to `min`,  max`, and `su
   
   - np.histogram
 
+
+Formulas:
+Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
+
+For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
+
+.. image:: images/np_MSE_formula.png
+    :width: 100%
+
+
+Implementing this formula is simple and straightforward in NumPy:
+
+.. image:: images/np_MSE_implementation.png
+    :width: 100%
+
+What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
+You can visualize it this way:
+
+.. image:: images/.png
+    :width: 100%(IMG)
+
+In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions, the values look like this:
+
+Next, the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
+
+
+.. image:: images/np_MSE_explanation.png
+    :width: 100%
+.. image:: images/np_MSE_explanation2.png
+    :width: 100%
 
 
 
