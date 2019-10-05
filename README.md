@@ -4,6 +4,8 @@ This repository is where you can find work in progress for the new absolute begi
 
 Here's an exerpt from the Medium article introducing the project:
 
+**From [Medium]((https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375)**
+
 ## What do You Want to See in the NumPy Docs?
 ### Behind the scenes at NumPy and SciPy with Google Season of Docs
 
@@ -51,9 +53,12 @@ The program received more than 700 technical writing project proposals from near
 
 ## Where did the funding come from?
 NumPy received two grants that are kind of a package deal (you can read about them here and here). Funds were awarded by the Moore and Sloan foundations for $1.3M to the Berkeley Institute of Data Science (BIDS) to support the development of NumPy. The funding period runs from April 2018 to Oct 2020. (Stéfan van der Walt, a NumPy Steering Council member, agreed to provide the funds from that grant.)
+
 Ralf Gommers, one of the core programmers behind NumPy and SciPy and the Director of Quansight Labs, is the point of contact for both organizations. Ralf is an incredible person, and he had this to say about Season of Docs:
+
 "When I first saw the Season of Docs announcement, I loved the idea of the program - working with a tech writer would be both an interesting new experience for me personally, and potentially massively beneficial to NumPy and SciPy. So I spent a lot of effort on both writing a very engaging ideas page, and then following up with writers that showed interest. I probably had ~10 video calls, and many more email threads.
 Then, it turned out that there was a lot of interest, and the quality of applicants and proposals was really high. I started thinking about how to not only get one or two 3-month projects running, but how to engage these writers in a way that would make them enjoy the experience enough to stay around after the project. One thing that came to mind was that people like working with like-minded others. However, we don't yet have technical writers - adding one to NumPy and one to SciPy may not be enough. So I decided to start building a documentation team. The ideas and people were there, so next what's needed is funding.
+
 NumPy has a significant active grant, so I discussed the possibility of using some of that grant funding for the extra Season of Docs projects with Stéfan. Stéfan is awesome, and he also sees the value of both the proposed projects and of building a team of writers. So he agreed to reserve some funds for this purpose. So here we are today - excited to get started!"
 
 ## Who are the writers?
@@ -62,6 +67,8 @@ The writers selected for the NumPy/SciPy documentation projects are amazing, and
 ### Maja Gwozdz
 The official technical writer selected by SciPy during Season of Docs is Maja Gwozdz. Her project proposal is called "User-oriented documentation and thorough restructuring." You can read all about it here, but essentially, Maja intends to work on the refactoring of the existing documentation, so that it would be easily accessible by users with different needs.
 Maja has done some knockout research, which you can find here. She has not only had significant experience with SciPy, but she's well aware of what a difference great documentation and guides can make.
+
+[Read more about Maja here!](https://towardsdatascience.com/scipy-meet-maja-gwozdz-61616cc35c08)
 
 ### Anne Bonner
 Yours truly (yay!) was the official selection for NumPy, with the project proposal, "Making 'The Basics' a Little More Basic: Improving the Introductory NumPy Sections." Since there's nothing that makes me happier than helping beginners understand complex information and technologies, NumPy is the perfect challenge!
@@ -76,10 +83,13 @@ Preserving the Python API documentation.
 
 ### Brandon David
 Brandon David was selected for his project "Improve the documentation of scipy.stats." Brandon plans to fill out missing functions as well as add examples and internal links. His goal is to clear up ambiguity and work through issues on GitHub.
+
 ### Christina Lee
 Christina Lee was selected for her proposal, "SciPy documentation: Design, Usability and Content." She is a recent addition, and I'm looking forward to sharing her work with you soon!
 Harivallabha Rangarajan
 Harivallabha Rangarajan is planning to contribute to the documentation and complement the work of the writers selected for Season of Docs in any way he can. He's particularly interested in writing end-to-end tutorials for the scipy.stats module. He writes that "having more comprehensive tutorials will help users get a better idea of how and where the available methods may be used in the pipeline."
+
+[Read about Christing here!]((https://towardsdatascience.com/numpy-and-scipy-and-google-season-of-docs-oh-my-meet-christina-lee-d334c62c301)
 
 **Welcome to Season of Docs!!!**
 
@@ -89,7 +99,3 @@ Photo by Pineapple Supply Co. from PexelsGet involved!
 Now that you know the major players on the writing side, don't be afraid to reach out and let us know if there's information you want to see in the official documentation! Who knows, we might just be able to give you what you want to see.
 
 If the idea of getting involved with open-source organizations interests you, get in there and start sharing! Don't wait for an invitation. Start contributing now! It's up to everyone to make the tech world an even more amazing place than it already is.
-
-If you're interested in contributing to open-source organizations but have no idea how to get started with GitHub, you might want to check out this article:
-Getting started with Git and GitHub: the complete beginner's guide
-Git and GitHub basics for the curious and completely confused (plus the easiest way to contribute to your first open…towardsdatascience.com
