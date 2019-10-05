@@ -216,8 +216,8 @@ Of course, you can do more than just addition!
 ::
 
   data - ones
-  data * ones
-  data / ones
+  data * data
+  data / data
 
 .. image:: images/np_sub_mult_divide.png
     :width: 100%
@@ -236,7 +236,7 @@ Of course, you can do more than just addition!
 
 - How to compute mean, median, minimum, maximum, std, var
 
-    - NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+  - NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
 .. image:: images/np_aggregation.png
   
@@ -321,21 +321,47 @@ The four values listed above correspond to the number of columns in your array. 
 
 - Indexing and slicing operations can be useful when you're manipulating matrices:
 
+::
+
+  data[0,1]
+  data[1:3]
+  data[0:2,0]
+
 .. image:: images/np_matrix_indexing.png
 
 - You can aggregate matrices the same way you aggregated vectors:
+
+::
+
+  data.max()
+  data.min()
+  data.sum()
 
 .. image:: images/np_matrix_aggregation.png
 
 - You can aggregate all the values in a matrix and you can aggregate them across columns or rows using the `axis` parameter:
 
+::
+  
+  data.max(axis=0)
+  data.max(axis=1)
+
+
 .. image:: images/np_matrix_aggregation_row.png
 
 - Once you've created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.
 
-  .. image:: images/np_matrix_arithmetic.png
+::
+
+  data + ones
+
+.. image:: images/np_matrix_arithmetic.png
 
 - You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
+
+::
+
+  data + ones_row
 
 .. image:: images/np_matrix_broadcasting.png
 
@@ -372,7 +398,13 @@ will be printed:
  
 - There are often instances where we want NumPy to initialize the values of an array. NumPy offers methods like ones(), zeros() and random.random() for these instances. All you need to do is pass in the number of elements you want it to generate.
 
-  .. image:: images/np_ones_zeros_random.png
+::
+
+  np.ones(3)
+  mp.zeros(3)
+  np.random.random((3)
+  
+.. image:: images/np_ones_zeros_random.png
 
   - np.linspace
   
@@ -398,6 +430,12 @@ will be printed:
 
   - You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
 
+::
+
+  np.ones(3,2)
+  mp.zeros(3,2)
+  np.random.random((3,2)
+
 .. image:: images/np_ones_zeros_matrix.png
 
 - How to get the unique items and the counts
@@ -407,7 +445,12 @@ will be printed:
 .. image:: images/np_transposing_reshaping.png
       :width: 100%
 
-- You may need to switch the dimensions of a matrix. This can happen when, for example you have a model that expects a certain input shape that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix
+- You may need to switch the dimensions of a matrix. This can happen when, for example you have a model that expects a certain input shape that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix.
+
+::
+
+  data.reshape(2,3)
+  data.reshape(3,2)
 
 .. image:: images/np_reshape.png
       :width: 100%
