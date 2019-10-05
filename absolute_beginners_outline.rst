@@ -53,10 +53,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
     # create a 1-D array
     a = np.array([1,2,3])
 
-    # print the first element of the array
-    print(a[0])
-    # this will print 1
-
+You can visualize your array this way:
 
 .. image:: images/np_array.png
     :width: 100%
@@ -127,7 +124,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
 ::
 
-  numpy.reshape(a, newshape,order)
+  numpy.reshape(a, newshape, order)
 
 - **a** is the array to be reshaped.
 - **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
@@ -161,7 +158,19 @@ For example:
   - Why use NumPy?
 
 - Indexing and Slicing
-  - We can index and slice NumPy arrays in the same ways we can slice Python lists:
+
+::
+
+   # create a 1-D array
+    a = np.array([1,2,3])
+
+    # print the first element of the array
+    print(a[0])
+
+    # Result
+    1
+
+- We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
 .. image:: images/np_indexing.png
 
@@ -385,19 +394,6 @@ will be printed:
 - How to save and load NumPy objects
 - How to apply a function column-wise or row-wise
 - How to convert a 1D array into a 2D array (how to add a new axis)
-- How to plot arrays, very basic with Matplotlib
-- How to read a docstring with `?` and source code with `??` in IPython/Jupyter
-
-- More useful functions:
-
-  - np.clip
-  
-  - np.digitize
-  
-  - np.bincount
-  
-  - np.histogram
-
 
 Formulas:
 Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
@@ -429,6 +425,18 @@ Next, the values in the vector are squared. Then NumPy sums the values, and your
 .. image:: images/np_MSE_explanation2.png
     :width: 100%
 
+- How to plot arrays, very basic with Matplotlib
+- How to read a docstring with `?` and source code with `??` in IPython/Jupyter
+
+- More useful functions:
+
+  - np.clip
+  
+  - np.digitize
+  
+  - np.bincount
+  
+  - np.histogram
 
 
 
