@@ -100,6 +100,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
   - You can! `numpy.reshape` will give a new shape to an array without changing the data. Optional parameters you can specify are:
 
 ::
+
   numpy.reshape(a, newshape,order)
 
 - **a** is the array to be reshaped.
@@ -109,6 +110,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 For example:
 
 ::
+
   a = np.arange(6)
   print('Original array:')
   print(a)
@@ -187,10 +189,12 @@ NumPy also performs aggregation functions. In addition to `min`,  `max`, and `su
   [0.22205557 0.03315231 0.45255134 0.41577852]]
 
   A.sum()
+
   # Result:
   5.103359574405063
 
   A.min()
+
   # Result
   0.030703756560824358
 
@@ -199,6 +203,7 @@ You can easily specify which axis you want the aggregation function to be comput
 ::
 
   A.min(axis=0)
+  
   # Result
   array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
 
