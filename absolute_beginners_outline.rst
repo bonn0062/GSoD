@@ -67,8 +67,12 @@ You can visualize your array this way:
   - What are the attributes of an array?
 
 - What’s the difference between a Python List and a NumPy array? 
+  
+  - While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematicl operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
 
   - Why use NumPy?
+
+    - NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
 
 - How do you know the shape and size of an array?
 
@@ -200,17 +204,31 @@ Optional parameters you can specify are:
 
 You can easily add them together with the plus sign.
 
+::
+
+  data + ones
+
 .. image:: images/np_data_plus_ones.png
     :width: 100%
 
 Of course, you can do more than just addition!
+
+::
+
+  data - ones
+  data * ones
+  data / ones
 
 .. image:: images/np_sub_mult_divide.png
     :width: 100%
 
 - Broadcasting
 
-  - There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
+  - There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
+
+::
+
+  data * 1.6
 
 .. image:: images/np_multiply_broadcasting.png
 
