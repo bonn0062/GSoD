@@ -135,9 +135,12 @@ Optional parameters you can specify are:
 
   numpy.reshape(a, newshape, order)
 
-- **a** is the array to be reshaped.
-- **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
-- **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
+  - **a** is the array to be reshaped.
+
+  - **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
+
+  - **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
+
 
 - What’s the difference between a Python List and a NumPy array? 
 
@@ -208,15 +211,15 @@ Of course, you can do more than just addition!
 
 - Broadcasting
 
-  - There are times when you might want to carry out an operation between an array and a single number (also known as an operation between a vector and a scalar). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
+  - There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with `data * 1.6`
 
 .. image:: images/np_multiply_broadcasting.png
 
-NumPy understands that the multiplication should happen with each cell. That concept is called *broadcasting*.
+- NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
 
 - How to compute mean, median, minimum, maximum, std, var
 
-NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+    - NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
 .. image:: images/np_aggregation.png
   
