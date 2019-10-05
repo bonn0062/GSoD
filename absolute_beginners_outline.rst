@@ -117,7 +117,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
 Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
-.. image:: images/np_array_data_ones.png
+.. image:: images/np_array_dataones.png
 
 You can easily add them together with the plus sign.
 
@@ -137,14 +137,41 @@ NumPy understands that the multiplication should happen with each cell. That con
 
 - How to compute mean, median, minimum, maximum, std, var
 
-NumPy also performs aggregations functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
 .. image:: images/np_aggregation.png
   
 - (include row-wise and column-wise compute)
 
+  - It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate over the entire array:
 
-- Broadcasting example
+::
+
+  A = np.random.random((3, 4))
+  print(A)
+
+  # Result
+  [[0.55466235 0.3424135  0.15217492 0.21755154]
+  [0.009259   0.24416699 0.89009665 0.44347466]
+  [0.22205557 0.03315231 0.45255134 0.41577852]]
+
+  A.sum()
+  # Result:
+  5.103359574405063
+
+  A.min()
+  # Result
+  0.030703756560824358
+
+You can easily specify which axis you want the aggregation function to be computed. For example, you can find the minimum value within each column by specifying `axis=0`.
+
+::
+
+  A.min(axis=0)
+  # Result
+  array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
+
+The four values correspond to the number of columns. With a four-column array, you can expect to get four values as your result.
 
 - How to create an array (ndarray object)
 - How to create a basic array
@@ -156,11 +183,11 @@ NumPy also performs aggregations functions. In addition to `min`,  `max`, and `s
 
   import pandas as pd
 
-  # if all columns are the same type
-  x = pd.read_csv('filename.csv').values
+  # If all columns are the same type:
+  x = pd.read_csv('music.csv').values
 
-  # otherwise, select the columns you need
-  x = pd.read_csv('filename.csv', columns=['float_colname_1', ...]).values
+  # Otherwise, you can simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
 
 .. image:: images/np_pandas.png
     :width: 100%
