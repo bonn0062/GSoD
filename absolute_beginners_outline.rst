@@ -101,32 +101,6 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
   - Why use NumPy?
 
-- Broadcasting example
-
-- How to create an array (ndarray object)
-- How to create a basic array
-- How to create an array from existing data
-
-  - reading in a CSV
-
-::
-
-  import pandas as pd
-
-  # if all columns are the same type
-  x = pd.read_csv('filename.csv').values
-
-  # otherwise, select the columns you need
-  x = pd.read_csv('filename.csv', columns=['float_colname_1', ...]).values
-
-- How to create a new array from an existing array
-- How to specify the datatype
-  
-  - Examples of commonly used NumPy dtypes
-
-- How to inspect the size and shape of a NumPy array
-- How to check whether a list is empty or not
-- How to represent missing values and infinite values
 - Indexing and Slicing
 
 We can index and slice NumPy arrays in the same ways we can slice Python lists:
@@ -168,6 +142,34 @@ NumPy also performs aggregations functions. In addition to `min`,  max`, and `su
 .. image:: images/np_aggregation.png
   
 - (include row-wise and column-wise compute)
+
+
+- Broadcasting example
+
+- How to create an array (ndarray object)
+- How to create a basic array
+- How to create an array from existing data
+
+  - reading in a CSV
+
+::
+
+  import pandas as pd
+
+  # if all columns are the same type
+  x = pd.read_csv('filename.csv').values
+
+  # otherwise, select the columns you need
+  x = pd.read_csv('filename.csv', columns=['float_colname_1', ...]).values
+
+- How to create a new array from an existing array
+- How to specify the datatype
+  
+  - Examples of commonly used NumPy dtypes
+
+- How to inspect the size and shape of a NumPy array
+- How to check whether a list is empty or not
+- How to represent missing values and infinite values
 
 - Sorting an array
 

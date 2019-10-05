@@ -4,7 +4,7 @@ This repository is where you can find work in progress for the new absolute begi
 
 Here's an exerpt from the Medium article introducing the project:
 
-**From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375)**
+**From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375):**
 
 ## What do You Want to See in the NumPy Docs?
 ### Behind the scenes at NumPy and SciPy with Google Season of Docs
@@ -89,7 +89,7 @@ Christina Lee was selected for her proposal, "SciPy documentation: Design, Usabi
 Harivallabha Rangarajan
 Harivallabha Rangarajan is planning to contribute to the documentation and complement the work of the writers selected for Season of Docs in any way he can. He's particularly interested in writing end-to-end tutorials for the scipy.stats module. He writes that "having more comprehensive tutorials will help users get a better idea of how and where the available methods may be used in the pipeline."
 
-[Read about Christing here!]((https://towardsdatascience.com/numpy-and-scipy-and-google-season-of-docs-oh-my-meet-christina-lee-d334c62c301)
+[Read about Christing here!](https://towardsdatascience.com/numpy-and-scipy-and-google-season-of-docs-oh-my-meet-christina-lee-d334c62c301)
 
 **Welcome to Season of Docs!!!**
 
