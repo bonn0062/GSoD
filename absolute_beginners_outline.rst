@@ -38,7 +38,11 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
     - When you're accessing elements, remember that indexing starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
 
-- To create a NumPy array, you can use the function `np.array()`
+- How to create an array (ndarray object)
+- How to create a basic array
+
+
+  - To create a NumPy array, you can use the function `np.array()`
 
   - All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. You can find more information about data types `here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
@@ -56,6 +60,28 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
 .. image:: images/np_array.png
     :width: 100%
+
+- How to create an array from existing data
+
+  - reading in a CSV
+
+::
+
+  import pandas as pd
+
+  # If all columns are the same type:
+  x = pd.read_csv('music.csv').values
+
+  # Otherwise, you can simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
+    :width: 100%
+
+- How to create a new array from an existing array
+- How to specify the datatype
+  
+  - Examples of commonly used NumPy dtypes
  
 - More information about arrays
 
@@ -105,7 +131,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
 - **a** is the array to be reshaped.
 - **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
-- **order** 'C' means to read/write the elements using C-like index order, 'F' for Fortrans style, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
+- **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
 
 For example:
 
@@ -135,8 +161,7 @@ For example:
   - Why use NumPy?
 
 - Indexing and Slicing
-
-We can index and slice NumPy arrays in the same ways we can slice Python lists:
+  - We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
 .. image:: images/np_indexing.png
 
@@ -148,7 +173,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
   - Binary operators
 
-Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
+  - Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
 .. image:: images/np_array_dataones.png
 
@@ -176,7 +201,7 @@ NumPy also performs aggregation functions. In addition to `min`,  `max`, and `su
   
 - (include row-wise and column-wise compute)
 
-  - It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate over the entire array:
+  - It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate of the entire array:
 
 ::
 
@@ -203,35 +228,13 @@ You can easily specify which axis you want the aggregation function to be comput
 ::
 
   A.min(axis=0)
-  
+
   # Result
   array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
 
-The four values correspond to the number of columns. With a four-column array, you can expect to get four values as your result.
+The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
-- How to create an array (ndarray object)
-- How to create a basic array
-- How to create an array from existing data
 
-  - reading in a CSV
-
-::
-
-  import pandas as pd
-
-  # If all columns are the same type:
-  x = pd.read_csv('music.csv').values
-
-  # Otherwise, you can simply select the columns you need:
-  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
-
-.. image:: images/np_pandas.png
-    :width: 100%
-
-- How to create a new array from an existing array
-- How to specify the datatype
-  
-  - Examples of commonly used NumPy dtypes
 
 - How to inspect the size and shape of a NumPy array
 - How to check whether a list is empty or not
