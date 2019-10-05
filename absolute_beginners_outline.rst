@@ -58,28 +58,6 @@ You can visualize your array this way:
 .. image:: images/np_array.png
     :width: 100%
 
-- How to create an array from existing data
-
-  - reading in a CSV
-
-::
-
-  import pandas as pd
-
-  # If all columns are the same type:
-  x = pd.read_csv('music.csv').values
-
-  # Otherwise, you can simply select the columns you need:
-  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
-
-.. image:: images/np_pandas.png
-    :width: 100%
-
-- How to create a new array from an existing array
-- How to specify the datatype
-  
-  - Examples of commonly used NumPy dtypes
- 
 - More information about arrays
 
   - What else might it be called?
@@ -158,6 +136,30 @@ Optional parameters you can specify are:
 - What’s the difference between a Python List and a NumPy array? 
 
   - Why use NumPy?
+
+- How to create an array from existing data
+
+  - reading in a CSV
+
+::
+
+  import pandas as pd
+
+  # If all columns are the same type:
+  x = pd.read_csv('music.csv').values
+
+  # Otherwise, you can simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
+    :width: 100%
+
+- How to create a new array from an existing array
+- How to specify the datatype
+  
+  - Examples of commonly used NumPy dtypes
+ 
+
 
 - Indexing and Slicing
 
