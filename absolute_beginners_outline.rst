@@ -56,7 +56,6 @@ This is a working outline for a future section introducing NumPy to absolute beg
 You can visualize your array this way:
 
 .. image:: images/np_array.png
-    :width: 100%
 
 - More information about arrays
 
@@ -131,7 +130,6 @@ For example:
   Original array:
   [0 1 2 3 4 5]
 
-
   Modified array:
   [[0 1]
    [2 3]
@@ -164,7 +162,6 @@ Optional parameters you can specify are:
   x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
 
 .. image:: images/np_pandas.png
-    :width: 100%
 
 - How to create a new array from an existing array
 - How to specify the datatype
@@ -209,7 +206,6 @@ You can easily add them together with the plus sign.
   data + ones
 
 .. image:: images/np_data_plus_ones.png
-    :width: 100%
 
 Of course, you can do more than just addition!
 
@@ -220,7 +216,6 @@ Of course, you can do more than just addition!
   data / data
 
 .. image:: images/np_sub_mult_divide.png
-    :width: 100%
 
 - Broadcasting
 
@@ -237,6 +232,12 @@ Of course, you can do more than just addition!
 - How to compute mean, median, minimum, maximum, std, var
 
   - NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+
+::
+
+  data.max()
+  data.min()
+  data.sum()
 
 .. image:: images/np_aggregation.png
   
@@ -274,8 +275,6 @@ You can easily specify which axis you want the aggregation function to be comput
   array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
-
-
 
 - How to inspect the size and shape of a NumPy array
 - How to check whether a list is empty or not
@@ -443,7 +442,6 @@ will be printed:
 - It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
 
 .. image:: images/np_transposing_reshaping.png
-      :width: 100%
 
 - You may need to switch the dimensions of a matrix. This can happen when, for example you have a model that expects a certain input shape that might be different from your dataset. This is where the `reshape` method can be useful. You pass in the new dimensions that you want for the matrix.
 
@@ -453,7 +451,6 @@ will be printed:
   data.reshape(3,2)
 
 .. image:: images/np_reshape.png
-      :width: 100%
 
 - How to reverse
  
@@ -476,29 +473,22 @@ Implementing mathematical formulas that work on matrices and vectors is one of t
 For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
 
 .. image:: images/np_MSE_formula.png
-    :width: 100%
-
 
 Implementing this formula is simple and straightforward in NumPy:
 
 .. image:: images/np_MSE_implementation.png
-    :width: 100%
 
 What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
+
 You can visualize it this way:
 
-.. image:: images/.png
-    :width: 100%(IMG)
+.. image:: images/np_mse_viz1.png
 
-In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions, the values look like this:
+In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
 
-Next, the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
+.. image:: images/np_viz2.png
 
-
-.. image:: images/np_MSE_explanation.png
-    :width: 100%
 .. image:: images/np_MSE_explanation2.png
-    :width: 100%
 
 - How to plot arrays, very basic with Matplotlib
 - How to read a docstring with `?` and source code with `??` in IPython/Jupyter
