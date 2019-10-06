@@ -94,14 +94,35 @@ You can visualize your array this way:
 
                                   [0 ,1 ,2, 3]
                                   [4, 5, 6, 7]]])
-      array_example.ndim
-      # will return 3
+
+::
+
+  array_example.ndim
+
+**Output**
+
+::
+
+ 3
+
+::
+  array_example.shape
+
+**Output
+
+::
+
+  (3,2,4)
+
+::
       
-      array_example.shape
-      # will return (3,2,4)
-      
-      array_example.size
-      # will return 24
+  array_example.size
+
+**Output**
+
+::
+
+  24
 
 - Can you reshape an array?
   
@@ -126,7 +147,10 @@ For example:
   print('Modified array:')
   print(b)
 
-  # Result
+**Output**
+
+::
+
   Original array:
   [0 1 2 3 4 5]
 
@@ -180,7 +204,10 @@ Optional parameters you can specify are:
     # print the first element of the array
     print(a[0])
 
-    # Result
+**Output**
+
+::
+
     1
 
 - We can index and slice NumPy arrays in the same ways we can slice Python lists:
@@ -257,12 +284,20 @@ Of course, you can do more than just addition!
 
   A.sum()
 
-  # Result:
+**Output**
+
+::
+
   5.103359574405063
+
+::
 
   A.min()
 
-  # Result
+**Output**
+
+::
+
   0.030703756560824358
 
 You can easily specify which axis you want the aggregation function to be computed. For example, you can find the minimum value within each column by specifying `axis=0`.
@@ -271,7 +306,10 @@ You can easily specify which axis you want the aggregation function to be comput
 
   A.min(axis=0)
 
-  # Result
+**Output**
+
+::
+
   array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
@@ -542,7 +580,7 @@ Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped ov
 
   np.ones((4,3,2))
 
-will be printed:
+**Output**
 
 ::
 
