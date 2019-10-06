@@ -486,7 +486,7 @@ You can visualize it this way:
 
 In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
 
-.. image:: images/np_viz2.png
+.. image:: images/np_mse_viz2.png
 
 .. image:: images/np_MSE_explanation2.png
 
