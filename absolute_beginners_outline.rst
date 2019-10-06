@@ -96,16 +96,16 @@ You can visualize your array this way:
                                   [4, 5, 6, 7]]])
 
   array_example.ndim
-  array_example.shape
   array_example.size
+  array_example.shape
 
 **Output:**
 
 ::
 
   3
-  (3,2,4)
   24
+  (3,2,4)
 
 - **Can you reshape an array?**
   
@@ -115,7 +115,7 @@ You can visualize your array this way:
 
   numpy.reshape() 
 
-will give a new shape to an array without changing the data. 
+will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 total elements, you'll need to make sure that your new array also has a total of 12 elements.
 
 For example:
 
