@@ -95,37 +95,19 @@ You can visualize your array this way:
                                   [0 ,1 ,2, 3]
                                   [4, 5, 6, 7]]])
 
-::
-
   array_example.ndim
-
-**Output:**
-
-::
-
- 3
-
-::
-
   array_example.shape
-
-**Output:**
-
-::
-
-  (3,2,4)
-
-::
-      
   array_example.size
 
 **Output:**
 
 ::
 
+  3
+  (3,2,4)
   24
 
-- Can you reshape an array?
+- **Can you reshape an array?**
   
   - You can! 
 
@@ -180,10 +162,10 @@ Optional parameters you can specify are:
 
   import pandas as pd
 
-  # If all columns are the same type:
+  # If all oof your columns are the same type:
   x = pd.read_csv('music.csv').values
 
-  # Otherwise, you can simply select the columns you need:
+  # You can also simply select the columns you need:
   x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
 
 .. image:: images/np_pandas.png
@@ -192,8 +174,6 @@ Optional parameters you can specify are:
 - **How to specify the datatype**
   
   - Examples of commonly used NumPy dtypes
- 
-
 
 - **Indexing and Slicing**
 
