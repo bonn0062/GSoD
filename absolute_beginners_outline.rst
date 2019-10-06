@@ -304,7 +304,11 @@ You can easily find the number of rows with:
  
   print('Number of Rows : ', num_of_rows)
 
-**Number of Rows :  3**
+**Output**
+
+::
+
+  Number of Rows :  3
 
 Or the number of columns:
 
@@ -428,6 +432,7 @@ This also works for 3D arrays:
 You can also use np.size() with 1D arrays:
 
 ::
+
   # Create a 1D array
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
