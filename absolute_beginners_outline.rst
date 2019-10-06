@@ -278,9 +278,7 @@ The four values listed above correspond to the number of columns in your array. 
 
 - How to inspect the size and shape of a NumPy array
 
-You can get the dimensions of a NumPy array any time using ndarray.shape 
-
-NumPy will show you the dimensions of the array as a tuple.
+You can get the dimensions of a NumPy array any time using ndarray.shape and NumPy will return the dimensions of the array as a tuple.
 
 For example, if you created this array:
 
@@ -297,7 +295,7 @@ For example, if you created this array:
   [ 5  6  7  8]
   [ 9 10 11 12]]
 
-You can easily find the number of rows
+You can easily find the number of rows with:
 
 ::
 
@@ -308,7 +306,7 @@ You can easily find the number of rows
   # Output
   Number of Rows :  3
 
-Or the number of columns
+Or the number of columns:
 
 ::
 
@@ -319,7 +317,7 @@ Or the number of columns
   # Output
   Number of Columns :  4
 
-It's also simple to find the total number of elements in your array:
+It's also easy to find the total number of elements in your array:
 
 ::
 
@@ -328,7 +326,7 @@ It's also simple to find the total number of elements in your array:
   # Output
   Total number of elements in array:  12
 
-Of course, you can also use np.shape() with a 1D array.
+You can also use np.shape() with a 1D array, of course.
 
 ::
 
@@ -343,7 +341,7 @@ Of course, you can also use np.shape() with a 1D array.
   Length of 1D array:  8
 
 
-You can also get the dimensions of an array using np.size()
+You can get the dimensions of an array using np.size()
 
 ::
 
@@ -365,7 +363,7 @@ You can also get the dimensions of an array using np.size()
   # Output
   Total number of elements in  array :  12
 
-This also works for 3D arrays.
+This also works for 3D arrays:
 
 ::
 
@@ -396,6 +394,19 @@ This also works for 3D arrays.
 
   # Output
   Total number of elements in 3D Numpy array :  24
+
+You can also use np.size() with 1D arrays:
+
+::
+  # Create a 1D array
+  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+  # Determine the length
+  print('Length of 1D numpy array : ', np.size(arr))
+
+  # Output
+  Length of 1D numpy array :  8
+
 - How to check whether a list is empty or not
 - How to represent missing values and infinite values
 
@@ -524,15 +535,15 @@ will be printed:
   
 .. image:: images/np_ones_zeros_random.png
 
-  - np.linspace
+- np.linspace
   
-  - np.logspace
+- np.logspace
 
-  - np.tile
+- np.tile
   
-  - np.zeros
+- np.zeros
 
-  - np.ones
+- np.ones
 
 - Random Number Generation (update below to numpy.random.Generator)
 
