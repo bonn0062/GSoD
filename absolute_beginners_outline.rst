@@ -290,6 +290,9 @@ For example, if you created this array:
   print(np_arr)
 
 **Numpy Array**
+
+::
+
   [[ 1  2  3  4]
   [ 5  6  7  8]
   [ 9 10 11 12]]
@@ -368,6 +371,9 @@ This also works for 3D arrays:
   print(arr3D)
 
 **Output**
+
+::
+
   [[[1 1 1 1]
     [2 2 2 2]
     [3 3 3 3]]
