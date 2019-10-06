@@ -277,6 +277,125 @@ You can easily specify which axis you want the aggregation function to be comput
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
 - How to inspect the size and shape of a NumPy array
+
+You can get the dimensions of a NumPy array any time using ndarray.shape 
+
+NumPy will show you the dimensions of the array as a tuple.
+
+For example, if you created this array:
+
+::
+
+  np_arr = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+ 
+  print('Numpy Array')
+  print(np_arr)
+
+  # Output:
+  Numpy Array
+  [[ 1  2  3  4]
+  [ 5  6  7  8]
+  [ 9 10 11 12]]
+
+You can easily find the number of rows
+
+::
+
+  num_of_rows = np_arr.shape[0]
+ 
+  print('Number of Rows : ', num_of_rows)
+
+  # Output
+  Number of Rows :  3
+
+Or the number of columns
+
+::
+
+  num_of_columns = np_arr.shape[1]
+ 
+  print('Number of Columns : ', num_of_columns) 
+
+  # Output
+  Number of Columns :  4
+
+It's also simple to find the total number of elements in your array:
+
+::
+
+  print('Total number of elements in array : ', np_arr.shape[0] * np_arr.shape[1])
+
+  # Output
+  Total number of elements in array:  12
+
+Of course, you can also use np.shape() with a 1D array.
+
+::
+
+  # Create an array
+  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+  print('Shape of 1D array: ', arr.shape)
+  print('Length of 1D array: ', arr.shape[0])
+
+  # Output
+  Shape of 1D array:  (8,)
+  Length of 1D array:  8
+
+
+You can also get the dimensions of an array using np.size()
+
+::
+
+  # get number of rows in array
+  num_of_rows2 = np.size(np_arr, 0)
+ 
+  # get number of columns in 2D numpy array
+  num_of_columns2 = np.size(np_arr, 1)
+ 
+  print('Number of Rows : ', num_of_rows2)
+  print('Number of Columns : ', num_of_columns2)
+
+  # Output
+  Number of Rows :  3
+  Number of Columns: 4
+  
+  print('Total number of elements in  array : ', np.size(np_arr))
+
+  # Output
+  Total number of elements in  array :  12
+
+This also works for 3D arrays.
+
+::
+
+  arr3D = np.array([ [[1, 1, 1, 1], [2, 2, 2, 2], [3, 3, 3, 3]],
+                 [[4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6]] ])
+ 
+  print(arr3D)
+
+  # Output
+  [[[1 1 1 1]
+    [2 2 2 2]
+    [3 3 3 3]]
+
+  [[4 4 4 4]
+    [5 5 5 5]
+    [6 6 6 6]]]
+
+  print('Axis 0 size : ', np.size(arr3D, 0))
+  print('Axis 1 size : ', np.size(arr3D, 1))
+  print('Axis 2 size : ', np.size(arr3D, 2))
+
+  # Output
+  Axis 0 size :  2
+  Axis 1 size :  3
+  Axis 2 size :  4
+
+  print('Total number of elements in 3D Numpy array : ', np.size(arr3D))
+
+  # Output
+  Total number of elements in 3D Numpy array :  24
 - How to check whether a list is empty or not
 - How to represent missing values and infinite values
 
