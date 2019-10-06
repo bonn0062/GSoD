@@ -289,8 +289,7 @@ For example, if you created this array:
   print('Numpy Array')
   print(np_arr)
 
-  # Output:
-  Numpy Array
+**Numpy Array**
   [[ 1  2  3  4]
   [ 5  6  7  8]
   [ 9 10 11 12]]
@@ -303,8 +302,7 @@ You can easily find the number of rows with:
  
   print('Number of Rows : ', num_of_rows)
 
-  # Output
-  Number of Rows :  3
+**Number of Rows :  3**
 
 Or the number of columns:
 
@@ -314,8 +312,7 @@ Or the number of columns:
  
   print('Number of Columns : ', num_of_columns) 
 
-  # Output
-  Number of Columns :  4
+**Number of Columns :  4**
 
 It's also easy to find the total number of elements in your array:
 
@@ -323,8 +320,7 @@ It's also easy to find the total number of elements in your array:
 
   print('Total number of elements in array : ', np_arr.shape[0] * np_arr.shape[1])
 
-  # Output
-  Total number of elements in array:  12
+**Total number of elements in array:  12**
 
 You can also use np.shape() with a 1D array, of course.
 
@@ -336,9 +332,8 @@ You can also use np.shape() with a 1D array, of course.
   print('Shape of 1D array: ', arr.shape)
   print('Length of 1D array: ', arr.shape[0])
 
-  # Output
-  Shape of 1D array:  (8,)
-  Length of 1D array:  8
+**Shape of 1D array:  (8,)**
+**Length of 1D array:  8**
 
 
 You can get the dimensions of an array using np.size()
@@ -354,14 +349,14 @@ You can get the dimensions of an array using np.size()
   print('Number of Rows : ', num_of_rows2)
   print('Number of Columns : ', num_of_columns2)
 
-  # Output
-  Number of Rows :  3
-  Number of Columns: 4
+**Number of Rows :  3**
+**Number of Columns: 4**
+
+::
   
   print('Total number of elements in  array : ', np.size(np_arr))
 
-  # Output
-  Total number of elements in  array :  12
+**Total number of elements in  array :  12**
 
 This also works for 3D arrays:
 
@@ -372,7 +367,7 @@ This also works for 3D arrays:
  
   print(arr3D)
 
-  # Output
+**Output**
   [[[1 1 1 1]
     [2 2 2 2]
     [3 3 3 3]]
@@ -381,19 +376,21 @@ This also works for 3D arrays:
     [5 5 5 5]
     [6 6 6 6]]]
 
+::
+
   print('Axis 0 size : ', np.size(arr3D, 0))
   print('Axis 1 size : ', np.size(arr3D, 1))
   print('Axis 2 size : ', np.size(arr3D, 2))
 
-  # Output
-  Axis 0 size :  2
-  Axis 1 size :  3
-  Axis 2 size :  4
+**Axis 0 size :  2**
+**Axis 1 size :  3**
+**Axis 2 size :  4**
+
+::
 
   print('Total number of elements in 3D Numpy array : ', np.size(arr3D))
 
-  # Output
-  Total number of elements in 3D Numpy array :  24
+**Total number of elements in 3D Numpy array :  24**
 
 You can also use np.size() with 1D arrays:
 
@@ -404,8 +401,7 @@ You can also use np.size() with 1D arrays:
   # Determine the length
   print('Length of 1D numpy array : ', np.size(arr))
 
-  # Output
-  Length of 1D numpy array :  8
+**Length of 1D numpy array :  8**
 
 - How to check whether a list is empty or not
 - How to represent missing values and infinite values
