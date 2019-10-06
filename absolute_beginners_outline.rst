@@ -99,16 +99,17 @@ You can visualize your array this way:
 
   array_example.ndim
 
-**Output**
+**Output:**
 
 ::
 
  3
 
 ::
+
   array_example.shape
 
-**Output
+**Output:**
 
 ::
 
@@ -118,7 +119,7 @@ You can visualize your array this way:
       
   array_example.size
 
-**Output**
+**Output:**
 
 ::
 
@@ -147,7 +148,7 @@ For example:
   print('Modified array:')
   print(b)
 
-**Output**
+**Output:**
 
 ::
 
@@ -171,7 +172,7 @@ Optional parameters you can specify are:
 
 - **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
 
-- How to create an array from existing data
+- **How to create an array from existing data**
 
   - reading in a CSV
 
@@ -187,14 +188,14 @@ Optional parameters you can specify are:
 
 .. image:: images/np_pandas.png
 
-- How to create a new array from an existing array
-- How to specify the datatype
+- **How to create a new array from an existing array**
+- **How to specify the datatype**
   
   - Examples of commonly used NumPy dtypes
  
 
 
-- Indexing and Slicing
+- **Indexing and Slicing**
 
 ::
 
@@ -204,7 +205,7 @@ Optional parameters you can specify are:
     # print the first element of the array
     print(a[0])
 
-**Output**
+**Output:**
 
 ::
 
@@ -214,7 +215,7 @@ Optional parameters you can specify are:
 
 .. image:: images/np_indexing.png
 
-- Basic array operations(np.sum, np.dot)
+- **Basic array operations(np.sum, np.dot)**
 
   - Operations on a single array
 
@@ -244,7 +245,7 @@ Of course, you can do more than just addition!
 
 .. image:: images/np_sub_mult_divide.png
 
-- Broadcasting
+- **Broadcasting**
 
   - There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
 
@@ -254,7 +255,7 @@ Of course, you can do more than just addition!
 
 .. image:: images/np_multiply_broadcasting.png
 
-- NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
+NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
 
 - How to compute mean, median, minimum, maximum, std, var
 
@@ -284,7 +285,7 @@ Of course, you can do more than just addition!
 
   A.sum()
 
-**Output**
+**Output:**
 
 ::
 
@@ -294,7 +295,7 @@ Of course, you can do more than just addition!
 
   A.min()
 
-**Output**
+**Output:**
 
 ::
 
@@ -306,7 +307,7 @@ You can easily specify which axis you want the aggregation function to be comput
 
   A.min(axis=0)
 
-**Output**
+**Output:**
 
 ::
 
@@ -314,7 +315,7 @@ You can easily specify which axis you want the aggregation function to be comput
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
-- How to inspect the size and shape of a NumPy array
+- **How to inspect the size and shape of a NumPy array**
 
 You can get the dimensions of a NumPy array any time using ndarray.shape and NumPy will return the dimensions of the array as a tuple.
 
@@ -326,7 +327,7 @@ For example, if you created this array:
  
   print(np_arr)
 
-**Output**
+**Output:**
 
 ::
 
@@ -342,7 +343,7 @@ You can easily find the number of rows with:
  
   print('Number of Rows : ', num_of_rows)
 
-**Output**
+**Output:**
 
 ::
 
@@ -356,7 +357,7 @@ Or the number of columns:
  
   print('Number of Columns : ', num_of_columns) 
 
-**Output**
+**Output:**
 
 ::
   
@@ -368,7 +369,7 @@ It's also easy to find the total number of elements in your array:
 
   print('Total number of elements in array : ', np_arr.shape[0] * np_arr.shape[1])
 
-**Output**
+**Output:**
 
 ::
 
@@ -405,7 +406,7 @@ You can get the dimensions of an array using np.size()
   print('Number of Rows : ', num_of_rows2)
   print('Number of Columns : ', num_of_columns2)
 
-**Output**
+**Output:**
 
 ::
 
@@ -416,7 +417,7 @@ You can get the dimensions of an array using np.size()
   
   print('Total number of elements in  array : ', np.size(np_arr))
 
-**Output**
+**Output:**
 
 ::
 
@@ -431,7 +432,7 @@ This also works for 3D arrays:
  
   print(arr3D)
 
-**Output**
+**Output:**
 
 ::
 
@@ -449,7 +450,7 @@ This also works for 3D arrays:
   print('Axis 1 size : ', np.size(arr3D, 1))
   print('Axis 2 size : ', np.size(arr3D, 2))
 
-**Output**
+**Output:**
 
 ::
 
@@ -461,7 +462,7 @@ This also works for 3D arrays:
 
   print('Total number of elements in 3D Numpy array : ', np.size(arr3D))
 
-**Output**
+**Output:**
 
 ::
 
@@ -477,26 +478,26 @@ You can also use np.size() with 1D arrays:
   # Determine the length
   print('Length of 1D numpy array : ', np.size(arr))
 
-**Output**
+**Output:**
 
 ::
 
   Length of 1D numpy array :  8
 
-- How to check whether a list is empty or not
-- How to represent missing values and infinite values
+- **How to check whether a list is empty or not**
+- **How to represent missing values and infinite values**
 
-- Sorting an array
+- **Sorting an array**
 
-- How to concatenate two arrays
+- **How to concatenate two arrays**
   
   - column-wise
 
-- row-wise
+  - row-wise
 
   - np.concatenate, np.stack, np.vstack, np.hstack
 
-- How to sort an array 
+- **How to sort an array**
   
   - based on one (or more) columns
     
@@ -512,9 +513,8 @@ You can also use np.size() with 1D arrays:
     
     - np.lexsort
 
-- How to pass a list of lists to create a 2-D array
 
-- Creating Matrices
+- **Creating Matrices**
 
   - You can pass Python lists of lists to create a matrix to represent them in NumPy.
 
@@ -580,7 +580,7 @@ Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped ov
 
   np.ones((4,3,2))
 
-**Output**
+**Output:**
 
 ::
 
@@ -673,7 +673,7 @@ Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped ov
 - How to apply a function column-wise or row-wise
 - How to convert a 1D array into a 2D array (how to add a new axis)
 
-Formulas:
+**Formulas:**
 Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
 
 For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
@@ -696,10 +696,10 @@ In this example, both the predictions and labels vectors contain three values, m
 
 .. image:: images/np_MSE_explanation2.png
 
-- How to plot arrays, very basic with Matplotlib
-- How to read a docstring with `?` and source code with `??` in IPython/Jupyter
+- **How to plot arrays, very basic with Matplotlib**
+- **How to read a docstring with `?` and source code with `??` in IPython/Jupyter**
 
-- More useful functions:
+- **More useful functions:**
 
   - np.clip
   
