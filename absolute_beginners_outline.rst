@@ -311,9 +311,23 @@ For example, if you created this array:
   [ 5  6  7  8]
   [ 9 10 11 12]]
 
-You can easily find the number of rows with:
+Use `.shape` if you want to quickly find the shape of your array:
 
 ::
+
+  np_arr.shape
+
+**Output**
+
+::
+
+  (3, 4)
+
+You can find the number of rows with:
+
+::
+
+  # np_arr.shape[0]
 
   num_of_rows = np_arr.shape[0]
  
@@ -329,6 +343,8 @@ Or the number of columns:
 
 ::
 
+  # np_arr.shape[1]
+
   num_of_columns = np_arr.shape[1]
  
   print('Number of Columns : ', num_of_columns) 
@@ -342,6 +358,8 @@ Or the number of columns:
 It's also easy to find the total number of elements in your array:
 
 ::
+
+  # np_arr.shape[0] * np_arr.shape[1]
 
   print('Total number of elements in array : ', np_arr.shape[0] * np_arr.shape[1])
 
