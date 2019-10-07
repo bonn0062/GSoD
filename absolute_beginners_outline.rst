@@ -115,7 +115,7 @@ You can visualize your array this way:
 
   numpy.reshape() 
 
-will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 total elements, you'll need to make sure that your new array also has a total of 12 elements.
+will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you'll need to make sure that your new array also has a total of 12 elements.
 
 For example:
 
@@ -259,19 +259,11 @@ NumPy understands that the multiplication should happen with each cell. That con
   print(A)
 
   # Result
-  [[0.55466235 0.3424135  0.15217492 0.21755154]
-  [0.009259   0.24416699 0.89009665 0.44347466]
-  [0.22205557 0.03315231 0.45255134 0.41577852]]
+ [[0.45053314 0.17296777 0.34376245 0.5510652 ]
+ [0.54627315 0.05093587 0.40067661 0.55645993]
+ [0.12697628 0.82485143 0.26590556 0.56917101]]
 
   A.sum()
-
-**Output:**
-
-::
-
-  5.103359574405063
-
-::
 
   A.min()
 
@@ -279,7 +271,11 @@ NumPy understands that the multiplication should happen with each cell. That con
 
 ::
 
-  0.030703756560824358
+  # Sum
+  4.8595783866706
+
+  # Minimum
+  0.050935870838424435
 
 You can easily specify which axis you want the aggregation function to be computed. For example, you can find the minimum value within each column by specifying `axis=0`.
 
@@ -437,6 +433,8 @@ This also works for 3D arrays:
   Axis 0 size :  2
   Axis 1 size :  3
   Axis 2 size :  4
+
+You can print the total number of elements:
 
 ::
 
