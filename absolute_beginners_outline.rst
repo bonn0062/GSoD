@@ -287,7 +287,7 @@ You can easily specify which axis you want the aggregation function to be comput
 
 ::
 
-  array([0.03070376, 0.51914664, 0.14838017, 0.15097071])
+  array([0.12697628, 0.05093587, 0.26590556, 0.5510652 ])
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
@@ -407,6 +407,8 @@ You can get the dimensions of an array using np.size()
   Number of Rows :  3
   Number of Columns: 4
 
+You can print the total number of elements as well:
+
 ::
   
   print('Total number of elements in  array : ', np.size(np_arr))
@@ -437,6 +439,8 @@ This also works for 3D arrays:
   [[4 4 4 4]
     [5 5 5 5]
     [6 6 6 6]]]
+
+You can easily print the size of the axis:
 
 ::
 
