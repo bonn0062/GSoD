@@ -9,22 +9,22 @@ This is a working outline for a future section introducing NumPy to absolute beg
 How to install NumPy
 --------------------
   
-  To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here: <https://www.scipy.org/install.html>`_.
+To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here: <https://www.scipy.org/install.html>`_.
 
-  If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
-    
-  If you already have Python, you can install NumPy with
-
-  ::
+If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
   
-    conda install numpy
-    
-  or 
-  
-  ::
+If you already have Python, you can install NumPy with
 
-    pip install numpy
-    
+::
+
+  conda install numpy
+  
+or 
+
+::
+
+  pip install numpy
+  
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
 How to import NumPy
@@ -76,9 +76,9 @@ More information about arrays
 
 What else might an array be called?
 
-    You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix referrs to an array with multiple columns.
+You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix referrs to an array with multiple columns.
 
-  - What are the attributes of an array?
+- What are the attributes of an array?
 
 What’s the difference between a Python List and a NumPy array? 
 --------------------------------------------------------------
