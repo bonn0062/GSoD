@@ -6,11 +6,12 @@ This is a working outline for a future section introducing NumPy to absolute beg
 
 
 
-- How to install NumPy
+How to install NumPy
+--------------------
   
-  To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find it all `here: <https://www.scipy.org/install.html>`_.
+  To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here: <https://www.scipy.org/install.html>`_.
 
-  If you don't have Python yet, you might want to consider using Anaconda as the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
+  If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
     
   If you already have Python, you can install NumPy with
 
@@ -20,21 +21,25 @@ This is a working outline for a future section introducing NumPy to absolute beg
     
   or 
   
-  :
-  
+  ::
+
     pip install numpy
     
-For more details, see the `Installation <https://www.scipy.org/install.html>`_ section
+You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
-- How to import NumPy
+How to import NumPy
+-------------------
+
+If you want to use a package or library in your code, you first need to make it accessible. In order to start using NumPy, you'll need to import it. To make use of the functions available in NumPy, you'll need to import it with an import statement. This can be easily done with:
 
 ::
 
   import numpy as np 
 
-We shorten "numpy" to "np" in order to save time and also so that code is standardized so that anyone working with your code can easily understand and run it.
+We shorten "numpy" to "np" in order to save time and also to keep code standardized so that anyone working with your code can easily understand and run it.
 
-- What is an array?
+What is an array?
+-----------------
 
 An array is a central data structure of the NumPy library. It's a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the array `dtype`. 
 
@@ -47,8 +52,9 @@ We can access the elements in the array using square brackets.
 When you're accessing elements, remember that indexing starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
 
 - How to create an array (ndarray object)
-- How to create a basic array
 
+How to create a basic array
+---------------------------
 
 To create a NumPy array, you can use the function `np.array()`
 
@@ -65,7 +71,8 @@ You can visualize your array this way:
 
 .. image:: images/np_array.png
 
-- More information about arrays
+More information about arrays
+-----------------------------
 
 What else might an array be called?
 
@@ -74,14 +81,17 @@ What else might an array be called?
   - What are the attributes of an array?
 
 What’s the difference between a Python List and a NumPy array? 
+--------------------------------------------------------------
   
 While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematicl operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
 
 Why use NumPy?
+--------------
 
 NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
 
-- How do you know the shape and size of an array?
+How do you know the shape and size of an array?
+-----------------------------------------------
 
 **ndarray.ndim** will tell you the number of axes, or dimensions, of the array.
 
@@ -115,7 +125,8 @@ For example:
   24
   (3,2,4)
 
-**Can you reshape an array?**
+Can you reshape an array?
+-------------------------
   
 You can! 
 
@@ -162,7 +173,8 @@ Optional parameters you can specify are:
 
 **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
 
-- **How to create an array from existing data**
+How to create an array from existing data
+-----------------------------------------
 
   - reading in a CSV
 
@@ -183,7 +195,8 @@ Optional parameters you can specify are:
   
 - Examples of commonly used NumPy dtypes
 
-- **Indexing and Slicing**
+Indexing and Slicing
+--------------------
 
 ::
 
@@ -211,7 +224,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
   - Binary operators
 
-  - Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
+nce you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
 .. image:: images/np_array_dataones.png
 
@@ -233,7 +246,8 @@ Of course, you can do more than just addition!
 
 .. image:: images/np_sub_mult_divide.png
 
-- **Broadcasting**
+Broadcasting
+------------
 
 There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
 
@@ -245,7 +259,8 @@ There are times when you might want to carry out an operation between an array a
 
 NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
 
-- How to compute mean, median, minimum, maximum, std, var
+How do I find the mean, median, maximum, and more?
+--------------------------------------------------
 
 NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
@@ -520,7 +535,8 @@ You can also use np.size() with 1D arrays:
     - np.lexsort
 
 
-- **Creating Matrices**
+Creating Matrices
+-----------------
 
 You can pass Python lists of lists to create a matrix to represent them in NumPy.
 
@@ -578,7 +594,8 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 
 - How to extract specific items from an array
 - How to create sequences, repetitions, and random numbers
-- NumPy can do everything we've mentioned in any number of dimensions, that's why it's called an N-Dimensional array.
+
+NumPy can do everything we've mentioned in any number of dimensions, that's why it's called an N-Dimensional array.
 
 Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. That means that 
 
@@ -651,6 +668,10 @@ You can also use the `ones()`, `zeros()`, and `random()` methods to create a mat
 
 - How to get the unique items and the counts
 - How to get index locations that satisfy a given condition 
+
+Transposing and reshaping a matrix
+----------------------------------
+
 It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
 
 .. image:: images/np_transposing_reshaping.png
@@ -679,7 +700,9 @@ You may need to switch the dimensions of a matrix. This can happen when, for exa
 - How to apply a function column-wise or row-wise
 - How to convert a 1D array into a 2D array (how to add a new axis)
 
-**Formulas:**
+Formulas:
+---------
+
 Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
 
 For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
