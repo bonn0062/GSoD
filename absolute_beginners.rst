@@ -123,20 +123,34 @@ And even an array that contains a range of evenly spaced interval. To do this, y
 
 ::
 
-  # Create an array that contains the numbers 2,4,6,8
   np.arange(2,9,2)
+
+**Output**
+
+::
+
+  array([2, 4, 6, 8])
 
 It's simple to create an array where the values are spaced linearly in an interval:
 
 ::
 
-  #Create an array containing the numbers 0,2.5,5,7.5,10
   np.linspace(0,10,5)
+
+**Output**
+
+::
+
+  array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 
 Adding, removing, and sorting elements
 --------------------------------------
 
-You can add elements to an array any time with np.append.
+::
+
+  np.append()
+  np.delete()
+  np.sort()
 
 If we start with this array:
 
@@ -145,8 +159,7 @@ If we start with this array:
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
  
 
-You can add elements to the end of the array with
-
+You can add elements to an array any time with np.append.
 ::
 
   np.append(arr, [1,2])
@@ -170,7 +183,7 @@ You can delete an element with np.delete.
 
   array([1, 3, 4, 5, 6, 7, 8])
 
-Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. Read more `here <
+Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. Read more about sorting an array `here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
 
 If you start with this array:
 
