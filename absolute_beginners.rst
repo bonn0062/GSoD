@@ -7,26 +7,9 @@ This is a working outline for a future section introducing NumPy to absolute beg
 Welcome to NumPy!
 -----------------
 
-NumPy is an open source numerical Python library tthat contains a multi-dmentional array and matrix data structures. It can be used to perform a lot of mathematical operations on array.  NumPy enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
+NumPy is an open source numerical Python library that's used in almost every field of science and engineering. It' i's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
 
-More information about arrays
------------------------------
-
-**What else might an array be called?**
-
-You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix referrs to an array with multiple columns.
-
-**What are the attributes of an array?**
-
-What’s the difference between a Python List and a NumPy array? 
---------------------------------------------------------------
-  
-While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematicl operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
-
-Why use NumPy?
---------------
-
-NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
+The NumPy library contains multidimentional array and matrix data structures. It provides **ndarray**, a homogeneous n-dimensional array object with methods to efficiently operate on it. NumPy can be used to perform a wide variety of mathematical operations on arrays.  It enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
 
 Installing NumPy
 ----------------
@@ -52,26 +35,53 @@ You can find all of the installation details in the `Installation <https://www.s
 How to import NumPy
 -------------------
 
-If you want to use a package or library in your code, you first need to make it accessible. In order to start using NumPy, you'll need to import it. To make use of the functions available in NumPy, you'll need to import it with an import statement. This can be easily done with:
+Any time you want to use a package or library in your code, you first need to make it accessible. 
+
+In order to start using NumPy and all of the functions available in NumPy, you'll need to import it. This can be easily done with this import statement:
 
 ::
 
   import numpy as np 
 
-We shorten "numpy" to "np" in order to save time and also to keep code standardized so that anyone working with your code can easily understand and run it.
+(We shorten "numpy" to "np" in order to save time and also to keep code standardized so that anyone working with your code can easily understand and run it.)
+
+What’s the difference between a Python List and a NumPy array? 
+--------------------------------------------------------------
+  
+NumPy gives you an enormous range of fast and efficient numerically-related options. While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematical operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
+
+**Why use NumPy?**
+
+NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
 
 What is an array?
 -----------------
 
 An array is a central data structure of the NumPy library. It's a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the array `dtype`. 
 
-All of the values in an array should be the same type. An array can be indexed by a tuple of nonnegative integers, by booleans, by another array, or by integers. The **rank** of the array is the number of dimensions. The **shape** of the array is a tuple of integers giving the size of the array along each dimension.
+An array can be indexed by a tuple of nonnegative integers, by booleans, by another array, or by integers. The **rank** of the array is the number of dimensions. The **shape** of the array is a tuple of integers giving the size of the array along each dimension.
 
 One way we can initialize NumPy arrays is from nested Python lists. 
 
 We can access the elements in the array using square brackets.
 
-When you're accessing elements, remember that indexing starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
+When you're accessing elements, remember that indexing in NumPy starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
+
+More information about arrays
+-----------------------------
+
+**What else might an array be called?**
+
+You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix refers to an array with multiple columns.
+
+**What are the attributes of an array?**
+
+An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is atuple of non-negative integers that specify the sizes of each dimension. Just like in other Python container objects, the contents of an array can be accessed and modified by indexing or slicing the array. Different arrays can share the same data, so changes made on one array might be visible in another. 
+
+Array attributes reflect information that is intrinsic to the array itself. If you need to get and even set poperties of an array without creating a new array, you can often access an array through its attributes. 
+
+Read more about array attributes `here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
+
 
 How to create a basic array
 ---------------------------
@@ -313,7 +323,6 @@ How to create an array from existing data
 Indexing and Slicing
 --------------------
 
-
 We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
 ::
@@ -473,7 +482,10 @@ You can easily specify which axis you want the aggregation function to be comput
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
-- **How to inspect the size and shape of a NumPy array**
+NumPy has a number of other very useful functions, which you can read about  `here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
+
+How to inspect the size and shape of a NumPy array
+--------------------------------------------------
 
 You can get the dimensions of a NumPy array any time using ndarray.shape and NumPy will return the dimensions of the array as a tuple.
 
@@ -927,9 +939,13 @@ All you need to do to plot your values is run
 
 .. image:: images/np_matplotlib.png
 
-- **How to read a docstring with `?` and source code with `??` in IPython/Jupyter**
+To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_.
 
-- **More useful functions:**
+How to read a docstring with `?` and source code with `??` in IPython/Jupyter
+-----------------------------------------------------------------------------
+
+More useful functions
+---------------------
 
   - np.clip
   
