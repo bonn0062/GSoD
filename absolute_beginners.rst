@@ -859,7 +859,7 @@ How to reverse
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
   
-  - flatten vs ravel
+- flatten vs ravel
 
 How to import and export data as a CSV
 --------------------------------------
@@ -925,8 +925,7 @@ All you need to do to plot your values is run
 
 **Output**
 
-.. iimage:: images/np_matplotlib.png
-
+.. image:: images/np_matplotlib.png
 
 - **How to read a docstring with `?` and source code with `??` in IPython/Jupyter**
 
