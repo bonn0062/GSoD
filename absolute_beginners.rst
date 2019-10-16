@@ -303,30 +303,33 @@ Indexing and Slicing
 
 We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
-.. image:: images/np_indexing.png
-
-
 ::
 
    # create a 1-D array
-    a = np.array([1,2,3])
+    data = np.array([1,2,3])
 
     # print the first element of the array
-    print(a[0])
+    print(data[0])
+    print(data[1])
+    print(data[0:2])
+    print(data[1:])
+    print(data[-2:])
 
 **Output:**
 
 ::
 
-    1
+  1
+  2
+  [1 2]
+  [2 3]
+  [2 3]
 
-- **Basic array operations(np.sum, np.dot)**
 
-  - Operations on a single array
+.. image:: images/np_indexing.png
 
-  - Unary operators
-
-  - Binary operators
+Basic array operations
+----------------------
 
 Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
@@ -349,6 +352,47 @@ Of course, you can do more than just addition!
   data / data
 
 .. image:: images/np_sub_mult_divide.png
+
+Basic operations are simple with NumPy. If you want to find the sum of the elements in an array, you'd use sum(). This works for 1D arrays, 2D arrays, and arrays in higher dimentions.
+
+::
+
+  a = np.array([1, 2, 3, 4])
+
+  # Add all of the elements in the array
+  a.sum()
+
+**Output**
+
+::
+
+  10
+
+To add the rows or the columns in a 2D array, you would specify the axis.
+
+::
+
+  b = np.array([[1, 1], [2, 2]])
+
+  # Sum the rows
+  b.sum(axis=0)
+
+**Output**
+
+::
+
+  array([3, 3])
+
+::
+
+  # Sum the columns
+  b.sum(axis=1)
+
+**Output**
+
+::
+
+  array([2, 4])
 
 Broadcasting
 ------------
