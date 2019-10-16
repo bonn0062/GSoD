@@ -4,12 +4,34 @@ NumPy: The Absolute Basics for Beginners
 
 This is a working outline for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
+Welcome to NumPy!
+-----------------
 
+NumPy is an open source numerical Python library tthat contains a multi-dmentional array and matrix data structures. It can be used to perform a lot of mathematical operations on array.  NumPy enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
 
-How to install NumPy
---------------------
+More information about arrays
+-----------------------------
+
+**What else might an array be called?**
+
+You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix referrs to an array with multiple columns.
+
+**What are the attributes of an array?**
+
+What’s the difference between a Python List and a NumPy array? 
+--------------------------------------------------------------
   
-To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here: <https://www.scipy.org/install.html>`_.
+While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematicl operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
+
+Why use NumPy?
+--------------
+
+NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
+
+Installing NumPy
+----------------
+  
+To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here <https://www.scipy.org/install.html>`_.
 
 If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
   
@@ -51,8 +73,6 @@ We can access the elements in the array using square brackets.
 
 When you're accessing elements, remember that indexing starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
 
-- How to create an array (ndarray object)
-
 How to create a basic array
 ---------------------------
 
@@ -71,24 +91,106 @@ You can visualize your array this way:
 
 .. image:: images/np_array.png
 
-More information about arrays
------------------------------
+Besides creating an array from a sequence of elements, you can easily create an array filled with 0s:
 
-What else might an array be called?
+::
 
-You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix referrs to an array with multiple columns.
+  # Create a 1D array with 2 elements, both 0s
+  np.zeros(2)
 
-- What are the attributes of an array?
+Or an array filled with 1s:
 
-What’s the difference between a Python List and a NumPy array? 
---------------------------------------------------------------
+::
+
+  # Create a 1D array with 2 eleements, both 1s
+  np.ones(2)
   
-While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematicl operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
+Or even an empty array:
 
-Why use NumPy?
---------------
+::
 
-NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
+  # Create an empty array with 2 elements
+  np.empty(2)
+
+You can create an array with a range of elements:
+
+::
+
+  # Create a 1D array containing the numbers 0,1,2,3
+  np.arange(4)
+
+And even an array that contains a range of evenly spaced interval. To do this, you will specify the first and last number and the step size.
+
+::
+
+  # Create an array that contains the numbers 2,4,6,8
+  np.arange(2,9,2)
+
+It's simple to create an array where the values are spaced linearly in an interval:
+
+::
+
+  #Create an array containing the numbers 0,2.5,5,7.5,10
+  np.linspace(0,10,5)
+
+Adding, removing, and sorting elements
+--------------------------------------
+
+You can add elements to an array any time with np.append.
+
+If we start with this array:
+
+::
+
+  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+ 
+
+You can add elements to the end of the array with
+
+::
+
+  np.append(arr, [1,2])
+
+**Output**
+
+::
+
+  array([1, 2, 3, 4, 5, 6, 7, 8, 1, 2])
+
+You can delete an element with np.delete. 
+
+::
+
+  # Delete the element in position 1
+  np.delete(arr, 1)
+
+**Output**
+
+::
+
+  array([1, 3, 4, 5, 6, 7, 8])
+
+Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. Read more `here <
+
+If you start with this array:
+
+::
+
+  arr2 = np.array([2, 1, 5, 3, 7, 4, 6, 8])
+
+You can quickly sort the numbers in ascending order with:
+
+::
+
+  np.sort(arr2)
+
+**Output**
+
+::
+
+  array([1, 2, 3, 4, 5, 6, 7, 8])
+
+
 
 How do you know the shape and size of an array?
 -----------------------------------------------
@@ -198,6 +300,12 @@ How to create an array from existing data
 Indexing and Slicing
 --------------------
 
+
+We can index and slice NumPy arrays in the same ways we can slice Python lists:
+
+.. image:: images/np_indexing.png
+
+
 ::
 
    # create a 1-D array
@@ -212,10 +320,6 @@ Indexing and Slicing
 
     1
 
-We can index and slice NumPy arrays in the same ways we can slice Python lists:
-
-.. image:: images/np_indexing.png
-
 - **Basic array operations(np.sum, np.dot)**
 
   - Operations on a single array
@@ -224,7 +328,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists:
 
   - Binary operators
 
-nce you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
+Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
 
 .. image:: images/np_array_dataones.png
 
@@ -259,8 +363,8 @@ There are times when you might want to carry out an operation between an array a
 
 NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
 
-How do I find the mean, median, maximum, and more?
---------------------------------------------------
+How do I find the mean of an array?
+-----------------------------------
 
 NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
@@ -666,8 +770,11 @@ You can also use the `ones()`, `zeros()`, and `random()` methods to create a mat
 
 .. image:: images/np_ones_zeros_matrix.png
 
-- How to get the unique items and the counts
-- How to get index locations that satisfy a given condition 
+How to get the unique items and the counts
+------------------------------------------
+
+How to get index locations that satisfy a given condition 
+---------------------------------------------------------
 
 Transposing and reshaping a matrix
 ----------------------------------
@@ -685,20 +792,29 @@ You may need to switch the dimensions of a matrix. This can happen when, for exa
 
 .. image:: images/np_reshape.png
 
-- How to reverse
+How to reverse
+--------------
  
-  - How to reverse the rows
+**How to reverse the rows**
  
-  - How to reverse the whole array
+**How to reverse the whole array**
 
-- Reshaping and Flattening multidimensional arrays
+Reshaping and Flattening multidimensional arrays
+------------------------------------------------
   
   - flatten vs ravel
 
-- How to import and export data as a CSV
-- How to save and load NumPy objects
-- How to apply a function column-wise or row-wise
-- How to convert a 1D array into a 2D array (how to add a new axis)
+How to import and export data as a CSV
+--------------------------------------
+
+How to save and load NumPy objects
+----------------------------------
+
+How to apply a function column-wise or row-wise
+-----------------------------------------------
+
+How to convert a 1D array into a 2D array (how to add a new axis)
+-----------------------------------------------------------------
 
 Formulas:
 ---------
@@ -726,6 +842,35 @@ In this example, both the predictions and labels vectors contain three values, m
 .. image:: images/np_MSE_explanation2.png
 
 - **How to plot arrays, very basic with Matplotlib**
+
+If you need to generate a plot for your values, it's very simple with Matplotlib. 
+
+For example, you may have an array like this one:
+
+::
+
+  A = np.array([2, 1, 5, 7, 4, 6, 8, 14, 10, 9, 18, 20, 22])
+
+If you already have Matplotlib installed, you can import it with
+
+::
+  
+  import matplotlib.pyplot as plt
+  # If you're using Jupyter Notebook, you may also want to run the following line of code to display your code in the notebook
+  %matplotlib inline
+
+All you need to do to plot your values is run
+
+::
+
+  plt.plot(A)
+  plt.show()
+
+**Output**
+
+.. iimage:: images/np_matplotlib.png
+
+
 - **How to read a docstring with `?` and source code with `??` in IPython/Jupyter**
 
 - **More useful functions:**
