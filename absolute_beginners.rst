@@ -7,7 +7,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 Welcome to NumPy!
 -----------------
 
-NumPy is an open source numerical Python library that's used in almost every field of science and engineering. It' i's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
+NumPy (**Num**erical **Py**thon) is an open source Python library that's used in almost every field of science and engineering. It's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
 
 The NumPy library contains multidimentional array and matrix data structures. It provides **ndarray**, a homogeneous n-dimensional array object with methods to efficiently operate on it. NumPy can be used to perform a wide variety of mathematical operations on arrays.  It enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
 
@@ -947,13 +947,13 @@ How to read a docstring with `?` and source code with `??` in IPython/Jupyter
 More useful functions
 ---------------------
 
-  - np.clip
-  
-  - np.digitize
-  
-  - np.bincount
-  
-  - np.histogram
+- np.clip
+
+- np.digitize
+
+- np.bincount
+
+- np.histogram
 
 
 
