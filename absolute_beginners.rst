@@ -990,7 +990,8 @@ If you already have Matplotlib installed, you can import it with
 ::
   
   import matplotlib.pyplot as plt
-  # If you're using Jupyter Notebook, you may also want to run the following line of code to display your code in the notebook
+  # If you're using Jupyter Notebook, you may also want to run the following line of code
+   to display your code in the notebook
   %matplotlib inline
 
 All you need to do to plot your values is run
