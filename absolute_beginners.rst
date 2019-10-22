@@ -984,8 +984,7 @@ For example, you can plot a 1D array like this:
 
   x = np.linspace(0, 5, 20)
   y = np.linspace(0, 10, 20)
-  plt.plot(x, y)       # plot line    
-  plt.plot(x, y, 'o')  # plot dots
+  plt.plot(x, y)
 
 .. image:: images/np_matplotlib1.png
     :scale: 50 %
