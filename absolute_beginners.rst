@@ -961,6 +961,7 @@ For example, you can plot a 1D array like this:
   plt.plot(x, y, 'o')  # plot dots
 
 .. image:: images/np_matplotlib1.png
+  :scale: 50 %
 
 It's simple to take advantage of the visualization power of Matplotlib.
 
@@ -972,6 +973,7 @@ It's simple to take advantage of the visualization power of Matplotlib.
   plt.colorbar()
 
 .. image:: images/np_matplotlib2.png
+  :scale: 50 %
 
 To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_.
 
