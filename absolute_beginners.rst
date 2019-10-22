@@ -1016,7 +1016,7 @@ For example, you can plot a 1D array like this:
 .. image:: images/np_matplotlib1.png
     :scale: 50 %
 
-Or any number of other visualization options. It's simple to take advantage of the visualization power of Matplotlib.
+With Matplotlib, you have access to an enormous number of visualization options.
 
 ::
 
