@@ -16,7 +16,7 @@ Installing NumPy
   
 To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here <https://www.scipy.org/install.html>`_.
 
-If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
+If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
   
 If you already have Python, you can install NumPy with
 
@@ -95,7 +95,13 @@ All you need to do to create a simple array is pass a list to it. If you choose 
     import numpy as np
 
     # create a 1-D array
-    a = np.array([1,2,3])
+    a = np.array([1, 2, 3])
+
+The default data type is floating point and you can explicity specify which data type you want any time:
+
+::
+
+  b = np.array([1, 2, 3], dtype=float)
 
 You can visualize your array this way:
 
@@ -152,6 +158,12 @@ It's simple to create an array where the values are spaced linearly in an interv
 ::
 
   array([ 0. ,  2.5,  5. ,  7.5, 10. ])
+
+While the default data type is floating point, you can expecity specify which data type you want:
+
+::
+
+  array = np.
 
 Adding, removing, and sorting elements
 --------------------------------------
@@ -253,7 +265,7 @@ For example:
 Can you reshape an array?
 -------------------------
   
-You can! 
+**You can!**
 
 ::
 
@@ -938,6 +950,28 @@ All you need to do to plot your values is run
 **Output**
 
 .. image:: images/np_matplotlib.png
+
+For example, you can plot a 1D array like this:
+
+::
+
+  x = np.linspace(0, 5, 20)
+  y = np.linspace(0, 10, 20)
+  plt.plot(x, y)       # plot line    
+  plt.plot(x, y, 'o')  # plot dots
+
+.. image:: images/np_matplotlib1.png
+
+It's simple to take advantage of the visualization power of Matplotlib.
+
+::
+
+  image = np.random.rand(40, 40)
+  plt.imshow(image, cmap=plt.cm.magma)
+
+  plt.colorbar()
+
+.. image:: images/np_matplotlib2.png
 
 To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_.
 
