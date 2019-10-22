@@ -114,12 +114,24 @@ Besides creating an array from a sequence of elements, you can easily create an 
   # Create a 1D array with 2 elements, both 0s
   np.zeros(2)
 
+**Output:**
+
+::
+
+  array([0., 0.])
+
 Or an array filled with 1s:
 
 ::
 
   # Create a 1D array with 2 eleements, both 1s
   np.ones(2)
+
+**Output:**
+
+::
+
+  array([1., 1.])
   
 Or even an empty array:
 
@@ -135,13 +147,19 @@ You can create an array with a range of elements:
   # Create a 1D array containing the numbers 0,1,2,3
   np.arange(4)
 
+**Output:**
+
+::
+
+  array([0, 1, 2, 3])
+
 And even an array that contains a range of evenly spaced interval. To do this, you will specify the first and last number and the step size.
 
 ::
 
   np.arange(2,9,2)
 
-**Output**
+**Output:**
 
 ::
 
@@ -153,7 +171,7 @@ It's simple to create an array where the values are spaced linearly in an interv
 
   np.linspace(0,10,5)
 
-**Output**
+**Output:**
 
 ::
 
@@ -168,11 +186,15 @@ While the default data type is floating point, you can expecity specify which da
 Adding, removing, and sorting elements
 --------------------------------------
 
+Let's take advantage of:
+
 ::
 
   np.append()
   np.delete()
   np.sort()
+
+**Append**
 
 If we start with this array:
 
@@ -192,6 +214,8 @@ You can add elements to an array any time with np.append.
 
   array([1, 2, 3, 4, 5, 6, 7, 8, 1, 2])
 
+**Delete**
+
 You can delete an element with np.delete. 
 
 ::
@@ -204,6 +228,8 @@ You can delete an element with np.delete.
 ::
 
   array([1, 3, 4, 5, 6, 7, 8])
+
+**Sort**
 
 Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. Read more about sorting an array `here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
 
@@ -989,7 +1015,7 @@ For example, you can plot a 1D array like this:
 .. image:: images/np_matplotlib1.png
     :scale: 50 %
 
-Or a 2D array. It's simple to take advantage of the visualization power of Matplotlib.
+Or any number of other visualization options. It's simple to take advantage of the visualization power of Matplotlib.
 
 ::
 
