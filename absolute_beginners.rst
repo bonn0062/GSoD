@@ -245,7 +245,7 @@ You can quickly sort the numbers in ascending order with:
 
   np.sort(arr2)
 
-**Output**
+**Output:**
 
 ::
 
@@ -359,7 +359,7 @@ You can create a new array from a section of your array with:
   arr1=arr[3:8]
   arr1
 
-**Output**
+**Output:**
 
 ::
 
@@ -449,7 +449,7 @@ Basic operations are simple with NumPy. If you want to find the sum of the eleme
   # Add all of the elements in the array
   a.sum()
 
-**Output**
+**Output:**
 
 ::
 
@@ -464,7 +464,7 @@ To add the rows or the columns in a 2D array, you would specify the axis.
   # Sum the rows
   b.sum(axis=0)
 
-**Output**
+**Output:**
 
 ::
 
@@ -475,7 +475,7 @@ To add the rows or the columns in a 2D array, you would specify the axis.
   # Sum the columns
   b.sum(axis=1)
 
-**Output**
+**Output:**
 
 ::
 
@@ -576,7 +576,7 @@ Use `.shape` if you want to quickly find the shape of your array:
 
   np_arr.shape
 
-**Output**
+**Output:**
 
 ::
 
@@ -1000,7 +1000,7 @@ All you need to do to plot your values is run
   plt.plot(A)
   plt.show()
 
-**Output**
+**Output:**
 
 .. image:: images/np_matplotlib.png
 
