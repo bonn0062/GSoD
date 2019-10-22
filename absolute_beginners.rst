@@ -7,7 +7,7 @@ This is a working outline for a future section introducing NumPy to absolute beg
 Welcome to NumPy!
 -----------------
 
-NumPy (**Num**erical **Py**thon) is an open source Python library that's used in almost every field of science and engineering. It's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
+NumPy (**Numerical Python**) is an open source Python library that's used in almost every field of science and engineering. It's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
 
 The NumPy library contains multidimentional array and matrix data structures. It provides **ndarray**, a homogeneous n-dimensional array object with methods to efficiently operate on it. NumPy can be used to perform a wide variety of mathematical operations on arrays.  It enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
 
@@ -265,7 +265,7 @@ For example:
 Can you reshape an array?
 -------------------------
   
-**You can!**
+**Yes!**
 
 ::
 
@@ -313,7 +313,34 @@ Optional parameters you can specify are:
 How to create an array from existing data
 -----------------------------------------
 
-  - reading in a CSV
+You can easily create a new array from a section of an existing array. Let's say you have this array:
+
+::
+
+  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  arr
+
+**Output**
+
+::
+
+  array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+You can create a new array from a section of your array with:
+
+::
+
+  arr1=arr[3:8]
+  arr1
+
+**Output**
+
+::
+
+  array([4, 5, 6, 7, 8])
+
+
+It's also simple to read in a CSV. The best and easiest way to do this is to use Pandas.
 
 ::
 
@@ -335,7 +362,7 @@ How to create an array from existing data
 Indexing and Slicing
 --------------------
 
-We can index and slice NumPy arrays in the same ways we can slice Python lists:
+We can index and slice NumPy arrays in the same ways we can slice Python lists.
 
 ::
 
@@ -963,7 +990,7 @@ For example, you can plot a 1D array like this:
 .. image:: images/np_matplotlib1.png
     :scale: 50 %
 
-It's simple to take advantage of the visualization power of Matplotlib.
+Or a 2D array. It's simple to take advantage of the visualization power of Matplotlib.
 
 ::
 
