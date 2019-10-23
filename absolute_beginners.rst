@@ -343,7 +343,7 @@ For example:
    [2 3]
    [4 5]]
 
-Optional parameters you can specify are:
+You can specify a few optional parameters.
 
 ::
 
@@ -573,7 +573,7 @@ To add the rows or the columns in a 2D array, you would specify the axis.
 Broadcasting
 ------------
 
-There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your  "data" array might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
+There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your array (we'll name it "data") might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
 
 ::
 
@@ -583,7 +583,7 @@ There are times when you might want to carry out an operation between an array a
 
 NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**.
 
-How do I find the mean of an array?
+More useful array operations
 -----------------------------------
 
 NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
@@ -596,19 +596,23 @@ NumPy also performs aggregation functions. In addition to `min`,  `max`, and `su
 
 .. image:: images/np_aggregation.png
 
-It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate of the entire array:
+Let's start with this array, called "A"
 
 ::
 
-  A = np.random.random((3, 4))
-  print(A)
-
-  # Result
  [[0.45053314 0.17296777 0.34376245 0.5510652 ]
  [0.54627315 0.05093587 0.40067661 0.55645993]
  [0.12697628 0.82485143 0.26590556 0.56917101]]
 
+It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate of the entire array. To find the sum or and the minimum of the elements in your array, simply run:
+
+::
+
   A.sum()
+
+Or
+
+::
 
   A.min()
 
@@ -636,7 +640,7 @@ You can easily specify which axis you want the aggregation function to be comput
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
-NumPy has a number of other very useful functions, which you can read about  `here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
+NumPy has a number of other very useful functions, `which you can read about here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
 
 How to inspect the size and shape of a NumPy array
 --------------------------------------------------
@@ -673,7 +677,7 @@ You can use `.shape` to quickly find the shape of your array:
 
 This output tells you that your array has three rows and four columns.
 
-You can just find the number of rows with:
+You can find just the number of rows by using np.shape[0:
 
 ::
 
@@ -689,7 +693,7 @@ You can just find the number of rows with:
 
   Number of Rows :  3
 
-Or the just the number of columns with:
+Or just the number of columns by specifying np.shape[1]:
 
 ::
 
@@ -719,7 +723,7 @@ It's also easy to find the total number of elements in your array:
 
   Total number of elements in array:  12
 
-You can also use np.shape() with a 1D array, of course.
+You can use np.shape() with a 1D array, of course.
 
 ::
 
