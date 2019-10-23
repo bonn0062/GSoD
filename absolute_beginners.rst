@@ -640,7 +640,7 @@ You can easily specify which axis you want the aggregation function to be comput
 
 The four values listed above correspond to the number of columns in your array. With a four-column array, you can expect to get four values as your result.
 
-NumPy has a number of other very useful functions, `which you can read about here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
+`Read more about functions here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
 
 How to inspect the size and shape of a NumPy array
 --------------------------------------------------
@@ -677,11 +677,9 @@ You can use `.shape` to quickly find the shape of your array:
 
 This output tells you that your array has three rows and four columns.
 
-You can find just the number of rows by using np.shape[0:
+You can find just the number of rows by specifying [0]:
 
 ::
-
-  # np_arr.shape[0]
 
   num_of_rows = np_arr.shape[0]
  
@@ -693,11 +691,9 @@ You can find just the number of rows by using np.shape[0:
 
   Number of Rows :  3
 
-Or just the number of columns by specifying np.shape[1]:
+Or just the number of columns by specifying [1]:
 
 ::
-
-  # np_arr.shape[1]
 
   num_of_columns = np_arr.shape[1]
  
