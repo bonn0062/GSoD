@@ -270,7 +270,12 @@ You can quickly sort the numbers in ascending order with:
 
   array([1, 2, 3, 4, 5, 6, 7, 8])
 
+In addition to sort, which returns a sorted copy of an array, you can use:
 
+**argsort**, which is an `indirect sort along a specified axis <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.argsort.html#numpy.argsort>`_,
+**lexsort**, which is an `indirect stable sort on multiple keys <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.lexsort.html#numpy.lexsort>`_,
+**searchsorted**, which will `find elements in a sorted array <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.searchsorted.html#numpy.searchsorted>`_, 
+**partition**, which is a `partial sort  <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.partition.html#numpy.partition>`_.
 
 How do you know the shape and size of an array?
 -----------------------------------------------
@@ -490,7 +495,31 @@ If you wanted to split your array after the third and fourth column, you'd run:
         [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
         [17, 18, 19, 20, 21, 22, 23, 24]])]
 
-It's also simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
+You can also use the `view` method to create a new array object that looks at the same data (a *shallow copy*)
+
+Let's say you create this array:
+
+::
+
+  a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+
+You can create a new array with the same data using:
+
+::
+
+  b = np_arr.view()
+
+Using the `copy` method makes a complete copy of the array and its data (a *deep copy*). To use this on your array, you could run:
+
+::
+
+  c = a.copy()
+ 
+
+Importing and exporting a CSV
+-----------------------------
+
+It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
 
 ::
 
@@ -503,6 +532,76 @@ It's also simple to read in a CSV that contains existing information. The best a
   x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
 
 .. image:: images/np_pandas.png
+
+It's simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to  create a pandas dataframe from the values in your array and then write the data frame to a CSV file with pandas.
+
+If you created this array:
+
+::
+
+  a = np.random.randn(4, 4)
+  a
+
+**Output:**
+::
+  
+  array([[-2.58289208,  0.43014843, -1.24082018,  1.59572603],
+       [ 0.99027828,  1.17150989,  0.94125714, -0.14692469],
+       [ 0.76989341,  0.81299683, -0.95068423,  0.11769564],
+       [ 0.20484034,  0.34784527,  1.96979195,  0.51992837]])
+
+You could create a Pandas dataframe
+
+::
+
+  df = pd.DataFrame(a)
+  print(df)
+
+**Output:**
+::
+  
+            0         1         2         3
+0 -2.582892  0.430148 -1.240820  1.595726
+1  0.990278  1.171510  0.941257 -0.146925
+2  0.769893  0.812997 -0.950684  0.117696
+3  0.204840  0.347845  1.969792  0.519928
+​
+You can easily save your dataframe with
+
+::
+
+  df.to_csv('pd.csv')
+
+And read your CSV with
+
+::
+
+  pd.read_csv('pd.csv')
+
+  .. image:: images/np_readcsv.png
+
+NumPy also has a built in `savetxt` method that allows you to save your array.
+
+::
+
+  np.savetxt('np.csv', a, fmt='%.2f', delimiter=',', header=" 1,  2,  3,  4")
+
+You can read your saved CSV with a command such as
+
+::
+
+  cat np.csv
+
+**Output:**
+
+::
+
+#  1,  2,  3,  4
+-2.58,0.43,-1.24,1.60
+0.99,1.17,0.94,-0.15
+0.77,0.81,-0.95,0.12
+0.20,0.35,1.97,0.52
+
 
 Basic array operations
 ----------------------
@@ -834,34 +933,7 @@ You can also use np.size() with 1D arrays:
 
   Length of 1D numpy array :  8
 
-- **How to check whether a list is empty or not**
-- **How to represent missing values and infinite values**
-
-- **Sorting an array**
-
-- **How to concatenate two arrays**
-  
-  - column-wise
-
-  - row-wise
-
-  - np.concatenate, np.stack, np.vstack, np.hstack
-
-- **How to sort an array**
-  
-  - based on one (or more) columns
-    
-    - np.sort
-    
-    - np.argsort
-
-    - np.argmin
-
-    - np.argsort
-
-  - based on two or more columns
-    
-    - np.lexsort
+Remember that if you check the size of your array and it equals 0, your array is empty.
 
 
 Creating Matrices
