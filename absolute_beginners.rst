@@ -2,7 +2,7 @@
 NumPy: The Absolute Basics for Beginners
 ****************************************
 
-This is a working outline for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
+This is a working documentl for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
 Welcome to NumPy!
 -----------------
@@ -14,7 +14,7 @@ The NumPy library contains multidimentional array and matrix data structures. It
 Installing NumPy
 ----------------
   
-To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can find all of the details `here <https://www.scipy.org/install.html>`_.
+To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can `find all of the details here <https://www.scipy.org/install.html>`_.
 
 If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
   
@@ -80,7 +80,7 @@ An array is usually a fixed-size container of items of the same type and size. T
 
 Array attributes reflect information that is intrinsic to the array itself. If you need to get and even set poperties of an array without creating a new array, you can often access an array through its attributes. 
 
-Read more about array attributes `here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
+`Read more about array attributes here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
 
 
 How to create a basic array
@@ -88,7 +88,7 @@ How to create a basic array
 
 To create a NumPy array, you can use the function `np.array()`
 
-All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. You can find more information about data types `here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
+All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. `You can find more information about data types here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
 ::
 
@@ -231,7 +231,7 @@ You can delete an element with np.delete.
 
 **Sort**
 
-Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. Read more about sorting an array `here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
+Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. `Read more about sorting an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
 
 If you start with this array:
 
@@ -356,7 +356,7 @@ You can create a new array from a section of your array with:
 
 ::
 
-  arr1=arr[3:8]
+  arr1 = arr[3:8]
   arr1
 
 **Output:**
@@ -365,8 +365,66 @@ You can create a new array from a section of your array with:
 
   array([4, 5, 6, 7, 8])
 
+You can stack two existing arrays, both vertically and horizontally. Let's say you have these two arrays:
 
-It's also simple to read in a CSV. The best and easiest way to do this is to use Pandas.
+::
+
+  a_1 = np.array([[1, 1], [2, 2]])
+  a_1
+
+**Output:**
+
+::
+
+  array([[1, 1],
+       [2, 2]])
+
+and
+
+::
+
+  a_2 = np.array([[3, 3], [4, 4]])
+  a_2
+
+::
+
+**Output:**
+
+::
+
+  array([[3, 3],
+       [4, 4]])
+
+You can stack them vertically with vstack:
+
+::
+
+  np.vstack((a_1, a_2))
+
+**Output:**
+
+::
+
+  array([[1, 1],
+       [2, 2],
+       [3, 3],
+       [4, 4]])
+
+Stacking them horizontally is simple with hstack:
+
+::
+
+  np.hstack((a_1, a_2))
+
+**Output:**
+
+::
+
+  array([[1, 1, 3, 3],
+       [2, 2, 4, 4]])
+
+
+It's also simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
 
 ::
 
@@ -570,7 +628,7 @@ For example, if you created this array:
   [ 5  6  7  8]
   [ 9 10 11 12]]
 
-Use `.shape` if you want to quickly find the shape of your array:
+You can use `.shape` to quickly find the shape of your array:
 
 ::
 
@@ -582,7 +640,9 @@ Use `.shape` if you want to quickly find the shape of your array:
 
   (3, 4)
 
-You can find the number of rows with:
+This output tells you that your array has three rows and four columns.
+
+You can just find the number of rows with:
 
 ::
 
@@ -598,7 +658,7 @@ You can find the number of rows with:
 
   Number of Rows :  3
 
-Or the number of columns:
+Or the just the number of columns with:
 
 ::
 
@@ -881,6 +941,34 @@ There are often instances where we want NumPy to initialize the values of an arr
 - np.zeros
 
 - np.ones
+
+The use of random number generatiion is an important part of the configuration and evaluation of machine learning algorithms. Whether you neeed to randomly initialize weights in an artificial neural network, split data into random sets, or randomly shuffle your dataset, being able to generate random numbers (actaullyrepeatable pseudo-random numbers) is essential.
+
+You have a number of options when using NumPy for random number generation. Random Generator is NumPy's replacement for RandomState. The main difference between them is that Generator relies on an additional BitGenerator to manage state and generate the random bits, which are transformed into random values.
+
+With Generator.integers, you can generate random integers from low (remeber that this is inclusive with NumPy) to high (exclusive). You can set *endopoint=True* to make the high number inclusive. 
+
+For example, you can get random values in a given state 
+
+
+
+
+
+
+
+You can generate a 2 x 4 array of random integers between 0 and 4 with
+
+::
+
+  rng.integers(5, size=(2, 4))
+
+**Output:**
+
+::
+
+  array([[4, 0, 2, 1],
+       [3, 2, 2, 0]])
+
 
 - Random Number Generation (update below to numpy.random.Generator)
 
