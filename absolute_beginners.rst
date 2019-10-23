@@ -516,88 +516,6 @@ Using the `copy` method makes a complete copy of the array and its data (a *deep
   c = a.copy()
  
 
-Importing and exporting a CSV
------------------------------
-
-It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
-
-::
-
-  import pandas as pd
-
-  # If all oof your columns are the same type:
-  x = pd.read_csv('music.csv').values
-
-  # You can also simply select the columns you need:
-  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
-
-.. image:: images/np_pandas.png
-
-It's simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to  create a pandas dataframe from the values in your array and then write the data frame to a CSV file with pandas.
-
-If you created this array "a"
-
-::
-
-  [[-2.58289208,  0.43014843, -1.24082018,  1.59572603],
-       [ 0.99027828,  1.17150989,  0.94125714, -0.14692469],
-       [ 0.76989341,  0.81299683, -0.95068423,  0.11769564],
-       [ 0.20484034,  0.34784527,  1.96979195,  0.51992837]]
-
-You could create a Pandas dataframe
-
-::
-
-  df = pd.DataFrame(a)
-  print(df)
-
-**Output:**
-
-::
-  
-            0         1         2         3
-  0 -2.582892  0.430148 -1.240820  1.595726
-  1  0.990278  1.171510  0.941257 -0.146925
-  2  0.769893  0.812997 -0.950684  0.117696
-  3  0.204840  0.347845  1.969792  0.519928
-  ​
-You can easily save your dataframe with
-
-::
-
-  df.to_csv('pd.csv')
-
-And read your CSV with
-
-::
-
-  pd.read_csv('pd.csv')
-
-.. image:: images/np_readcsv.png
-
-NumPy also has a built in `savetxt` method that allows you to save your array.
-
-::
-
-  np.savetxt('np.csv', a, fmt='%.2f', delimiter=',', header=" 1,  2,  3,  4")
-
-You can read your saved CSV with a command such as
-
-::
-
-  cat np.csv
-
-**Output:**
-
-::
-
-  #  1,  2,  3,  4
-  -2.58,0.43,-1.24,1.60
-  0.99,1.17,0.94,-0.15
-  0.77,0.81,-0.95,0.12
-  0.20,0.35,1.97,0.52
-
-
 Basic array operations
 ----------------------
 
@@ -1161,7 +1079,92 @@ In this example, both the predictions and labels vectors contain three values, m
 
 .. image:: images/np_MSE_explanation2.png
 
-- **How to plot arrays, very basic with Matplotlib**
+
+
+Importing and exporting a CSV
+-----------------------------
+
+It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
+
+::
+
+  import pandas as pd
+
+  # If all oof your columns are the same type:
+  x = pd.read_csv('music.csv').values
+
+  # You can also simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
+
+It's simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to  create a pandas dataframe from the values in your array and then write the data frame to a CSV file with pandas.
+
+If you created this array "a"
+
+::
+
+  [[-2.58289208,  0.43014843, -1.24082018,  1.59572603],
+       [ 0.99027828,  1.17150989,  0.94125714, -0.14692469],
+       [ 0.76989341,  0.81299683, -0.95068423,  0.11769564],
+       [ 0.20484034,  0.34784527,  1.96979195,  0.51992837]]
+
+You could create a Pandas dataframe
+
+::
+
+  df = pd.DataFrame(a)
+  print(df)
+
+**Output:**
+
+::
+  
+            0         1         2         3
+  0 -2.582892  0.430148 -1.240820  1.595726
+  1  0.990278  1.171510  0.941257 -0.146925
+  2  0.769893  0.812997 -0.950684  0.117696
+  3  0.204840  0.347845  1.969792  0.519928
+  ​
+You can easily save your dataframe with
+
+::
+
+  df.to_csv('pd.csv')
+
+And read your CSV with
+
+::
+
+  pd.read_csv('pd.csv')
+
+.. image:: images/np_readcsv.png
+
+You can also save your array with the NumPy "savetxt" method.
+
+::
+
+  np.savetxt('np.csv', a, fmt='%.2f', delimiter=',', header=" 1,  2,  3,  4")
+
+Read your saved CSV any time with a command such as
+
+::
+
+  cat np.csv
+
+**Output:**
+
+::
+
+  #  1,  2,  3,  4
+  -2.58,0.43,-1.24,1.60
+  0.99,1.17,0.94,-0.15
+  0.77,0.81,-0.95,0.12
+  0.20,0.35,1.97,0.52
+
+
+Plotting arrays with Matplotlib
+-------------------------------
 
 If you need to generate a plot for your values, it's very simple with Matplotlib. 
 
