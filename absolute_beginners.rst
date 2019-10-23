@@ -423,6 +423,44 @@ Stacking them horizontally is simple with hstack:
   array([[1, 1, 3, 3],
        [2, 2, 4, 4]])
 
+You can also split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
+
+Let's say you have this array:
+
+::
+
+  array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
+       [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
+
+For example, if you want to split an array into three equally shaped arrays, you can run:
+
+::
+
+  np.hsplit(a_3,3)
+
+**Output:**
+
+::
+
+  [array([[ 1,  2,  3,  4],
+        [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
+        [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
+        [21, 22, 23, 24]])]
+
+If you want to split your array after the third and fourth column, run
+
+::
+
+  np.hsplit(a_3,(3,4))
+
+**Output:**
+
+::
+
+  [array([[ 1,  2,  3],
+        [13, 14, 15]]), array([[ 4],
+        [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
+        [17, 18, 19, 20, 21, 22, 23, 24]])]
 
 It's also simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
 
