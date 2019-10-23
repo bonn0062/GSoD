@@ -343,13 +343,6 @@ You can easily create a new array from a section of an existing array. Let's say
 
 ::
 
-  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-  arr
-
-**Output**
-
-::
-
   array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
 
 You can create a new array from a section of your array with:
@@ -369,26 +362,10 @@ You can stack two existing arrays, both vertically and horizontally. Let's say y
 
 ::
 
-  a_1 = np.array([[1, 1], [2, 2]])
-  a_1
-
-**Output:**
-
-::
-
   array([[1, 1],
        [2, 2]])
 
 and
-
-::
-
-  a_2 = np.array([[3, 3], [4, 4]])
-  a_2
-
-::
-
-**Output:**
 
 ::
 
