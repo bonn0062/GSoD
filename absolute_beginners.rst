@@ -76,9 +76,20 @@ You might occasionally hear an array referred to as an "ndarray," which is short
 
 **What are the attributes of an array?**
 
-An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is atuple of non-negative integers that specify the sizes of each dimension. Just like in other Python container objects, the contents of an array can be accessed and modified by indexing or slicing the array. Different arrays can share the same data, so changes made on one array might be visible in another. 
+An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is atuple of non-negative integers that specify the sizes of each dimension. 
 
-Array attributes reflect information that is intrinsic to the array itself. If you need to get and even set poperties of an array without creating a new array, you can often access an array through its attributes. 
+In NumPy, dimensions are called **axes**. This means that if you have a 2D array that looks like this:
+
+::
+
+  [[0., 0., 0.],
+   [1., 1., 1.]]
+
+Your array has 2 axes. The first axis has a length of 2 and the second axis has a length of 3.
+
+Just like in other Python container objects, the contents of an array can be accessed and modified by indexing or slicing the array. Different arrays can share the same data, so changes made on one array might be visible in another. 
+
+Array **attributes** reflect information intrinsic to the array itself. If you need to get and even set poperties of an array without creating a new array, you can often access an array through its attributes. 
 
 `Read more about array attributes here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
 
@@ -133,7 +144,7 @@ Or an array filled with 1s:
 
   array([1., 1.])
   
-Or even an empty array:
+Or even an empty array! The function *empty* creates an array whose initial content iis random and depends on the state of the memory. 
 
 ::
 
@@ -177,11 +188,19 @@ It's simple to create an array where the values are spaced linearly in an interv
 
   array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 
-While the default data type is floating point, you can expecity specify which data type you want:
+While the default data type is floating point (float64), you can expecity specify which data type you want using 'dtype'.
 
 ::
 
-  array = np.
+  array = np.ones(2, dtype=int)
+  array
+
+**Output:**
+
+::
+
+  array([1, 1])
+
 
 Adding, removing, and sorting elements
 --------------------------------------
@@ -194,14 +213,14 @@ Let's take advantage of:
   np.delete()
   np.sort()
 
-**Append**
-
 If we start with this array:
 
 ::
 
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
  
+
+**Append**
 
 You can add elements to an array any time with np.append.
 ::
@@ -258,9 +277,9 @@ How do you know the shape and size of an array?
 
 **ndarray.ndim** will tell you the number of axes, or dimensions, of the array.
 
-**ndarray.shape** will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2D-array with 2 rows and 3 columns, the shape of your array is (2,3).
+**ndarray.shape** will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2D array with 2 rows and 3 columns, the shape of your array is (2,3).
 
-**ndarray.size** will tell you the total number of elements of the array. This is, in other words, the product of the elements of the array's shape.
+**ndarray.size** will tell you the total number of elements of the array. This is the *product* of the elements of the array's shape.
 
 For example:
 
@@ -336,128 +355,6 @@ Optional parameters you can specify are:
 
 **order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
 
-How to create an array from existing data
------------------------------------------
-
-You can easily create a new array from a section of an existing array. Let's say you have this array:
-
-::
-
-  array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
-
-You can create a new array from a section of your array with:
-
-::
-
-  arr1 = arr[3:8]
-  arr1
-
-**Output:**
-
-::
-
-  array([4, 5, 6, 7, 8])
-
-You can stack two existing arrays, both vertically and horizontally. Let's say you have these two arrays:
-
-::
-
-  array([[1, 1],
-       [2, 2]])
-
-and
-
-::
-
-  array([[3, 3],
-       [4, 4]])
-
-You can stack them vertically with vstack:
-
-::
-
-  np.vstack((a_1, a_2))
-
-**Output:**
-
-::
-
-  array([[1, 1],
-       [2, 2],
-       [3, 3],
-       [4, 4]])
-
-Stacking them horizontally is simple with hstack:
-
-::
-
-  np.hstack((a_1, a_2))
-
-**Output:**
-
-::
-
-  array([[1, 1, 3, 3],
-       [2, 2, 4, 4]])
-
-You can also split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
-
-Let's say you have this array:
-
-::
-
-  array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
-       [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
-
-For example, if you want to split an array into three equally shaped arrays, you can run:
-
-::
-
-  np.hsplit(a_3,3)
-
-**Output:**
-
-::
-
-  [array([[ 1,  2,  3,  4],
-        [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
-        [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
-        [21, 22, 23, 24]])]
-
-If you want to split your array after the third and fourth column, run
-
-::
-
-  np.hsplit(a_3,(3,4))
-
-**Output:**
-
-::
-
-  [array([[ 1,  2,  3],
-        [13, 14, 15]]), array([[ 4],
-        [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
-        [17, 18, 19, 20, 21, 22, 23, 24]])]
-
-It's also simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
-
-::
-
-  import pandas as pd
-
-  # If all oof your columns are the same type:
-  x = pd.read_csv('music.csv').values
-
-  # You can also simply select the columns you need:
-  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
-
-.. image:: images/np_pandas.png
-
-- **How to create a new array from an existing array**
-- **How to specify the datatype**
-  
-- Examples of commonly used NumPy dtypes
-
 Indexing and Slicing
 --------------------
 
@@ -487,6 +384,125 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists.
 
 
 .. image:: images/np_indexing.png
+
+How to create an array from existing data
+-----------------------------------------
+
+You can easily create a new array from a section of an existing array. Let's say you have this array:
+
+::
+
+  array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+You can create a new array from a section of your array any time by specifying where you want to slice your array.
+
+::
+
+  arr1 = arr[3:8]
+  arr1
+
+**Output:**
+
+::
+
+  array([4, 5, 6, 7, 8])
+
+Here, you grabbed a section of your array from index position 3 through index position 8.
+
+You can also stack two existing arrays, both vertically and horizontally. Let's say you have two arrays. This one:
+
+::
+
+  array([[1, 1],
+       [2, 2]])
+
+and this one:
+
+::
+
+  array([[3, 3],
+       [4, 4]])
+
+You can stack them vertically with vstack:
+
+::
+
+  np.vstack((a_1, a_2))
+
+**Output:**
+
+::
+
+  array([[1, 1],
+       [2, 2],
+       [3, 3],
+       [4, 4]])
+
+Or stack them horizontally with hstack:
+
+::
+
+  np.hstack((a_1, a_2))
+
+**Output:**
+
+::
+
+  array([[1, 1, 3, 3],
+       [2, 2, 4, 4]])
+
+You can also split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
+
+Let's say you have this array:
+
+::
+
+  array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
+       [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
+
+If you wanted to split this array into three equally shaped arrays, you would run:
+
+::
+
+  np.hsplit(a_3,3)
+
+**Output:**
+
+::
+
+  [array([[ 1,  2,  3,  4],
+        [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
+        [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
+        [21, 22, 23, 24]])]
+
+If you wanted to split your array after the third and fourth column, you'd run:
+
+::
+
+  np.hsplit(a_3,(3,4))
+
+**Output:**
+
+::
+
+  [array([[ 1,  2,  3],
+        [13, 14, 15]]), array([[ 4],
+        [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
+        [17, 18, 19, 20, 21, 22, 23, 24]])]
+
+It's also simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
+
+::
+
+  import pandas as pd
+
+  # If all oof your columns are the same type:
+  x = pd.read_csv('music.csv').values
+
+  # You can also simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
 
 Basic array operations
 ----------------------
