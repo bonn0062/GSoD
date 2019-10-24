@@ -948,29 +948,14 @@ There are often instances where we want NumPy to initialize the values of an arr
   
 .. image:: images/np_ones_zeros_random.png
 
-- np.linspace
-  
-- np.logspace
-
-- np.tile
-  
-- np.zeros
-
-- np.ones
+Generating random numbers
+-------------------------
 
 The use of random number generatiion is an important part of the configuration and evaluation of machine learning algorithms. Whether you neeed to randomly initialize weights in an artificial neural network, split data into random sets, or randomly shuffle your dataset, being able to generate random numbers (actaullyrepeatable pseudo-random numbers) is essential.
 
 You have a number of options when using NumPy for random number generation. Random Generator is NumPy's replacement for RandomState. The main difference between them is that Generator relies on an additional BitGenerator to manage state and generate the random bits, which are transformed into random values.
 
 With Generator.integers, you can generate random integers from low (remeber that this is inclusive with NumPy) to high (exclusive). You can set *endopoint=True* to make the high number inclusive. 
-
-For example, you can get random values in a given state 
-
-
-
-
-
-
 
 You can generate a 2 x 4 array of random integers between 0 and 4 with
 
@@ -986,19 +971,7 @@ You can generate a 2 x 4 array of random integers between 0 and 4 with
        [3, 2, 2, 0]])
 
 
-- Random Number Generation (update below to numpy.random.Generator)
-
-  - np.random.randn
-  
-  - np.random.randint
-  
-  - np.random.random
-  
-  - np.random.choice
-  
-  - np.random.RandomState, np.random.seed
-
-You can also use the `ones()`, `zeros()`, and `random()` methods to create a matrix if you give them a tuple describing the deminsions of the matrix.
+You can also use the `ones()`, `zeros()`, and `random()` methods to create an array if you give them a tuple describing the deminsions of the matrix.
 
 ::
 
@@ -1042,19 +1015,15 @@ Reshaping and Flattening multidimensional arrays
   
 - flatten vs ravel
 
-How to import and export data as a CSV
---------------------------------------
 
 How to save and load NumPy objects
 ----------------------------------
 
-How to apply a function column-wise or row-wise
------------------------------------------------
 
 How to convert a 1D array into a 2D array (how to add a new axis)
 -----------------------------------------------------------------
 
-Formulas:
+Formulas
 ---------
 
 Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
