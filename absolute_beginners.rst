@@ -52,7 +52,7 @@ NumPy gives you an enormous range of fast and efficient numerically-related opti
 
 **Why use NumPy?**
 
-NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types, which allow the code to be optimisted even further. 
+NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types. This allows the code to be optimisted even further. 
 
 What is an array?
 -----------------
@@ -76,7 +76,7 @@ You might occasionally hear an array referred to as an "ndarray," which is short
 
 **What are the attributes of an array?**
 
-An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is atuple of non-negative integers that specify the sizes of each dimension. 
+An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is a tuple of non-negative integers that specify the sizes of each dimension. 
 
 In NumPy, dimensions are called **axes**. This means that if you have a 2D array that looks like this:
 
@@ -89,7 +89,7 @@ Your array has 2 axes. The first axis has a length of 2 and the second axis has 
 
 Just like in other Python container objects, the contents of an array can be accessed and modified by indexing or slicing the array. Different arrays can share the same data, so changes made on one array might be visible in another. 
 
-Array **attributes** reflect information intrinsic to the array itself. If you need to get and even set poperties of an array without creating a new array, you can often access an array through its attributes. 
+Array **attributes** reflect information intrinsic to the array itself. If you need to get, or even set, poperties of an array without creating a new array, you can often access an array through its attributes. 
 
 `Read more about array attributes here <https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_.
 
@@ -144,7 +144,7 @@ Or an array filled with 1s:
 
   array([1., 1.])
   
-Or even an empty array! The function *empty* creates an array whose initial content iis random and depends on the state of the memory. 
+Or even an empty array! The function *empty* creates an array whose initial content is random and depends on the state of the memory. 
 
 ::
 
@@ -274,7 +274,7 @@ In addition to sort, which returns a sorted copy of an array, you can use:
 
 **argsort**, which is an `indirect sort along a specified axis <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.argsort.html#numpy.argsort>`_,
 **lexsort**, which is an `indirect stable sort on multiple keys <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.lexsort.html#numpy.lexsort>`_,
-**searchsorted**, which will `find elements in a sorted array <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.searchsorted.html#numpy.searchsorted>`_, 
+**searchsorted**, which will `find elements in a sorted array <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.searchsorted.html#numpy.searchsorted>`_, and 
 **partition**, which is a `partial sort  <https://docs.scipy.org/doc/numpy-1.17.0/reference/generated/numpy.partition.html#numpy.partition>`_.
 
 How do you know the shape and size of an array?
