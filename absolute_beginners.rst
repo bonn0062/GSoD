@@ -57,7 +57,7 @@ NumPy arrays are faster and more compact than Python lists. An array consumes le
 What is an array?
 -----------------
 
-An array is a central data structure of the NumPy library. It's a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the **array dtype**. 
+An array is a central data structure of the NumPy library. It's a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the array **dtype**. 
 
 An array can be indexed by a tuple of nonnegative integers, by booleans, by another array, or by integers. The **rank** of the array is the number of dimensions. The **shape** of the array is a tuple of integers giving the size of the array along each dimension.
 
@@ -366,8 +366,7 @@ You can specify a few optional parameters.
 
 **newshape** is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result wil be an array of that length. The shape should be compatible with the original shape.
 
-**order** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise.
-
+**order:** 'C' means to read/write the elements using C-like index order,  ‘F’ means to read / write the elements using Fortran-like index order, ‘A’ means to read / write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise. (This is an optional parameter and doesn't need to be specified.)
 
 Indexing and Slicing
 --------------------
@@ -396,6 +395,7 @@ We can index and slice NumPy arrays in the same ways we can slice Python lists.
   [2 3]
   [2 3]
 
+You can visualize it this way:
 
 .. image:: images/np_indexing.png
 
@@ -529,11 +529,11 @@ Using the `copy` method makes a complete copy of the array and its data (a *deep
 Basic array operations
 ----------------------
 
-Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones": 
+Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones" 
 
 .. image:: images/np_array_dataones.png
 
-You can easily add arrays together with the plus sign.
+You can easily add the arrays together with the plus sign.
 
 ::
 
@@ -596,7 +596,7 @@ To add the rows or the columns in a 2D array, you would specify the axis.
 Broadcasting
 ------------
 
-There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your array (we'll name it "data") might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with 
+There are times when you might want to carry out an operation between an array and a single number (also called *an operation between a vector and a scalar*). Your array (we'll call it "data") might, for example, contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with: 
 
 ::
 
@@ -929,6 +929,8 @@ Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped ov
 ::
 
   np.ones((4,3,2))
+
+Will print out like this:
 
 **Output:**
 
