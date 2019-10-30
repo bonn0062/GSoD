@@ -1037,19 +1037,21 @@ How to reverse
  
 NumPy's np.flip() function allows you to easily flip the contents of an array along an axis. You simply specify the array you would like to reverse and the axis. If you don't specify the axis, NumPy will flip or reverse the contents along all of the axes of your input array. 
 
-With a 1D array like this one
+**Reversing a 1D array**
+
+If you begin with a 1D array like this one:
 
 ::
 
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
-You can reverse it with 
+You can reverse it with: 
 
 ::
 
   reversedArr = np.flip(arr)
 
-If you want to print your reversed array, you could run
+If you want to print your reversed array, you could run:
 
 ::
 
@@ -1060,6 +1062,8 @@ If you want to print your reversed array, you could run
 ::
 
   Reversed Array:  [8 7 6 5 4 3 2 1]
+
+**Reversing a 2D array**
 
 A 2D array works much the same way.
 
@@ -1163,7 +1167,7 @@ Or the column at index position 1 (the second column)
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
   
-There are two popular ways to flatten an array: flatten() and ravel(). The primary difference between the two is that the new array created using ravel() is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
+There are two popular ways to flatten an array: **flatten()** and **ravel()**. The primary difference between the two is that the new array created using ravel() is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
 
 If you start with this array:
 
@@ -1171,7 +1175,7 @@ If you start with this array:
 
   array = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-You can use flatten() to flatten your array into a 1D array
+You can use **flatten()** to flatten your array into a 1D array.
 
 ::
 
@@ -1194,6 +1198,18 @@ When you use flatten(), changes to your new array won't change the parent array.
   print('New array: ')
   print(a1)
 
+**Output:**
+
+::
+
+  Original array: 
+  [[ 1  2  3  4]
+   [ 5  6  7  8]
+   [ 9 10 11 12]]
+  New array: 
+  [100   2   3   4   5   6   7   8   9  10  11  12]
+
+
 But when you use ravel(), the changes you make to the new array will affect the parent array.
 
 For example,
@@ -1212,11 +1228,11 @@ For example,
 ::
 
   Original array: 
-[[101   2   3   4]
- [  5   6   7   8]
- [  9  10  11  12]]
-New array: 
-[101   2   3   4   5   6   7   8   9  10  11  12]
+  [[101   2   3   4]
+   [  5   6   7   8]
+   [  9  10  11  12]]
+  New array: 
+  [101   2   3   4   5   6   7   8   9  10  11  12]
 
 
 How to save and load NumPy objects
