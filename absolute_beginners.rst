@@ -1067,13 +1067,13 @@ If you want to print your reversed array, you could run:
 
 A 2D array works much the same way.
 
-If you start with this array
+If you start with this array:
 
 ::
 
   arr2D = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-You can reverse the content in all of the rows and all of the columns with
+You can reverse the content in all of the rows and all of the columns with:
 
 ::
 
@@ -1091,7 +1091,7 @@ You can reverse the content in all of the rows and all of the columns with
    [ 8  7  6  5]
    [ 4  3  2  1]]
 
-You can easily reverse only the rows with
+You can easily reverse only the rows with:
 
 ::
 
@@ -1109,7 +1109,7 @@ You can easily reverse only the rows with
    [ 5  6  7  8]
    [ 1  2  3  4]]
 
-Or reverse only the columns with
+Or reverse only the columns with:
 
 ::
 
@@ -1145,7 +1145,7 @@ You can also reverse the contents of only one column or row. For example, you ca
    [ 5  6  7  8]
    [ 9 10 11 12]]
 
-Or the column at index position 1 (the second column)
+Or the column at index position 1 (the second column):
 
 ::
 
@@ -1167,7 +1167,7 @@ Or the column at index position 1 (the second column)
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
   
-There are two popular ways to flatten an array: **flatten()** and **ravel()**. The primary difference between the two is that the new array created using ravel() is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
+There are two popular ways to flatten an array: **flatten()** and **ravel()**. The primary difference between the two is that the new array created using **ravel()** is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
 
 If you start with this array:
 
@@ -1187,7 +1187,9 @@ You can use **flatten()** to flatten your array into a 1D array.
 
   array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
 
-When you use flatten(), changes to your new array won't change the parent array.
+When you use **flatten()**, changes to your new array won't change the parent array.
+
+For example:
 
 ::
 
@@ -1210,9 +1212,9 @@ When you use flatten(), changes to your new array won't change the parent array.
   [100   2   3   4   5   6   7   8   9  10  11  12]
 
 
-But when you use ravel(), the changes you make to the new array will affect the parent array.
+But when you use **ravel()**, the changes you make to the new array will affect the parent array.
 
-For example,
+For example:
 
 ::
 
