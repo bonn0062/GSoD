@@ -1035,9 +1035,130 @@ You may need to switch the dimensions of a matrix. This can happen when, for exa
 How to reverse
 --------------
  
-**How to reverse the rows**
+NumPy's np.flip() function allows you to easily flip the contents of an array along an axis. You simply specify the array you would like to reverse and the axis. If you don't specify the axis, NumPy will flip or reverse the contents along all of the axes of your input array. 
+
+With a 1D array like this one
+
+::
+
+  arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+You can reverse it with 
+
+::
+
+  reversedArr = np.flip(arr)
+
+If you want to print your reversed array, you could run
+
+::
+
+  print('Reversed Array: ', reversedArr)
+
+**Output:**
+
+::
+
+  Reversed Array:  [8 7 6 5 4 3 2 1]
+
+A 2D array works much the same way.
+
+If you start with this array
+
+::
+
+  arr2D = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+
+You can reverse the content in all of the rows and all of the columns with
+
+::
+
+  reversedArr = np.flip(arr2D)
  
-**How to reverse the whole array**
+  print('Reversed Array: ')
+  print(reversedArr)
+
+**Output:**
+
+::
+
+  Reversed Array: 
+  [[12 11 10  9]
+   [ 8  7  6  5]
+   [ 4  3  2  1]]
+
+You can easily reverse only the rows with
+
+::
+
+  reversedArr_rows = np.flip(arr2D, axis=0)
+ 
+  print('Reversed Array: ')
+  print(reversedArr_rows)
+
+**Output:**
+
+::
+
+  Reversed Array: 
+  [[ 9 10 11 12]
+   [ 5  6  7  8]
+   [ 1  2  3  4]]
+
+Or reverse only the columns with
+
+::
+
+  reversedArr_columns = np.flip(arr2D, axis=1)
+ 
+  print('Reversed Array columns: ')
+  print(reversedArr_columns)
+
+**Output:**
+
+::
+
+  Reversed Array columns: 
+  [[ 4  3  2  1]
+   [ 8  7  6  5]
+   [12 11 10  9]]
+
+You can also reverse the contents of only one column or row. For example, you can reverse the contents of the row at index position 1 (the second row):
+
+::
+
+  arr2D[1] = np.flip(arr2D[1])
+   
+  print('Reversed Array: ')
+  print(arr2D)
+
+**Output:**
+
+::
+
+  Reversed Array: 
+  [[ 1  2  3  4]
+   [ 5  6  7  8]
+   [ 9 10 11 12]]
+
+Or the column at index position 1 (the second column)
+
+::
+
+  arr2D[:,1] = np.flip(arr2D[:,1])
+   
+  print('Reversed Array: ')
+  print(arr2D)
+
+**Output:**
+
+::
+
+  Reversed Array: 
+  [[ 1 10  3  4]
+   [ 5  6  7  8]
+   [ 9  2 11 12]]
+
 
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
