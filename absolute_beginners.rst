@@ -1145,7 +1145,7 @@ You can also reverse the contents of only one column or row. For example, you ca
    [ 5  6  7  8]
    [ 9 10 11 12]]
 
-Or the column at index position 1 (the second column):
+You can also reverse the column at index position 1 (the second column):
 
 ::
 
