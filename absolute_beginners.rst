@@ -1163,7 +1163,60 @@ Or the column at index position 1 (the second column)
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
   
-- flatten vs ravel
+There are two popular ways to flatten an array: flatten() and ravel(). The primary difference between the two is that the new array created using ravel() is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
+
+If you start with this array:
+
+::
+
+  array = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+
+You can use flatten() to flatten your array into a 1D array
+
+::
+
+  array.flatten()
+
+**Output:**
+
+::
+
+  array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
+
+When you use flatten(), changes to your new array won't change the parent array.
+
+::
+
+  a1 = array.flatten()  
+  a1[0] = 100
+  print('Original array: ')
+  print(array)
+  print('New array: ')
+  print(a1)
+
+But when you use ravel(), the changes you make to the new array will affect the parent array.
+
+For example,
+
+::
+
+  a2 = array.ravel()  
+  a2[0] = 101 
+  print('Original array: ')
+  print(array)
+  print('New array: ')
+  print(a2)
+
+**Output:**
+
+::
+
+  Original array: 
+[[101   2   3   4]
+ [  5   6   7   8]
+ [  9  10  11  12]]
+New array: 
+[101   2   3   4   5   6   7   8   9  10  11  12]
 
 
 How to save and load NumPy objects
