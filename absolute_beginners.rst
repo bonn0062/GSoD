@@ -236,7 +236,15 @@ While the default data type is floating point (float64), you can expecity specif
 Adding, removing, and sorting elements
 --------------------------------------
 
-**np.append, np.delete, np.sort**
+-----
+
+::
+
+  np.append()
+  np.delete() 
+  np.sort()
+
+-----
 
 
 If we start with this array:
@@ -307,7 +315,15 @@ In addition to sort, which returns a sorted copy of an array, you can use:
 How do you know the shape and size of an array?
 -----------------------------------------------
 
-**ndarray.ndim, ndarray.size, ndarray.shape**
+-----
+
+::
+
+  ndarray.ndim() 
+  ndarray.size()
+  ndarray.shape()
+
+-----
 
 **ndarray.ndim** will tell you the number of axes, or dimensions, of the array.
 
@@ -345,7 +361,12 @@ For example:
 Can you reshape an array?
 -------------------------
 
-**np.reshape**
+-----
+::
+
+  np.reshape()
+
+-----
   
 **Yes!**
 
@@ -430,7 +451,17 @@ You can visualize it this way:
 How to create an array from existing data
 -----------------------------------------
 
-**slicing and indexing, np.vstack, np.hstack, np.hsplit, view,** and **copy**
+-----
+
+::
+
+  slicing and indexing
+  np.vstack, np.hstack()
+  np.hsplit()
+  view
+  copy
+
+-----
 
 You can easily create a new array from a section of an existing array. Let's say you have this array:
 
@@ -561,7 +592,13 @@ Using the `copy` method makes a complete copy of the array and its data (a *deep
 Basic array operations
 ----------------------
 
-**addition, subtraction, multiplication, division, and more**
+-----
+
+::
+
+  addition, subtraction, multiplication, division, and more
+
+-----
 
 Once you've created your arrays, you can start to work with them. Let's say, for example, that you've created two arrays, one called "data" and one called "ones" 
 
@@ -648,7 +685,11 @@ NumPy understands that the multiplication should happen with each cell. That con
 More useful array operations
 -----------------------------------
 
-**maximum, minimum, sum, mean, product, standard deviation, and more**
+-----
+
+::
+
+  maximum, minimum, sum, mean, product, standard deviation, and more
 
 NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
 
@@ -710,7 +751,15 @@ The four values listed above correspond to the number of columns in your array. 
 How to inspect the size and shape of a NumPy array
 --------------------------------------------------
 
-**np.shape, np.size**
+-----
+
+::
+
+
+  np.shape()
+  np.size()
+
+-----
 
 You can get the dimensions of a NumPy array any time using ndarray.shape and NumPy will return the dimensions of the array as a tuple.
 
@@ -1048,7 +1097,14 @@ How to get index locations that satisfy a given condition
 Transposing and reshaping a matrix
 ----------------------------------
 
-**np.reshape, T**
+-----
+
+::
+
+  np.reshape()
+  T
+
+-----
 
 It's common to need to rotate your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
 
@@ -1066,7 +1122,13 @@ You may need to switch the dimensions of a matrix. This can happen when, for exa
 How to reverse
 --------------
 
-**np.flip**
+-----
+
+::
+
+  np.flip
+
+-----
  
 NumPy's np.flip() function allows you to easily flip the contents of an array along an axis. You simply specify the array you would like to reverse and the axis. If you don't specify the axis, NumPy will flip or reverse the contents along all of the axes of your input array. 
 
@@ -1200,7 +1262,12 @@ You can also reverse the column at index position 1 (the second column):
 Reshaping and Flattening multidimensional arrays
 ------------------------------------------------
 
-**flatten, ravel**
+-----
+
+::
+
+  flatten
+  ravel
   
 There are two popular ways to flatten an array: **flatten()** and **ravel()**. The primary difference between the two is that the new array created using **ravel()** is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
 
