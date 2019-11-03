@@ -362,6 +362,7 @@ Can you reshape an array?
 -------------------------
 
 -----
+
 ::
 
   np.reshape()
@@ -456,7 +457,8 @@ How to create an array from existing data
 ::
 
   slicing and indexing
-  np.vstack, np.hstack()
+  np.vstack()
+  np.hstack()
   np.hsplit()
   view
   copy
