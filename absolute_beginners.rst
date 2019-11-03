@@ -78,6 +78,8 @@ We can access the elements in the array using square brackets. When you're acces
 More information about arrays
 -----------------------------
 
+-----
+
 ::
 
   1D array, 2D array, ndarray, vector, matrix
