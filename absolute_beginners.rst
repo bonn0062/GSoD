@@ -111,6 +111,8 @@ Array **attributes** reflect information intrinsic to the array itself. If you n
 How to create a basic array
 ---------------------------
 
+-----
+
 ::
 
   np.array()
