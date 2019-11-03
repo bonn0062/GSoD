@@ -78,7 +78,9 @@ We can access the elements in the array using square brackets. When you're acces
 More information about arrays
 -----------------------------
 
-**1D array, 2D array, ndarray, vector, matrix**
+::
+
+  1D array, 2D array, ndarray, vector, matrix
 
 You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix refers to an array with multiple columns.
 
@@ -105,7 +107,15 @@ Array **attributes** reflect information intrinsic to the array itself. If you n
 How to create a basic array
 ---------------------------
 
-**np.array, np.zeros, np.ones, np.empty, np.arange, np.linspace, dtype**
+::
+
+  np.array()
+  np.zeros() 
+  np.ones() 
+  np.empty() 
+  np.arange() 
+  np.linspace()
+  dtype
 
 To create a NumPy array, you can use the function `np.array()`
 
