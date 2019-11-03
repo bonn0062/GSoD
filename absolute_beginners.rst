@@ -4,7 +4,6 @@ NumPy: The Absolute Basics for Beginners
 
 This is a working document for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
------------------
 Welcome to NumPy!
 -----------------
 
@@ -14,7 +13,6 @@ The NumPy library contains multidimentional array and matrix data structures. It
 
 `Learn more about NumPy here <https://docs.scipy.org/doc/numpy-1.17.0/user/whatisnumpy.html>`_!
 
-----------------
 Installing NumPy
 ----------------
   
@@ -36,7 +34,6 @@ or
   
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
--------------------
 How to import NumPy
 -------------------
 
@@ -50,18 +47,15 @@ In order to start using NumPy and all of the functions available in NumPy, you'l
 
 (We shorten "numpy" to "np" in order to save time and also to keep code standardized so that anyone working with your code can easily understand and run it.)
 
---------------------------------------------------------------
 What’s the difference between a Python List and a NumPy array? 
 --------------------------------------------------------------
   
 NumPy gives you an enormous range of fast and efficient numerically-related options. While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematical operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
 
-Why use NumPy?
-================
+**Why use NumPy?**
 
 NumPy arrays are faster and more compact than Python lists. An array consumes less memory and is convenient to use. NumPy uses much less memory to store data and it provides a mechanism of specifying the data types. This allows the code to be optimised even further. 
 
------------------
 What is an array?
 -----------------
 
@@ -81,7 +75,6 @@ We can access the elements in the array using square brackets. When you're acces
 
   print(data[0])
 
------------------------------
 More information about arrays
 -----------------------------
 
