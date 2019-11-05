@@ -4,6 +4,7 @@ NumPy: The Absolute Basics for Beginners
 
 This is a working document for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
+----
 Welcome to NumPy!
 -----------------
 
@@ -13,6 +14,7 @@ The NumPy library contains multidimentional array and matrix data structures. It
 
 `Learn more about NumPy here <https://docs.scipy.org/doc/numpy-1.17.0/user/whatisnumpy.html>`_!
 
+-----
 Installing NumPy
 ----------------
   
@@ -34,6 +36,7 @@ or
   
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
+-----
 How to import NumPy
 -------------------
 
