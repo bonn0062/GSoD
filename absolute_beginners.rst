@@ -1342,17 +1342,20 @@ How to save and load NumPy objects
 ::
 
   np.save()
+  np.savez()
   np.savetxt()
   np.load()
   np.loadtxt()
 
 -----
 
-There are a number of ways to save and load objects with Numpy. NdThe ndarray objects can be saved to and loaded from the disk files with **loadtxt** and **savetxt** functions that handle normal text files and **load** and **save** functions that handle NumPy binary files with a **npy** function.
+You will, at some point, want to save your arrays to disk and load them back without having to re-run the code. Fortunately, there are several ways to save and load objects with Numpy. The ndarray objects can be saved to and loaded from the disk files with **loadtxt** and **savetxt** functions that handle normal text files, **load** and **save** functions that handle NumPy binary files with a **.npy** file extension, and a **savez** function that handles NumPy files with a .npz file extension.
 
-The **.npy** file stores data, shpae, dtype, and other information that's required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is oon another machine with different architecture.
+The **.npy** and **.npz** files store data, shape, dtype, and other information that's required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is on another machine with different architecture.
 
-It's easy to save and load and array with **np.save()**. Just make sure to speciy the array you want to save and a file name.  For example, if you create this array:
+If you want to store a single ndarray object, store it as a .npy file using np.save. If you want to store more than one ndarray object in a single file, save it as a .npz file using np.savez.
+
+It's easy to save and load and array with **np.save()**. Just make sure to specify the array you want to save and a file name.  For example, if you create this array:
 
 ::
 
@@ -1384,7 +1387,7 @@ If you want to check your array, you can run:
 
 The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter.
 
-You can read more about `save here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_. and `load here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_. 
+You can read more about `save here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_. `savez here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_, and `load here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_. 
 You can read more about `savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_. and `loadtxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_.
 
 Learn more about `input and output routines here <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_.
