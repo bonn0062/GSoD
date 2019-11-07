@@ -1101,19 +1101,19 @@ How to get the unique items and the counts
 
 -----
 
-NumPy provides a funciton to find the unique elements in an array. 
+You can find the unique elements in an array easily with **np.unique**. 
 
-To find the unique values in an array like this one:
+For example, if you start with this array:
 
 ::
 
-  array = np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
+  a = np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
 
 you can use **np.unique**
 
 ::
 
-  unique_values = np.unique(array)
+  unique_values = np.unique(a)
   print(unique_values)
 
 **Output:**
@@ -1126,7 +1126,7 @@ To get the indices of unique values in a NumPy array (an array of first index po
 
 ::
 
-  indices_list = np.unique(array, return_index=True)
+  indices_list = np.unique(a, return_index=True)
   print(indices_list)
 
 **Output:**
@@ -1139,7 +1139,7 @@ You can pass the **return_counts** argument in np.unique() along with your array
 
 ::
 
-  unique_values, occurrence_count = np.unique(array, return_counts=True)
+  unique_values, occurrence_count = np.unique(a, return_counts=True)
   print(occurrence_count)
 
 **Output:**
@@ -1152,13 +1152,13 @@ This also works with 2D arrays. If you start with this array:
 
 ::
 
-  arr2D = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] , [9, 10, 11, 12],  [1, 2, 3, 4]])
+  a2D = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] , [9, 10, 11, 12],  [1, 2, 3, 4]])
 
 You can find the unique values with:
 
 ::
 
-  unique_values = np.unique(arr2D)
+  unique_values = np.unique(a2D)
   print(unique_values)
 
 **Output:**
@@ -1171,7 +1171,7 @@ If the axis argument isn't passed, your 2D array will be flattened. To get the u
 
 ::
 
-  unique_rows = np.unique(arr2D, axis=0)
+  unique_rows = np.unique(a2D, axis=0)
   print(unique_rows)
 
 **Output:**
@@ -1186,7 +1186,7 @@ To get the unique rows, occurrence count, and index position, you can use:
 
 ::
 
-  unique_rows, occurence_count, indices = np.unique(arr2D, axis=0, return_counts=True, return_index=True)
+  unique_rows, occurence_count, indices = np.unique(a2D, axis=0, return_counts=True, return_index=True)
   print('Unique Rows: ', '\n', unique_rows) 
 
   print('Occurrence Count:', '\n', occurence_count)
