@@ -1152,7 +1152,7 @@ This also works with 2D arrays. If you start with this array:
 
 ::
 
-  arr2D = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] , [9, 10, 11, 12],  [13, 14, 15, 16]])
+  arr2D = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] , [9, 10, 11, 12],  [1, 2, 3, 4]])
 
 You can find the unique values with:
 
@@ -1165,8 +1165,7 @@ You can find the unique values with:
 
 ::
 
-  [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16]
-
+  [ 1  2  3  4  5  6  7  8  9 10 11 12]
 
 If the axis argument isn't passed, your 2D array will be flattened. To get the unique rows or columns, make sure to pass the **axis** argument. To find the unique rows, speciify **axis=0** and for columns, specify **axis=1**.
 
@@ -1181,8 +1180,7 @@ If the axis argument isn't passed, your 2D array will be flattened. To get the u
 
   [[ 1  2  3  4]
    [ 5  6  7  8]
-   [ 9 10 11 12]
-   [13 14 15 16]]
+   [ 9 10 11 12]]
 
 To get the unique rows, occurrence count, and index position, you can use:
 
@@ -1202,13 +1200,11 @@ To get the unique rows, occurrence count, and index position, you can use:
   Unique Rows:  
    [[ 1  2  3  4]
    [ 5  6  7  8]
-   [ 9 10 11 12]
-   [13 14 15 16]]
+   [ 9 10 11 12]]
   Occurrence Count: 
-   [0 1 2 3]
+   [0 1 2]
   Indices:  
-   [1 1 1 1]
-
+   [2 1 1]
 
 How to get index locations that satisfy a given condition 
 ---------------------------------------------------------
