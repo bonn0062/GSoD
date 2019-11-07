@@ -373,11 +373,7 @@ Can you reshape an array?
   
 **Yes!**
 
-::
-
-  np.reshape() 
-
-will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you'll need to make sure that your new array also has a total of 12 elements.
+**np.reshape()** will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you'll need to make sure that your new array also has a total of 12 elements.
 
 For example:
 
@@ -463,11 +459,14 @@ How to create an array from existing data
 ::
 
   slicing and indexing
+
+  view
+  copy
+
   np.vstack()
   np.hstack()
   np.hsplit()
-  view
-  copy
+  
 
 -----
 
@@ -603,7 +602,7 @@ Basic array operations
 
 ::
 
-  addition, subtraction, multiplication, division, and more
+  Addition, subtraction, multiplication, division, and more!
 
 -----
 
