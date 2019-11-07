@@ -4,7 +4,7 @@ NumPy: The Absolute Basics for Beginners
 
 This is a working document for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
-.. image:: images/numpylogo.svg
+.. image:: images/NumPy_logo.svg
 
 Welcome to NumPy!
 -----------------
@@ -1385,7 +1385,24 @@ If you want to check your array, you can run:
 
   [1 2 3 4 5 6]
 
-The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter.
+
+You can save a NumPy array as a plain text file like a **.csv** or **.txt** file with **np.savetxt**.
+
+For example, if you create this array:
+
+::
+
+  csv_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+You can easily save it as a .csv file with the name "new_file.csv" like this:
+
+::
+
+  np.savetxt('new_file.csv', csv_arr)
+
+The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are faster to retrieve.
+
+With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
 
 You can read more about `save here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_. `savez here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_, and `load here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_. 
 You can read more about `savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_. and `loadtxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_.
