@@ -4,7 +4,12 @@ NumPy: The Absolute Basics for Beginners
 
 This is a working document for a future section introducing NumPy to absolute beginners. If you have comments or suggestions, please don’t hesitate to reach out!
 
+-----
+
 .. image:: images/NumPy_logo.svg
+
+-----
+
 
 Welcome to NumPy!
 -----------------
