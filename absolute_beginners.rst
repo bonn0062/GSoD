@@ -1188,9 +1188,7 @@ To get the unique rows, occurrence count, and index position, you can use:
 
   unique_rows, occurence_count, indices = np.unique(a2D, axis=0, return_counts=True, return_index=True)
   print('Unique Rows: ', '\n', unique_rows) 
-
   print('Occurrence Count:', '\n', occurence_count)
-
   print('Indices: ', '\n', indices)
 
 **Output:**
@@ -1378,10 +1376,10 @@ Reshaping and Flattening multidimensional arrays
 
 ::
 
-  flatten
-  ravel
+  .flatten()
+  .ravel()
   
-There are two popular ways to flatten an array: **flatten()** and **ravel()**. The primary difference between the two is that the new array created using **ravel()** is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
+There are two popular ways to flatten an array: **.flatten()** and **.ravel()**. The primary difference between the two is that the new array created using **ravel()** is actually a reference to the parent array. This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it's memory efficient. 
 
 If you start with this array:
 
@@ -1389,7 +1387,7 @@ If you start with this array:
 
   array = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-You can use **flatten()** to flatten your array into a 1D array.
+You can use **flatten** to flatten your array into a 1D array.
 
 ::
 
@@ -1401,7 +1399,7 @@ You can use **flatten()** to flatten your array into a 1D array.
 
   array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
 
-When you use **flatten()**, changes to your new array won't change the parent array.
+When you use **flatten**, changes to your new array won't change the parent array.
 
 For example:
 
@@ -1426,7 +1424,7 @@ For example:
   [100   2   3   4   5   6   7   8   9  10  11  12]
 
 
-But when you use **ravel()**, the changes you make to the new array will affect the parent array.
+But when you use **ravel**, the changes you make to the new array will affect the parent array.
 
 For example:
 
@@ -1519,12 +1517,12 @@ The **savetxt()** and **loadtxt()** functions accept additional optional paramet
 
 With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
 
-You can read more about `save here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_. `savez here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_, and `load here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_. 
-You can read more about `savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_. and `loadtxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_.
+You can read more about `save <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_here, `savez <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_here, and `load <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_here. 
+You can read more about `savetxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_here, and `loadtxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_here.
 
 Learn more about `input and output routines here <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_.
 
-Be aware that loading files that contain object arrays with **np.load()** uses the pickle module which is not secure against erroneous or maliciously constructed data. Consider passing **allow_pickle=False** to load data that is known not to contain object arrays for the safer handling of untrusted sources.
+**Be aware that loading files that contain object arrays with np.load() uses the pickle module which is not secure against erroneous or maliciously constructed data. Consider passing allow_pickle=False to load data that is known not to contain object arrays for the safer handling of untrusted sources.**
 
 
 Working with Mathematical Formulas
@@ -1631,7 +1629,7 @@ Read your saved CSV any time with a command such as
 Plotting arrays with Matplotlib
 -------------------------------
 
-If you need to generate a plot for your values, it's very simple with Matplotlib. 
+If you need to generate a plot for your values, it's very simple with `Matplotlib <https://matplotlib.org/>`_. 
 
 For example, you may have an array like this one:
 
@@ -1683,11 +1681,271 @@ With Matplotlib, you have access to an enormous number of visualization options.
 .. image:: images/np_matplotlib2.png
     :scale: 50 %
 
-To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_.
+To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_. For directions regarding installing Matplotlib, see the official `installation section <https://matplotlib.org/users/installing.html>`_.
 
 
-How to read a docstring with `?` and source code with `??` in IPython/Jupyter
------------------------------------------------------------------------------
+How to access the docstring to get more information
+---------------------------------------------------
+
+::
+
+  help()
+  ?
+  ??
+
+-----
+
+When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of that is the built-in accss to documentation. Every object contains the reference to a string, which is knows as the **docstring**. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in **help()** function that can help you access this information. This means that nearly any time you need more information, you can use **help()** to find more information quickly.
+
+For example,
+
+::
+
+  help(max)
+
+Will return
+
+::
+
+  Help on built-in function max in module builtins:
+
+  max(...)
+      max(iterable, *[, default=obj, key=func]) -> value
+      max(arg1, arg2, *args, *[, key=func]) -> value
+      
+      With a single iterable argument, return its biggest item. The
+      default keyword-only argument specifies an object to return if
+      the provided iterable is empty.
+      With two or more arguments, return the largest argument.
+
+Because access to more information is so useful, IPython uses the **?** character as a shorthand for accessing this documentation along with other relevant information.
+
+For example,
+
+::
+
+  max?
+
+Will return
+
+::
+
+  Docstring:
+  
+You can even use this notation for object methods and objects themselves.
+
+Let's say you create this array:
+
+::
+
+  a = np.array([1, 2, 3, 4, 5, 6])
+
+Running
+
+::
+
+  a?
+  
+Will return a lot of useful information.
+
+::
+
+  Type:            ndarray
+  String form:     [1 2 3 4 5 6]
+  Length:          6
+  File:            ~/anaconda3/lib/python3.7/site-packages/numpy/__init__.py
+  Docstring:       <no docstring>
+  Class docstring:
+  ndarray(shape, dtype=float, buffer=None, offset=0,
+          strides=None, order=None)
+
+  An array object represents a multidimensional, homogeneous array
+  of fixed-size items.  An associated data-type object describes the
+  format of each element in the array (its byte-order, how many bytes it
+  occupies in memory, whether it is an integer, a floating point number,
+  or something else, etc.)
+
+  Arrays should be constructed using `array`, `zeros` or `empty` (refer
+  to the See Also section below).  The parameters given here refer to
+  a low-level method (`ndarray(...)`) for instantiating an array.
+
+  For more information, refer to the `numpy` module and examine the
+  methods and attributes of an array.
+
+  Parameters
+  ----------
+  (for the __new__ method; see Notes below)
+
+  shape : tuple of ints
+      Shape of created array.
+  dtype : data-type, optional
+      Any object that can be interpreted as a numpy data type.
+  buffer : object exposing buffer interface, optional
+      Used to fill the array with data.
+  offset : int, optional
+      Offset of array data in buffer.
+  strides : tuple of ints, optional
+      Strides of data in memory.
+  order : {'C', 'F'}, optional
+      Row-major (C-style) or column-major (Fortran-style) order.
+
+  Attributes
+  ----------
+  T : ndarray
+      Transpose of the array.
+  data : buffer
+      The array's elements, in memory.
+  dtype : dtype object
+      Describes the format of the elements in the array.
+  flags : dict
+      Dictionary containing information related to memory use, e.g.,
+      'C_CONTIGUOUS', 'OWNDATA', 'WRITEABLE', etc.
+  flat : numpy.flatiter object
+      Flattened version of the array as an iterator.  The iterator
+      allows assignments, e.g., ``x.flat = 3`` (See `ndarray.flat` for
+      assignment examples; TODO).
+  imag : ndarray
+      Imaginary part of the array.
+  real : ndarray
+      Real part of the array.
+  size : int
+      Number of elements in the array.
+  itemsize : int
+      The memory use of each array element in bytes.
+  nbytes : int
+      The total number of bytes required to store the array data,
+      i.e., ``itemsize * size``.
+  ndim : int
+      The array's number of dimensions.
+  shape : tuple of ints
+      Shape of the array.
+  strides : tuple of ints
+      The step-size required to move from one element to the next in
+      memory. For example, a contiguous ``(3, 4)`` array of type
+      ``int16`` in C-order has strides ``(8, 2)``.  This implies that
+      to move from element to element in memory requires jumps of 2 bytes.
+      To move from row-to-row, one needs to jump 8 bytes at a time
+      (``2 * 4``).
+  ctypes : ctypes object
+      Class containing properties of the array needed for interaction
+      with ctypes.
+  base : ndarray
+      If the array is a view into another array, that array is its `base`
+      (unless that array is also a view).  The `base` array is where the
+      array data is actually stored.
+
+  See Also
+  --------
+  array : Construct an array.
+  zeros : Create an array, each element of which is zero.
+  empty : Create an array, but leave its allocated memory unchanged (i.e.,
+          it contains "garbage").
+  dtype : Create a data-type.
+
+  Notes
+  -----
+  There are two modes of creating an array using ``__new__``:
+
+  1. If `buffer` is None, then only `shape`, `dtype`, and `order`
+     are used.
+  2. If `buffer` is an object exposing the buffer interface, then
+     all keywords are interpreted.
+
+  No ``__init__`` method is needed because the array is fully initialized
+  after the ``__new__`` method.
+
+  Examples
+  --------
+  These examples illustrate the low-level `ndarray` constructor.  Refer
+  to the `See Also` section above for easier ways of constructing an
+  ndarray.
+
+  First mode, `buffer` is None:
+
+  >>> np.ndarray(shape=(2,2), dtype=float, order='F')
+  array([[ -1.13698227e+002,   4.25087011e-303],
+         [  2.88528414e-306,   3.27025015e-309]])         #random
+
+  Second mode:
+
+  >>> np.ndarray((2,), buffer=np.array([1,2,3]),
+  ...            offset=np.int_().itemsize,
+  ...            dtype=int) # offset = 1*itemsize, i.e. skip first element
+  array([2, 3])
+
+This also works for functions and other objects that you created. Just remember to create a docstring with your function using a string literal (**""" """** or **''' '''** around your documentation).
+
+For example, if you create this function:
+
+::
+
+  def double(a):
+    '''Return a * 2'''
+    return a * 2
+
+You can run
+
+::
+
+  double?
+
+Which will return
+
+::
+
+  Signature: double(a)
+  Docstring: Return a * 2
+  File:      ~/Desktop/<ipython-input-23-b5adf20be596>
+  Type:      function
+
+You can also reach another level of information by reading the source code of the object you're interested in. You can access the source code using a double question mark (**??**).
+
+For example, running
+
+::
+
+  double??
+
+Will return 
+
+::
+
+  Signature: double(a)
+  Source:   
+  def double(a):
+      '''Return a * 2'''
+      return a * 2
+  File:      ~/Desktop/<ipython-input-23-b5adf20be596>
+  Type:      function
+
+If the object in question is compiled in a language other than Python, using ?? will return the same information as ?. You'll find this with a lot of built-in objects and types, for example:
+
+::
+
+  len?
+
+**Output:**
+
+::
+
+  Signature: len(obj, /)
+  Docstring: Return the number of items in a container.
+  Type:      builtin_function_or_method
+
+and
+
+::
+
+  len??
+
+**Output:**
+
+::
+
+  ​Signature: len(obj, /)
+  Docstring: Return the number of items in a container.
+  Type:      builtin_function_or_method
+
 
 More useful functions
 ---------------------
