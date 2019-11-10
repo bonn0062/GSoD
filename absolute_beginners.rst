@@ -516,6 +516,18 @@ You can use **np.expand_dims** to add an axis at index position 1 with:
 
   (6, 1)
 
+You can add an axis at index position 0 with:
+
+::
+
+  c = np.expand_dims(a, axis=0)
+  c.shape
+
+**Output:**
+
+::
+
+  (1, 6)
 
 Indexing and Slicing
 --------------------
@@ -542,6 +554,18 @@ You can index and slice NumPy arrays in the same ways you can slice Python lists
   2
   [1 2]
   [2 3]
+  Or you can add an axis at index position 0 with:
+
+  :;:
+
+    c.shape
+    c.shape
+
+  **Output:**
+
+  ::
+
+    (1, 6)
   [2 3]
 
 You can visualize it this way:
