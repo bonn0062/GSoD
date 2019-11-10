@@ -1448,242 +1448,6 @@ For example:
   New array: 
   [101   2   3   4   5   6   7   8   9  10  11  12]
 
-
-How to save and load NumPy objects
-----------------------------------
-
-::
-
-  np.save()
-  np.savez()
-  np.savetxt()
-  np.load()
-  np.loadtxt()
-
------
-
-You will, at some point, want to save your arrays to disk and load them back without having to re-run the code. Fortunately, there are several ways to save and load objects with Numpy. The ndarray objects can be saved to and loaded from the disk files with **loadtxt** and **savetxt** functions that handle normal text files, **load** and **save** functions that handle NumPy binary files with a **.npy** file extension, and a **savez** function that handles NumPy files with a .npz file extension.
-
-The **.npy** and **.npz** files store data, shape, dtype, and other information that's required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is on another machine with different architecture.
-
-If you want to store a single ndarray object, store it as a .npy file using np.save. If you want to store more than one ndarray object in a single file, save it as a .npz file using np.savez. You can also `save several arrays into a single file in compressed npz format <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html>`_ with **np.savez_compressed**.
-
-It's easy to save and load and array with **np.save()**. Just make sure to specify the array you want to save and a file name.  For example, if you create this array:
-
-::
-
-  a = np.array([1, 2, 3, 4, 5, 6])
-
-You can save it as "filename.npy" with
-
-::
-
-  np.save('filename',a)
-
-You can use **np.load()** to reconstruct your array.
-
-::
-
-  b = np.load('filename.npy')
-
-If you want to check your array, you can run:
-
-::
-
-  print(b)
-
-**Output:**
-
-::
-
-  [1 2 3 4 5 6]
-
-
-You can save a NumPy array as a plain text file like a **.csv** or **.txt** file with **np.savetxt**.
-
-For example, if you create this array:
-
-::
-
-  csv_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
-
-You can easily save it as a .csv file with the name "new_file.csv" like this:
-
-::
-
-  np.savetxt('new_file.csv', csv_arr)
-
-The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are faster to retrieve.
-
-With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
-
-You can read more about `save <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_here, `savez <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_here, and `load <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_here. 
-You can read more about `savetxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_here, and `loadtxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_here.
-
-Learn more about `input and output routines here <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_.
-
-**Be aware that loading files that contain object arrays with np.load() uses the pickle module which is not secure against erroneous or maliciously constructed data. Consider passing allow_pickle=False to load data that is known not to contain object arrays for the safer handling of untrusted sources.**
-
-
-Working with Mathematical Formulas
-----------------------------------
-
-Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
-
-For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
-
-.. image:: images/np_MSE_formula.png
-
-Implementing this formula is simple and straightforward in NumPy:
-
-.. image:: images/np_MSE_implementation.png
-
-What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
-
-You can visualize it this way:
-
-.. image:: images/np_mse_viz1.png
-
-In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
-
-.. image:: images/np_mse_viz2.png
-
-.. image:: images/np_MSE_explanation2.png
-
-
-
-Importing and exporting a CSV
------------------------------
-
-It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
-
-::
-
-  import pandas as pd
-
-  # If all of your columns are the same type:
-  x = pd.read_csv('music.csv').values
-
-  # You can also simply select the columns you need:
-  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
-
-.. image:: images/np_pandas.png
-
-It's simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to  create a pandas dataframe from the values in your array and then write the data frame to a CSV file with pandas.
-
-If you created this array "a"
-
-::
-
-  [[-2.58289208,  0.43014843, -1.24082018,  1.59572603],
-  [ 0.99027828,  1.17150989,  0.94125714, -0.14692469],
-  [ 0.76989341,  0.81299683, -0.95068423,  0.11769564],
-  [ 0.20484034,  0.34784527,  1.96979195,  0.51992837]]
-
-You could create a Pandas dataframe
-
-::
-
-  df = pd.DataFrame(a)
-  print(df)
-
-.. image:: images/np_pddf.png
-
-You can easily save your dataframe with
-
-::
-
-  df.to_csv('pd.csv')
-
-And read your CSV with
-
-::
-
-  pd.read_csv('pd.csv')
-
-.. image:: images/np_readcsv.png
-
-You can also save your array with the NumPy "savetxt" method.
-
-::
-
-  np.savetxt('np.csv', a, fmt='%.2f', delimiter=',', header=" 1,  2,  3,  4")
-
-Read your saved CSV any time with a command such as
-
-::
-
-  cat np.csv
-
-**Output:**
-
-::
-
-  #  1,  2,  3,  4
-  -2.58,0.43,-1.24,1.60
-  0.99,1.17,0.94,-0.15
-  0.77,0.81,-0.95,0.12
-  0.20,0.35,1.97,0.52
-
-
-Plotting arrays with Matplotlib
--------------------------------
-
-If you need to generate a plot for your values, it's very simple with `Matplotlib <https://matplotlib.org/>`_. 
-
-For example, you may have an array like this one:
-
-::
-
-  A = np.array([2, 1, 5, 7, 4, 6, 8, 14, 10, 9, 18, 20, 22])
-
-If you already have Matplotlib installed, you can import it with
-
-::
-  
-  import matplotlib.pyplot as plt
-  # If you're using Jupyter Notebook, you may also want to run the following line of code
-   to display your code in the notebook
-  %matplotlib inline
-
-All you need to do to plot your values is run
-
-::
-
-  plt.plot(A)
-  plt.show()
-
-**Output:**
-
-.. image:: images/np_matplotlib.png
-
-For example, you can plot a 1D array like this:
-
-::
-
-  x = np.linspace(0, 5, 20)
-  y = np.linspace(0, 10, 20)
-  plt.plot(x, y, 'purple') # line  
-  plt.plot(x, y, 'o')      # dots
-
-.. image:: images/np_matplotlib1.png
-    :scale: 50 %
-
-With Matplotlib, you have access to an enormous number of visualization options.
-
-::
-
-  image = np.random.rand(40, 40)
-  plt.imshow(image, cmap=plt.cm.magma)
-
-  plt.colorbar()
-
-.. image:: images/np_matplotlib2.png
-    :scale: 50 %
-
-To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_. For directions regarding installing Matplotlib, see the official `installation section <https://matplotlib.org/users/installing.html>`_.
-
-
 How to access the docstring to get more information
 ---------------------------------------------------
 
@@ -1945,6 +1709,242 @@ and
   ​Signature: len(obj, /)
   Docstring: Return the number of items in a container.
   Type:      builtin_function_or_method
+
+
+How to save and load NumPy objects
+----------------------------------
+
+::
+
+  np.save()
+  np.savez()
+  np.savetxt()
+  np.load()
+  np.loadtxt()
+
+-----
+
+You will, at some point, want to save your arrays to disk and load them back without having to re-run the code. Fortunately, there are several ways to save and load objects with Numpy. The ndarray objects can be saved to and loaded from the disk files with **loadtxt** and **savetxt** functions that handle normal text files, **load** and **save** functions that handle NumPy binary files with a **.npy** file extension, and a **savez** function that handles NumPy files with a .npz file extension.
+
+The **.npy** and **.npz** files store data, shape, dtype, and other information that's required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is on another machine with different architecture.
+
+If you want to store a single ndarray object, store it as a .npy file using np.save. If you want to store more than one ndarray object in a single file, save it as a .npz file using np.savez. You can also `save several arrays into a single file in compressed npz format <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html>`_ with **np.savez_compressed**.
+
+It's easy to save and load and array with **np.save()**. Just make sure to specify the array you want to save and a file name.  For example, if you create this array:
+
+::
+
+  a = np.array([1, 2, 3, 4, 5, 6])
+
+You can save it as "filename.npy" with
+
+::
+
+  np.save('filename',a)
+
+You can use **np.load()** to reconstruct your array.
+
+::
+
+  b = np.load('filename.npy')
+
+If you want to check your array, you can run:
+
+::
+
+  print(b)
+
+**Output:**
+
+::
+
+  [1 2 3 4 5 6]
+
+
+You can save a NumPy array as a plain text file like a **.csv** or **.txt** file with **np.savetxt**.
+
+For example, if you create this array:
+
+::
+
+  csv_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+
+You can easily save it as a .csv file with the name "new_file.csv" like this:
+
+::
+
+  np.savetxt('new_file.csv', csv_arr)
+
+The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are faster to retrieve.
+
+With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
+
+You can read more about `save <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_here, `savez <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_here, and `load <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_here. 
+You can read more about `savetxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_here, and `loadtxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_here.
+
+Learn more about `input and output routines here <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_.
+
+**Be aware that loading files that contain object arrays with np.load() uses the pickle module which is not secure against erroneous or maliciously constructed data. Consider passing allow_pickle=False to load data that is known not to contain object arrays for the safer handling of untrusted sources.**
+
+
+Working with Mathematical Formulas
+----------------------------------
+
+Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
+
+For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
+
+.. image:: images/np_MSE_formula.png
+
+Implementing this formula is simple and straightforward in NumPy:
+
+.. image:: images/np_MSE_implementation.png
+
+What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
+
+You can visualize it this way:
+
+.. image:: images/np_mse_viz1.png
+
+In this example, both the predictions and labels vectors contain three values, meaning `n` has a value of three. After we carry out subtractions the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
+
+.. image:: images/np_mse_viz2.png
+
+.. image:: images/np_MSE_explanation2.png
+
+
+
+Importing and exporting a CSV
+-----------------------------
+
+It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
+
+::
+
+  import pandas as pd
+
+  # If all of your columns are the same type:
+  x = pd.read_csv('music.csv').values
+
+  # You can also simply select the columns you need:
+  x = pd.read_csv('music.csv', columns=['float_colname_1', ...]).values
+
+.. image:: images/np_pandas.png
+
+It's simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to  create a pandas dataframe from the values in your array and then write the data frame to a CSV file with pandas.
+
+If you created this array "a"
+
+::
+
+  [[-2.58289208,  0.43014843, -1.24082018,  1.59572603],
+  [ 0.99027828,  1.17150989,  0.94125714, -0.14692469],
+  [ 0.76989341,  0.81299683, -0.95068423,  0.11769564],
+  [ 0.20484034,  0.34784527,  1.96979195,  0.51992837]]
+
+You could create a Pandas dataframe
+
+::
+
+  df = pd.DataFrame(a)
+  print(df)
+
+.. image:: images/np_pddf.png
+
+You can easily save your dataframe with
+
+::
+
+  df.to_csv('pd.csv')
+
+And read your CSV with
+
+::
+
+  pd.read_csv('pd.csv')
+
+.. image:: images/np_readcsv.png
+
+You can also save your array with the NumPy "savetxt" method.
+
+::
+
+  np.savetxt('np.csv', a, fmt='%.2f', delimiter=',', header=" 1,  2,  3,  4")
+
+Read your saved CSV any time with a command such as
+
+::
+
+  cat np.csv
+
+**Output:**
+
+::
+
+  #  1,  2,  3,  4
+  -2.58,0.43,-1.24,1.60
+  0.99,1.17,0.94,-0.15
+  0.77,0.81,-0.95,0.12
+  0.20,0.35,1.97,0.52
+
+
+Plotting arrays with Matplotlib
+-------------------------------
+
+If you need to generate a plot for your values, it's very simple with `Matplotlib <https://matplotlib.org/>`_. 
+
+For example, you may have an array like this one:
+
+::
+
+  A = np.array([2, 1, 5, 7, 4, 6, 8, 14, 10, 9, 18, 20, 22])
+
+If you already have Matplotlib installed, you can import it with
+
+::
+  
+  import matplotlib.pyplot as plt
+  # If you're using Jupyter Notebook, you may also want to run the following line of code
+   to display your code in the notebook
+  %matplotlib inline
+
+All you need to do to plot your values is run
+
+::
+
+  plt.plot(A)
+  plt.show()
+
+**Output:**
+
+.. image:: images/np_matplotlib.png
+
+For example, you can plot a 1D array like this:
+
+::
+
+  x = np.linspace(0, 5, 20)
+  y = np.linspace(0, 10, 20)
+  plt.plot(x, y, 'purple') # line  
+  plt.plot(x, y, 'o')      # dots
+
+.. image:: images/np_matplotlib1.png
+    :scale: 50 %
+
+With Matplotlib, you have access to an enormous number of visualization options.
+
+::
+
+  image = np.random.rand(40, 40)
+  plt.imshow(image, cmap=plt.cm.magma)
+
+  plt.colorbar()
+
+.. image:: images/np_matplotlib2.png
+    :scale: 50 %
+
+To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_. For directions regarding installing Matplotlib, see the official `installation section <https://matplotlib.org/users/installing.html>`_.
+
 
 
 More useful functions
