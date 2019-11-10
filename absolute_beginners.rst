@@ -16,7 +16,7 @@ Welcome to NumPy!
 
 NumPy (**Numerical Python**) is an open source Python library that's used in almost every field of science and engineering. It's the universal standard for working with numerical data in Python, and it's at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development. The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages. 
 
-The NumPy library contains multidimentional array and matrix data structures. It provides **ndarray**, a homogeneous n-dimensional array object, with methods to efficiently operate on it. NumPy can be used to perform a wide variety of mathematical operations on arrays.  It enriches Python with powerful data structures that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
+The NumPy library contains multidimentional array and matrix data structures (you'll find more information about this in later sections). It provides **ndarray**, a homogeneous n-dimensional array object, with methods to efficiently operate on it. NumPy can be used to perform a wide variety of mathematical operations on arrays.  It adds powerful data structures to Python that guarantee efficient calculations with arrays and matrices and it supplies an enormous library of high-level mathematical functions that operate on these array and matrices. 
 
 `Learn more about NumPy here <https://docs.scipy.org/doc/numpy-1.17.0/user/whatisnumpy.html>`_!
 
@@ -39,7 +39,7 @@ or
 
   pip install numpy
   
-If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
+If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, like pandas, Scikit-Learn, etc.
 
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
@@ -56,7 +56,7 @@ In order to start using NumPy and all of the functions available in NumPy, you'l
 
 (We shorten "numpy" to "np" in order to save time and also to keep code standardized so that anyone working with your code can easily understand and run it.)
 
-What’s the difference between a Python List and a NumPy array? 
+What’s the difference between a Python list and a NumPy array? 
 --------------------------------------------------------------
   
 NumPy gives you an enormous range of fast and efficient numerically-related options. While a Python list can contain different data types within a single list, all of the elements in a NumPy array should be homogenous. The mathematical operations that are meant to be performed on arrays wouldn't be possible if the arrays weren't homogenous. 
@@ -100,7 +100,7 @@ More information about arrays
 
 ------
 
-You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A vector is an array with a single column, while a matrix refers to an array with multiple columns.
+You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A **vector** is an array with a single column, while a **matrix** refers to an array with multiple columns.
 
 **What are the attributes of an array?**
 
@@ -159,7 +159,7 @@ You can visualize your array this way:
 
 .. image:: images/np_array.png
 
-Besides creating an array from a sequence of elements, you can easily create an array filled with **0**s:
+Besides creating an array from a sequence of elements, you can easily create an array filled with 0s:
 
 ::
 
@@ -172,7 +172,7 @@ Besides creating an array from a sequence of elements, you can easily create an 
 
   array([0., 0.])
 
-Or an array filled with **1**s:
+Or an array filled with 1s:
 
 ::
 
@@ -192,7 +192,7 @@ Or even an empty array! The function *empty* creates an array whose initial cont
   # Create an empty array with 2 elements
   np.empty(2)
 
-You can create an array with a **range** of elements:
+You can create an array with a range of elements:
 
 ::
 
@@ -281,7 +281,7 @@ You can add elements to your array any time with **np.append()**. Make sure to s
 
 **Delete**
 
-You can delete an element with **np.delete()**. If you want to delete the element in position 1 of your array "arr," you can run:
+You can delete an element with **np.delete()**. If you want to delete the element in position 1 of your array, you can run:
 
 ::
 
@@ -301,13 +301,13 @@ If you start with this array:
 
 ::
 
-  arr2 = np.array([2, 1, 5, 3, 7, 4, 6, 8])
+  arr = np.array([2, 1, 5, 3, 7, 4, 6, 8])
 
 You can quickly sort the numbers in ascending order with:
 
 ::
 
-  np.sort(arr2)
+  np.sort(arr)
 
 **Output:**
 
@@ -422,8 +422,8 @@ You can specify a few optional parameters.
 `Learn more about shape manipulation here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#shape-manipulation>`_.
 
 
-How to convert a 1D array into a 2D array (how to add a new axis)
------------------------------------------------------------------
+How to convert a 1D array into a 2D array (how to add a new axis to an array)
+-----------------------------------------------------------------------------
 
 ::
 
@@ -466,8 +466,8 @@ You can explicitly convert a 1D array with either a row vector or a column vecto
 
 ::
 
-  row_vec = a[np.newaxis, :]
-  row_vec.shape
+  row_vector = a[np.newaxis, :]
+  row_vector.shape
 
 **Output:**
 
@@ -479,8 +479,8 @@ Or, for a column vector, you can insert an axis along the second dimension:
 
 ::
 
-  row_vec = a[:, np.newaxis]
-  row_vec.shape
+  col_vector = a[:, np.newaxis]
+  col_vector.shape
 
 **Output:**
 
@@ -488,7 +488,7 @@ Or, for a column vector, you can insert an axis along the second dimension:
 
   (6, 1)
 
-You can also expand an array by inserting a new axis at a specified position with np.expand_dims.
+You can also expand an array by inserting a new axis at a specified position with **np.expand_dims**.
 
 For example, if you start with this array:
 
@@ -529,7 +529,7 @@ You can add an axis at index position 0 with:
 
   (1, 6)
 
-Indexing and Slicing
+Indexing and slicing
 --------------------
 
 You can index and slice NumPy arrays in the same ways you can slice Python lists.
@@ -581,7 +581,6 @@ How to create an array from existing data
 ::
 
   slicing and indexing
-
   view
   copy
 
@@ -602,7 +601,7 @@ You can create a new array from a section of your array any time by specifying w
 
 ::
 
-  arr1 = arr[3:8]
+  arr1 = array[3:8]
   arr1
 
 **Output:**
@@ -613,21 +612,23 @@ You can create a new array from a section of your array any time by specifying w
 
 Here, you grabbed a section of your array from index position 3 through index position 8.
 
-You can also stack two existing arrays, both vertically and horizontally. Let's say you have two arrays. This one:
+You can also stack two existing arrays, both vertically and horizontally. Let's say you have two arrays: 
+
+a_1
 
 ::
 
   array([[1, 1],
        [2, 2]])
 
-and this one:
+and a_2:
 
 ::
 
   array([[3, 3],
        [4, 4]])
 
-You can stack them vertically with vstack:
+You can stack them vertically with **vstack**:
 
 ::
 
@@ -642,7 +643,7 @@ You can stack them vertically with vstack:
        [3, 3],
        [4, 4]])
 
-Or stack them horizontally with hstack:
+Or stack them horizontally with **hstack**:
 
 ::
 
@@ -659,7 +660,7 @@ Or stack them horizontally with hstack:
 
 You can also split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
 
-Let's say you have this array:
+Let's say you have this array, a_3:
 
 ::
 
@@ -718,9 +719,9 @@ Using the `copy` method makes a complete copy of the array and its data (a *deep
  
 `Learn more about copies and views here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#copies-and-views>`_.
 
+
 Basic array operations
 ----------------------
-
 
 ::
 
@@ -750,7 +751,7 @@ Of course, you can do more than just addition!
 
 .. image:: images/np_sub_mult_divide.png
 
-Basic operations are simple with NumPy. If you want to find the sum of the elements in an array, you'd use sum(). This works for 1D arrays, 2D arrays, and arrays in higher dimentions.
+Basic operations are simple with NumPy. If you want to find the sum of the elements in an array, you'd use **sum()**. This works for 1D arrays, 2D arrays, and arrays in higher dimentions.
 
 ::
 
@@ -816,9 +817,9 @@ More useful array operations
 
 ::
 
-  maximum, minimum, sum, mean, product, standard deviation, and more
+  Maximum, minimum, sum, mean, product, standard deviation, and more
 
-NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run `mean` to get the average, `prod` to get the result of multiplying the elements together, `std` to get the standard deviation, and more.
+NumPy also performs aggregation functions. In addition to `min`,  `max`, and `sum`, you can easily run **mean** to get the average, **prod** to get the result of multiplying the elements together, **std** to get the standard deviation, and more.
 
 ::
 
@@ -887,7 +888,7 @@ How to inspect the size and shape of a NumPy array
 
 -----
 
-You can get the dimensions of a NumPy array any time using ndarray.shape and NumPy will return the dimensions of the array as a tuple.
+You can get the dimensions of a NumPy array any time using **ndarray.shape**. NumPy will return the dimensions of the array as a tuple.
 
 For example, if you created this array:
 
@@ -905,7 +906,7 @@ For example, if you created this array:
   [ 5  6  7  8]
   [ 9 10 11 12]]
 
-You can use `.shape` to quickly find the shape of your array:
+You can use **np.shape** to quickly find the shape of your array.
 
 ::
 
@@ -961,7 +962,7 @@ It's also easy to find the total number of elements in your array:
 
   Total number of elements in array:  12
 
-You can use np.shape() with a 1D array, of course.
+You can use **np.shape()** with a 1D array as well.
 
 ::
 
@@ -979,7 +980,7 @@ You can use np.shape() with a 1D array, of course.
   Length of 1D array:  8
 
 
-You can get the dimensions of an array using np.size()
+You can get the dimensions of an array using **np.size()**.
 
 ::
 
@@ -1060,7 +1061,7 @@ You can print the total number of elements:
 
   Total number of elements in 3D Numpy array :  24
 
-You can also use np.size() with 1D arrays:
+You can also use **np.size()** with 1D arrays:
 
 ::
 
@@ -1079,7 +1080,7 @@ You can also use np.size() with 1D arrays:
 Remember that if you check the size of your array and it equals 0, your array is empty.
 
 
-Creating Matrices
+Creating matrices
 -----------------
 
 You can pass Python lists of lists to create a matrix to represent them in NumPy.
@@ -1090,7 +1091,7 @@ You can pass Python lists of lists to create a matrix to represent them in NumPy
 
 .. image:: images/np_create_matrix.png
 
-Indexing and slicing operations can be useful when you're manipulating matrices:
+Indexing and slicing operations are useful when you're manipulating matrices:
 
 ::
 
@@ -1128,18 +1129,13 @@ Once you've created your matrices, you can add and multiply them using arithmeti
 
 .. image:: images/np_matrix_arithmetic.png
 
-You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or onw row. In this case, NumPy will use its broadcast rules for the operation.
+You can do these arithmetic operations on matrices of different sizes, but only if the different matrix has only one column or one row. In this case, NumPy will use its broadcast rules for the operation.
 
 ::
 
   data + ones_row
 
 .. image:: images/np_matrix_broadcasting.png
-
-- How to extract specific items from an array
-- How to create sequences, repetitions, and random numbers
-
-NumPy can do everything we've mentioned in any number of dimensions, that's why it's called an N-Dimensional array.
 
 Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. That means that 
 
@@ -1203,7 +1199,7 @@ You can generate a 2 x 4 array of random integers between 0 and 4 with
        [3, 2, 2, 0]])
 
 
-You can also use the `ones()`, `zeros()`, and `random()` methods to create an array if you give them a tuple describing the deminsions of the matrix.
+You can also use the **ones()**, **zeros()**, and **random()** methods to create an array if you give them a tuple describing the deminsions of the matrix.
 
 ::
 
@@ -1244,7 +1240,7 @@ you can use **np.unique**
 
   [11 12 13 14 15 16 17 18 19 20]
 
-To get the indices of unique values in a NumPy array (an array of first index positions of unique values in the array), just pass the **return_index** argument in np.unique() as well as your array.
+To get the indices of unique values in a NumPy array (an array of first index positions of unique values in the array), just pass the **return_index** argument in **np.unique()** as well as your array.
 
 ::
 
@@ -1257,7 +1253,7 @@ To get the indices of unique values in a NumPy array (an array of first index po
 
   [ 0  2  3  4  5  6  7 12 13 14]
 
-You can pass the **return_counts** argument in np.unique() along with your array to get the frequecy count of unique values in a NumPy array.
+You can pass the **return_counts** argument in **np.unique()** along with your array to get the frequecy count of unique values in a NumPy array.
 
 ::
 
@@ -1377,13 +1373,13 @@ You can reverse it with:
 
 ::
 
-  reversedArr = np.flip(arr)
+  reversed_arr = np.flip(arr)
 
 If you want to print your reversed array, you could run:
 
 ::
 
-  print('Reversed Array: ', reversedArr)
+  print('Reversed Array: ', reversed_arr)
 
 **Output:**
 
@@ -1405,10 +1401,10 @@ You can reverse the content in all of the rows and all of the columns with:
 
 ::
 
-  reversedArr = np.flip(arr2D)
+  reversed_arr = np.flip(arr2D)
  
   print('Reversed Array: ')
-  print(reversedArr)
+  print(reversed_arr)
 
 **Output:**
 
@@ -1423,10 +1419,10 @@ You can easily reverse only the rows with:
 
 ::
 
-  reversedArr_rows = np.flip(arr2D, axis=0)
+  reversed_arr_rows = np.flip(arr2D, axis=0)
  
   print('Reversed Array: ')
-  print(reversedArr_rows)
+  print(reversed_arr_rows)
 
 **Output:**
 
@@ -1441,10 +1437,10 @@ Or reverse only the columns with:
 
 ::
 
-  reversedArr_columns = np.flip(arr2D, axis=1)
+  reversed_arr_columns = np.flip(arr2D, axis=1)
  
   print('Reversed Array columns: ')
-  print(reversedArr_columns)
+  print(reversed_arr_columns)
 
 **Output:**
 
@@ -1492,7 +1488,7 @@ You can also reverse the column at index position 1 (the second column):
    [ 9  2 11 12]]
 
 
-Reshaping and Flattening multidimensional arrays
+Reshaping and flattening multidimensional arrays
 ------------------------------------------------
 
 
@@ -1917,10 +1913,10 @@ Learn more about `input and output routines here <https://docs.scipy.org/doc/num
 **Be aware that loading files that contain object arrays with np.load() uses the pickle module which is not secure against erroneous or maliciously constructed data. Consider passing allow_pickle=False to load data that is known not to contain object arrays for the safer handling of untrusted sources.**
 
 
-Working with Mathematical Formulas
+Working with mathematical formulas
 ----------------------------------
 
-Implementing mathematical formulas that work on matrices and vectors is one of the things that make NumPy so highly regarded in the scientific Python community. 
+Implementing mathematical formulas that work on arrays is one of the things that make NumPy so highly regarded in the scientific Python community. 
 
 For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
 
