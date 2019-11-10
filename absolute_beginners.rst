@@ -25,7 +25,7 @@ Installing NumPy
   
 To install NumPy, we strongly recommend using a scientific Python distribution. If you're looking for the full instructions for installing NumPy on your operating system, you can `find all of the details here <https://www.scipy.org/install.html>`_.
 
-If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
+
   
 If you already have Python, you can install NumPy with
 
@@ -39,6 +39,8 @@ or
 
   pip install numpy
   
+If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, such as pandas, Scikit-Learn, etc.
+
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
 How to import NumPy
@@ -66,7 +68,7 @@ NumPy arrays are faster and more compact than Python lists. An array consumes le
 What is an array?
 -----------------
 
-An array is a central data structure of the NumPy library. It's a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the array **dtype**. 
+An array is a central data structure of the NumPy library. An array is a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in `various ways <https://numpy.org/devdocs/user/quickstart.html#indexing-slicing-and-iterating>`_. The elements are all of the same type, referred to as the array **dtype**. 
 
 An array can be indexed by a tuple of nonnegative integers, by booleans, by another array, or by integers. The **rank** of the array is the number of dimensions. The **shape** of the array is a tuple of integers giving the size of the array along each dimension.
 
@@ -76,15 +78,21 @@ One way we can initialize NumPy arrays is from nested Python lists.
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-We can access the elements in the array using square brackets. When you're accessing elements, remember that indexing in NumPy starts at 0. That means that, if you want to access the first element in your array, you'll be accessing element "0".
+We can access the elements in the array using square brackets. When you're accessing elements, remember that indexing in NumPy starts at 0. That means that if you want to access the first element in your array, you'll be accessing element "0".
 
 ::
 
-  print(data[0])
+  print(a[0])
+
+**Output:**
+
+::
+
+  [1 2 3 4]
+
 
 More information about arrays
 -----------------------------
-
 
 ::
 
@@ -151,7 +159,7 @@ You can visualize your array this way:
 
 .. image:: images/np_array.png
 
-Besides creating an array from a sequence of elements, you can easily create an array filled with 0s:
+Besides creating an array from a sequence of elements, you can easily create an array filled with **0**s:
 
 ::
 
@@ -164,7 +172,7 @@ Besides creating an array from a sequence of elements, you can easily create an 
 
   array([0., 0.])
 
-Or an array filled with 1s:
+Or an array filled with **1**s:
 
 ::
 
@@ -184,7 +192,7 @@ Or even an empty array! The function *empty* creates an array whose initial cont
   # Create an empty array with 2 elements
   np.empty(2)
 
-You can create an array with a range of elements:
+You can create an array with a **range** of elements:
 
 ::
 
@@ -197,7 +205,7 @@ You can create an array with a range of elements:
 
   array([0, 1, 2, 3])
 
-And even an array that contains a range of evenly spaced interval. To do this, you will specify the first and last number and the step size.
+And even an array that contains a range of evenly spaced interval. To do this, you will specify the **first number**, **last number**, and the **step size**.
 
 ::
 
@@ -223,7 +231,7 @@ It's simple to create an array where the values are spaced linearly in an interv
 
 **Specifying your data type**
 
-While the default data type is floating point (float64), you can expecity specify which data type you want using 'dtype'.
+While the default data type is floating point (float64), you can expecity specify which data type you want using **dtype**.
 
 ::
 
@@ -251,7 +259,7 @@ Adding, removing, and sorting elements
 -----
 
 
-If we start with this array:
+If you start with this array:
 
 ::
 
@@ -260,7 +268,7 @@ If we start with this array:
 
 **Append**
 
-You can add elements to an array any time with np.append.
+You can add elements to your array any time with **np.append()**. Make sure to specify the array and the elements you want to include.
 ::
 
   np.append(arr, [1,2])
@@ -273,11 +281,10 @@ You can add elements to an array any time with np.append.
 
 **Delete**
 
-You can delete an element with np.delete. 
+You can delete an element with **np.delete()**. If you want to delete the element in position 1 of your array "arr," you can run:
 
 ::
 
-  # Delete the element in position 1
   np.delete(arr, 1)
 
 **Output**
@@ -288,7 +295,7 @@ You can delete an element with np.delete.
 
 **Sort**
 
-Sorting an element is simple with np.sort. You can specify the axis, kind, and order when you call the function. `Read more about sorting an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
+Sorting an element is simple with **np.sort()**. You can specify the axis, kind, and order when you call the function. `Read more about sorting an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
 
 If you start with this array:
 
@@ -373,7 +380,7 @@ Can you reshape an array?
   
 **Yes!**
 
-**np.reshape()** will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you'll need to make sure that your new array also has a total of 12 elements.
+Using **np.reshape()** will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you'll need to make sure that your new array also has a total of 12 elements.
 
 For example:
 
@@ -418,6 +425,92 @@ You can specify a few optional parameters.
 How to convert a 1D array into a 2D array (how to add a new axis)
 -----------------------------------------------------------------
 
+::
+
+  newaxis
+  expandims
+
+-----
+
+You can use **newaxis** to increase the dimensions of your existing array by one o dimension when used once. This means that a 1D array will become a 2D array, a 2 D array will be come a 3D array, and so on. 
+
+::
+
+  a = np.array([1, 2, 3, 4, 5, 6])
+  a.shape
+
+**Output:**
+
+::
+
+  (6,)
+
+You can add a new axis this way:
+
+::
+
+  a2 = a[np.newaxis]
+  a2.shape
+
+**Output:**
+
+::
+
+  (1, 6)
+
+You can explicityly convert a 1D array to either a row vector or a column vector with np.newaxis. For example, you can convert a 1D array to a row vector by inserting a n axis  along the first dimension:
+
+::
+
+  row_vec = a[np.newaxis, :]
+  row_vec.shape
+
+**Output:**
+
+::
+
+  (1, 6)
+
+Or, for a column vector, you can insert an axis along the second dimension:
+
+::
+
+  row_vec = a[:, np.newaxis]
+  row_vec.shape
+
+**Output:**
+
+::
+
+  (6, 1)
+
+You can also expand an array by inserting a new axis at a specified position with np.expand_dims.
+
+For example, if you start with this array:
+
+::
+
+  a = np.array([1, 2, 3, 4, 5, 6])
+  a.shape
+
+**Output:**
+
+::
+
+  (6,)
+
+You can use **np.expand_dimes to add an axis at index position 1 with:
+
+::
+
+  b = np.expand_dims(a, axis=1)
+  b.shape
+
+**Output:**
+
+::
+
+  (6, 1)
 
 Indexing and Slicing
 --------------------
@@ -1459,7 +1552,7 @@ How to access the docstring for more information
 
 -----
 
-When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of that is the built-in access to documentation. Every object contains the reference to a string, which is known as the **docstring**. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in **help()** function that can help you access this information. This means that nearly any time you need more information, you can use **help()** to find more information quickly.
+When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of that is the built-in access to documentation. Every object contains the reference to a string, which is known as the **docstring**. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in **help()** function that can help you access this information. This means that nearly any time you need more information, you can use **help()** to quickly find the information that you need.
 
 For example,
 
@@ -1482,7 +1575,7 @@ Will return
       the provided iterable is empty.
       With two or more arguments, return the largest argument.
 
-Because access to more information is so useful, IPython uses the **?** character as a shorthand for accessing this documentation along with other relevant information.
+Because access to additional information is so useful, IPython uses the **?** character as a shorthand for accessing this documentation along with other relevant information.
 
 For example,
 
