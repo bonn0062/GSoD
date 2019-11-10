@@ -427,12 +427,16 @@ How to convert a 1D array into a 2D array (how to add a new axis)
 
 ::
 
-  newaxis
-  expandims
+  np.newaxis
+  np.expand_dims
 
 -----
 
-You can use **newaxis** to increase the dimensions of your existing array by one o dimension when used once. This means that a 1D array will become a 2D array, a 2 D array will be come a 3D array, and so on. 
+You can use **np.newaxis** and **np.expand_dims** to increase the dimensions of your existing array.
+
+Using **np.newaxis** will increase the dimensions of your array by one dimension when used once. This means that a **1D** array will become a **2D** array, a **2D** array will be come a **3D** array, and so on. 
+
+For example, if you start with this array:
 
 ::
 
@@ -445,7 +449,7 @@ You can use **newaxis** to increase the dimensions of your existing array by one
 
   (6,)
 
-You can add a new axis this way:
+You can use **np.newaxis** to add a new axis:
 
 ::
 
@@ -458,7 +462,7 @@ You can add a new axis this way:
 
   (1, 6)
 
-You can explicityly convert a 1D array to either a row vector or a column vector with np.newaxis. For example, you can convert a 1D array to a row vector by inserting a n axis  along the first dimension:
+You can explicitly convert a 1D array with either a row vector or a column vector using np.newaxis. For example, you can convert a 1D array to a row vector by inserting an axis  along the first dimension:
 
 ::
 
@@ -499,7 +503,7 @@ For example, if you start with this array:
 
   (6,)
 
-You can use **np.expand_dimes to add an axis at index position 1 with:
+You can use **np.expand_dims** to add an axis at index position 1 with:
 
 ::
 
@@ -511,6 +515,7 @@ You can use **np.expand_dimes to add an axis at index position 1 with:
 ::
 
   (6, 1)
+
 
 Indexing and Slicing
 --------------------
