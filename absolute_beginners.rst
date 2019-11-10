@@ -1448,7 +1448,7 @@ For example:
   New array: 
   [101   2   3   4   5   6   7   8   9  10  11  12]
 
-How to access the docstring to get more information
+How to access the docstring for more information
 ---------------------------------------------------
 
 ::
@@ -1459,7 +1459,7 @@ How to access the docstring to get more information
 
 -----
 
-When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of that is the built-in accss to documentation. Every object contains the reference to a string, which is knows as the **docstring**. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in **help()** function that can help you access this information. This means that nearly any time you need more information, you can use **help()** to find more information quickly.
+When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of that is the built-in access to documentation. Every object contains the reference to a string, which is known as the **docstring**. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in **help()** function that can help you access this information. This means that nearly any time you need more information, you can use **help()** to find more information quickly.
 
 For example,
 
@@ -1495,6 +1495,14 @@ Will return
 ::
 
   Docstring:
+  max(iterable, *[, default=obj, key=func]) -> value
+  max(arg1, arg2, *args, *[, key=func]) -> value
+
+  With a single iterable argument, return its biggest item. The
+  default keyword-only argument specifies an object to return if
+  the provided iterable is empty.
+  With two or more arguments, return the largest argument.
+  Type:      builtin_function_or_method
   
 You can even use this notation for object methods and objects themselves.
 
@@ -1637,7 +1645,7 @@ Will return a lot of useful information.
   ...            dtype=int) # offset = 1*itemsize, i.e. skip first element
   array([2, 3])
 
-This also works for functions and other objects that you created. Just remember to create a docstring with your function using a string literal (**""" """** or **''' '''** around your documentation).
+This also works for functions and other objects that **you** create. Just remember to include a docstring with your function using a string literal (**""" """** or **''' '''** around your documentation).
 
 For example, if you create this function:
 
@@ -1779,8 +1787,8 @@ The **savetxt()** and **loadtxt()** functions accept additional optional paramet
 
 With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
 
-You can read more about `save <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_here, `savez <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_here, and `load <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_here. 
-You can read more about `savetxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_here, and `loadtxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_here.
+You can read more about `save <https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html>`_ here, `savez <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html>`_ here, and `load <https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html>`_ here. 
+You can read more about `savetxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_ here, and `loadtxt <https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html>`_ here.
 
 Learn more about `input and output routines here <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_.
 
