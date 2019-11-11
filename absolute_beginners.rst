@@ -39,7 +39,7 @@ or
 
   pip install numpy
   
-If you don't have Python yet, you might want to consider using Anaconda. It's the easiest way to get started! The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, like pandas, Scikit-Learn, etc.
+If you don't have Python yet, you might want to consider using `Anaconda <https://www.anaconda.com/>`_. It's the easiest way to get started. The good thing about getting this distribution is is the fact that you don’t need to worry too much about separately installing NumPy or any of the major packages that you’ll be using for your data analyses, like pandas, Scikit-Learn, etc.
 
 You can find all of the installation details in the `Installation <https://www.scipy.org/install.html>`_ section at scipy.org.
 
@@ -138,7 +138,7 @@ How to create a basic array
 
 -----
 
-To create a NumPy array, you can use the function `np.array()`
+To create a NumPy array, you can use the function **np.array()**.
 
 All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. `You can find more information about data types here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
@@ -149,7 +149,7 @@ All you need to do to create a simple array is pass a list to it. If you choose 
     # create a 1-D array
     a = np.array([1, 2, 3])
 
-The default data type is floating point and you can explicity specify which data type you want any time:
+The default data type is floating point, but you can explicity specify which data type you want:
 
 ::
 
