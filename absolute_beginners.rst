@@ -149,12 +149,6 @@ All you need to do to create a simple array is pass a list to it. If you choose 
     # create a 1-D array
     a = np.array([1, 2, 3])
 
-The default data type is floating point, but you can explicity specify which data type you want:
-
-::
-
-  b = np.array([1, 2, 3], dtype=float)
-
 You can visualize your array this way:
 
 .. image:: images/np_array.png
@@ -176,7 +170,7 @@ Or an array filled with 1s:
 
 ::
 
-  # Create a 1D array with 2 eleements, both 1s
+  # Create a 1D array with 2 elements, both 1s
   np.ones(2)
 
 **Output:**
@@ -217,7 +211,7 @@ And even an array that contains a range of evenly spaced interval. To do this, y
 
   array([2, 4, 6, 8])
 
-It's simple to create an array where the values are spaced linearly in an interval:
+You can also use **np.linspace()** to create an array with values that are spaced linearly in a specified interval:
 
 ::
 
@@ -231,7 +225,7 @@ It's simple to create an array where the values are spaced linearly in an interv
 
 **Specifying your data type**
 
-While the default data type is floating point (float64), you can expecity specify which data type you want using **dtype**.
+While the default data type is floating point (**float64**), you can expecity specify which data type you want using **dtype**.
 
 ::
 
@@ -341,7 +335,7 @@ How do you know the shape and size of an array?
 
 **ndarray.shape** will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2D array with 2 rows and 3 columns, the shape of your array is (2,3).
 
-For example:
+For example, if you create this array:
 
 ::
 
@@ -355,16 +349,40 @@ For example:
                                   [0 ,1 ,2, 3]
                                   [4, 5, 6, 7]]])
 
-  array_example.ndim # Number of dimensions
-  array_example.size # Total number of elements in the array
-  array_example.shape # Shape of your array
+  To find the number of dimensions of the array, run:
+
+  ::
+
+    array_example.ndim
 
 **Output:**
 
 ::
 
   3
+
+To find the total number of elements in the array, run:
+
+::
+  array_example.size # Total number of elements in the array
+  
+
+**Output:**
+
+::
+
   24
+
+And to find the shape of your array, run:
+
+::
+
+  array_example.shape # Shape of your array
+
+**Output:**
+
+::
+
   (3,2,4)
 
 
