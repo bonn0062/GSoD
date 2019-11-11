@@ -349,9 +349,9 @@ For example, if you create this array:
                                   [0 ,1 ,2, 3]
                                   [4, 5, 6, 7]]])
 
-  To find the number of dimensions of the array, run:
+To find the number of dimensions of the array, run:
 
-  ::
+::
 
     array_example.ndim
 
@@ -364,6 +364,7 @@ For example, if you create this array:
 To find the total number of elements in the array, run:
 
 ::
+  
   array_example.size # Total number of elements in the array
   
 
