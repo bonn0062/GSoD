@@ -365,7 +365,7 @@ To find the total number of elements in the array, run:
 
 ::
   
-  array_example.size # Total number of elements in the array
+  array_example.size
   
 
 **Output:**
@@ -378,7 +378,7 @@ And to find the shape of your array, run:
 
 ::
 
-  array_example.shape # Shape of your array
+  array_example.shape
 
 **Output:**
 
