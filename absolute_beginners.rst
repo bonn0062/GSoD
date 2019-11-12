@@ -614,6 +614,32 @@ You can also specify a condition, for example, numbers that are equal to or grea
 
   [ 5  6  7  8  9 10 11 12]
 
+You can select elements that are divisible by 2:
+
+::
+
+  divisible_by_2 = a[a%2==0]
+  print(divisible_by_2)
+
+**Output:**
+
+::
+
+  [ 2  4  6  8 10 12]
+
+You can also select elements that satisfy two conditions using the **&** and **|** operators:
+
+::
+
+  c = a[(a > 2) & (a < 11)]
+  print(c)
+
+**Output:**
+
+::
+
+  [ 3  4  5  6  7  8  9 10]
+
 While it would be incredibly inefficient for this array, you can also make use of the logical operators **&** and **|** in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be particularly useful with arrays that contain names or other categorical values.
 
 ::
@@ -650,6 +676,26 @@ You can use **np.where()** to print the indices of elements that are, for exampl
 
   (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
 
+In this example, a tuple of arrays was returned: one fo reach dimension. THe first array represents the row indicies where this value is found, and the second array represents the column indices where the values is found.
+
+If you want to generate a list of coordinates where the elements exist, you can zip the arrays, iterate over the list of coordinates, and print them. For example:
+
+::
+
+  list_of_coordinates= list(zip(b[0], b[1]))
+
+  for cord in list_of_coordinates:
+      print(cord)
+
+**Output:**
+
+::
+
+  (0, 0)
+  (0, 1)
+  (0, 2)
+  (0, 3)
+
 You can also use **np.where()** to print the elements in array that are less than 5 with:
 
 ::
@@ -674,6 +720,7 @@ If the element you're looking for doesn't exist in the array, then the returned 
 ::
 
   (array([], dtype=int64), array([], dtype=int64))
+
 
 `Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
 
