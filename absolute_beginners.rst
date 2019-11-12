@@ -573,20 +573,6 @@ You can index and slice NumPy arrays in the same ways you can slice Python lists
   2
   [1 2]
   [2 3]
-  
-Or you can add an axis at index position 0 with:
-
-::
-
-    c.shape
-    c.shape
-
-**Output:**
-
-::
-
-  (1, 6)
-  [2 3]
 
 You can visualize it this way:
 
