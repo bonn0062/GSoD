@@ -580,6 +580,58 @@ You can visualize it this way:
 
 `Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
 
+You may want to take just a part of your array or specific array elements to use in further analysis or additional operations. To do that, you'll need to subset, slice, and/or index your arrays. 
+
+You may want to select valuses from your array that fulfill a certain condition. This is straightforward with NumPy. 
+
+For example, if you start with this array:
+
+::
+
+  a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+
+You can easily print all of the values in the array that are less than 5
+
+::
+
+  print(a[a<5])
+
+**Output:**
+
+::
+  
+  [1 2 3 4]
+
+You can also specify a condition, for example, numbers that are equal to or greater than 5, and use that condition to index an array.
+
+::
+
+  five_up = (a >= 5)
+  print(a[five_up])
+
+**Output:**
+
+::
+
+  [ 5  6  7  8  9 10 11 12]
+
+While it's incredibly inefficient for this array, you can also make use of the logical operators **&** and **|** in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be particularily usefull with arrays that contain names or other categorical values.
+
+::
+
+  five_up = (array > 5) | (array == 5)
+  print(five_up)
+
+**Output:**
+
+::
+
+  [[False False False False]
+   [ True  True  True  True]
+   [ True  True  True  True]] 
+
+
+
 How to create an array from existing data
 -----------------------------------------
 
@@ -587,13 +639,13 @@ How to create an array from existing data
 ::
 
   slicing and indexing
-  view
-  copy
 
   np.vstack()
   np.hstack()
   np.hsplit()
   
+  .view()
+  .copy()
 
 -----
 
@@ -666,7 +718,7 @@ Or stack them horizontally with **hstack**:
 
 You can also split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
 
-Let's say you have this array, a_3:
+Let's say you have this array:
 
 ::
 
@@ -677,7 +729,7 @@ If you wanted to split this array into three equally shaped arrays, you would ru
 
 ::
 
-  np.hsplit(a_3,3)
+  np.hsplit(array,3)
 
 **Output:**
 
@@ -692,7 +744,7 @@ If you wanted to split your array after the third and fourth column, you'd run:
 
 ::
 
-  np.hsplit(a_3,(3,4))
+  np.hsplit(array,(3,4))
 
 **Output:**
 
@@ -715,7 +767,7 @@ You can create a new array with the same data using:
 
 ::
 
-  b = np_arr.view()
+  b = a.view()
 
 Using the `copy` method makes a complete copy of the array and its data (a *deep copy*). To use this on your array, you could run:
 
@@ -1328,8 +1380,6 @@ To get the unique rows, occurrence count, and index position, you can use:
   Indices:  
    [2 1 1]
 
-How to get index locations that satisfy a given condition 
----------------------------------------------------------
 
 Transposing and reshaping a matrix
 ----------------------------------
