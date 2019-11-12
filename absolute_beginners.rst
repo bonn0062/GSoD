@@ -650,7 +650,7 @@ You can use **np.where()** to print the indices of elements that are, for exampl
 
   (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
 
-And print the elements that are less than 5 with:
+You can also use **np.where()** to print the elements in array that are less than 5 with:
 
 ::
 
@@ -661,6 +661,19 @@ And print the elements that are less than 5 with:
 ::
 
   [1 2 3 4]
+
+If the element you're looking for doesn't exist in the array, then the returned array of indices will be empty. For example:
+
+::
+
+  not_there = np.where(a == 42)
+  print(not_there)
+
+**Output:**
+
+::
+
+  (array([], dtype=int64), array([], dtype=int64))
 
 `Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
 
