@@ -578,11 +578,10 @@ You can visualize it this way:
 
 .. image:: images/np_indexing.png
 
-`Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
 
 You may want to take just a part of your array or specific array elements to use in further analysis or additional operations. To do that, you'll need to subset, slice, and/or index your arrays. 
 
-You may want to select valuses from your array that fulfill a certain condition. This is straightforward with NumPy. 
+If you want to select values from your array that fulfill certain conditions, it's straightforward with NumPy. 
 
 For example, if you start with this array:
 
@@ -615,7 +614,7 @@ You can also specify a condition, for example, numbers that are equal to or grea
 
   [ 5  6  7  8  9 10 11 12]
 
-While it's incredibly inefficient for this array, you can also make use of the logical operators **&** and **|** in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be particularily usefull with arrays that contain names or other categorical values.
+While it would be incredibly inefficient for this array, you can also make use of the logical operators **&** and **|** in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be particularly useful with arrays that contain names or other categorical values.
 
 ::
 
@@ -630,6 +629,42 @@ While it's incredibly inefficient for this array, you can also make use of the l
    [ True  True  True  True]
    [ True  True  True  True]] 
 
+You can also select elements or indices from an array with **np.where()**. 
+
+Starting with this array:
+
+::
+
+  a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+
+You can use **np.where()** to print the indices of elements that are, for example, less than 5 with:
+
+::
+
+  b = np.where(a<5)
+  print(b)
+
+**Output:**
+
+::
+
+  (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
+
+And print the elements that are less than 5 with:
+
+::
+
+  print(a[b])
+
+**Output:**
+
+::
+
+  [1 2 3 4]
+
+`Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
+
+`Read more about the where function here <https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.where.html>`_.
 
 
 How to create an array from existing data
