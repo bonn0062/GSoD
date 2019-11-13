@@ -74,8 +74,6 @@ An array can be indexed by a tuple of nonnegative integers, by booleans, by anot
 
 One way we can initialize NumPy arrays is from nested Python lists. 
 
-**Input:**
-
 ::
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
@@ -110,8 +108,6 @@ An array is usually a fixed-size container of items of the same type and size. T
 
 In NumPy, dimensions are called **axes**. This means that if you have a 2D array that looks like this:
 
-**Input:**
-
 ::
 
   [[0., 0., 0.],
@@ -145,8 +141,6 @@ How to create a basic array
 To create a NumPy array, you can use the function **np.array()**.
 
 All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. `You can find more information about data types here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
-
-**Input:**
 
 ::
 
@@ -274,8 +268,6 @@ Adding, removing, and sorting elements
 
 If you start with this array:
 
-**Input:**
-
 ::
 
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
@@ -311,8 +303,6 @@ You can delete an element with **np.delete()**. If you want to delete the elemen
 
 `Read more about appending an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.append.html>`_ and `deleting elements here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.delete.html>`_.
 
-**Sort**
-
 Sorting an element is simple with **np.sort()**. You can specify the axis, kind, and order when you call the function. `Read more about sorting an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.sort.html>`_.
 
 If you start with this array:
@@ -322,6 +312,8 @@ If you start with this array:
   arr = np.array([2, 1, 5, 3, 7, 4, 6, 8])
 
 You can quickly sort the numbers in ascending order with:
+
+**Input:**
 
 ::
 
@@ -363,17 +355,18 @@ For example, if you create this array:
 
 ::
 
-      import numpy as np
-      array_example = np.array([[[0, 1, 2, 3]
-                                 [4, 5, 6, 7]],
+  array_example = np.array([[[0, 1, 2, 3]
+                             [4, 5, 6, 7]],
 
-                                 [[0, 1, 2, 3]
-                                  [4, 5, 6, 7]],
+                             [[0, 1, 2, 3]
+                              [4, 5, 6, 7]],
 
-                                  [0 ,1 ,2, 3]
-                                  [4, 5, 6, 7]]])
+                              [0 ,1 ,2, 3]
+                              [4, 5, 6, 7]]])
 
 To find the number of dimensions of the array, run:
+
+**Input:**
 
 ::
 
@@ -387,6 +380,8 @@ To find the number of dimensions of the array, run:
 
 To find the total number of elements in the array, run:
 
+**Input:**
+
 ::
   
   array_example.size
@@ -399,6 +394,8 @@ To find the total number of elements in the array, run:
   24
 
 And to find the shape of your array, run:
+
+**Input:**
 
 ::
 
@@ -441,6 +438,8 @@ If you start with this array:
 
 You can use **reshape()** to reshape your array. For example, you can reshape this array to an array with three rows and two columns:
 
+**Input:**
+
 ::
 
   b = a.reshape(3,2)
@@ -455,6 +454,8 @@ You can use **reshape()** to reshape your array. For example, you can reshape th
    [4 5]]
 
 With np.reshape, you can specify a few optional parameters:
+
+**Input:**
 
 ::
 
@@ -498,6 +499,8 @@ For example, if you start with this array:
 
 You can use **np.newaxis** to add a new axis:
 
+**Input:**
+
 ::
 
   a2 = a[np.newaxis]
@@ -511,6 +514,8 @@ You can use **np.newaxis** to add a new axis:
 
 You can explicitly convert a 1D array with either a row vector or a column vector using np.newaxis. For example, you can convert a 1D array to a row vector by inserting an axis  along the first dimension:
 
+**Input:**
+
 ::
 
   row_vector = a[np.newaxis, :]
@@ -523,6 +528,8 @@ You can explicitly convert a 1D array with either a row vector or a column vecto
   (1, 6)
 
 Or, for a column vector, you can insert an axis along the second dimension:
+
+**Input:**
 
 ::
 
@@ -539,6 +546,8 @@ You can also expand an array by inserting a new axis at a specified position wit
 
 For example, if you start with this array:
 
+**Input:**
+
 ::
 
   a = np.array([1, 2, 3, 4, 5, 6])
@@ -552,6 +561,8 @@ For example, if you start with this array:
 
 You can use **np.expand_dims** to add an axis at index position 1 with:
 
+**Input:**
+
 ::
 
   b = np.expand_dims(a, axis=1)
@@ -564,6 +575,8 @@ You can use **np.expand_dims** to add an axis at index position 1 with:
   (6, 1)
 
 You can add an axis at index position 0 with:
+
+**Input:**
 
 ::
 
@@ -581,12 +594,12 @@ Indexing and slicing
 
 You can index and slice NumPy arrays in the same ways you can slice Python lists.
 
+**Input:**
+
 ::
 
-   # create a 1-D array
     data = np.array([1,2,3])
 
-    # print the first element of the array
     print(data[0])
     print(data[1])
     print(data[0:2])
@@ -617,7 +630,9 @@ For example, if you start with this array:
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-You can easily print all of the values in the array that are less than 5
+You can easily print all of the values in the array that are less than 5.
+
+**Input:**
 
 ::
 
@@ -630,6 +645,8 @@ You can easily print all of the values in the array that are less than 5
   [1 2 3 4]
 
 You can also select, for example, numbers that are equal to or greater than 5, and use that condition to index an array.
+
+**Input:**
 
 ::
 
@@ -644,6 +661,8 @@ You can also select, for example, numbers that are equal to or greater than 5, a
 
 You can select elements that are divisible by 2:
 
+**Input:**
+
 ::
 
   divisible_by_2 = a[a%2==0]
@@ -657,6 +676,8 @@ You can select elements that are divisible by 2:
 
 Or you can select elements that satisfy two conditions using the **&** and **|** operators:
 
+**Input:**
+
 ::
 
   c = a[(a > 2) & (a < 11)]
@@ -669,6 +690,8 @@ Or you can select elements that satisfy two conditions using the **&** and **|**
   [ 3  4  5  6  7  8  9 10]
 
 While it would be incredibly inefficient for this array, you can also make use of the logical operators **&** and **|** in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be useful with arrays that contain names or other categorical values.
+
+**Input:**
 
 ::
 
@@ -687,11 +710,15 @@ You can also use **np.where()** to select elements or indices from an array.
 
 Starting with this array:
 
+**Input:**
+
 ::
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can use **np.where()** to print the indices of elements that are, for example, less than 5:
+
+**Input:**
 
 ::
 
@@ -707,6 +734,8 @@ You can use **np.where()** to print the indices of elements that are, for exampl
 In this example, a tuple of arrays was returned: one for each dimension. The first array represents the row indices where this value is found, and the second array represents the column indices where the values is found.
 
 If you want to generate a list of coordinates where the elements exist, you can zip the arrays, iterate over the list of coordinates, and print them. For example:
+
+**Input:**
 
 ::
 
@@ -726,6 +755,8 @@ If you want to generate a list of coordinates where the elements exist, you can 
 
 You can also use **np.where()** to print the elements in array that are less than 5 with:
 
+**Input:**
+
 ::
 
   print(a[b])
@@ -737,6 +768,8 @@ You can also use **np.where()** to print the elements in array that are less tha
   [1 2 3 4]
 
 If the element you're looking for doesn't exist in the array, then the returned array of indices will be empty. For example:
+
+**Input:**
 
 ::
 
@@ -780,6 +813,8 @@ You can easily use create a new array from a section of an existing array. Let's
 
 You can create a new array from a section of your array any time by specifying where you want to slice your array.
 
+**Input:**
+
 ::
 
   arr1 = array[3:8]
@@ -811,6 +846,8 @@ and a_2:
 
 You can stack them vertically with **vstack**:
 
+**Input:**
+
 ::
 
   np.vstack((a_1, a_2))
@@ -825,6 +862,8 @@ You can stack them vertically with **vstack**:
        [4, 4]])
 
 Or stack them horizontally with **hstack**:
+
+**Input:**
 
 ::
 
@@ -850,6 +889,8 @@ Let's say you have this array:
 
 If you wanted to split this array into three equally shaped arrays, you would run:
 
+**Input:**
+
 ::
 
   np.hsplit(array,3)
@@ -864,6 +905,8 @@ If you wanted to split this array into three equally shaped arrays, you would ru
         [21, 22, 23, 24]])]
 
 If you wanted to split your array after the third and fourth column, you'd run:
+
+**Input:**
 
 ::
 
@@ -882,17 +925,23 @@ You can use the **view** method to create a new array object that looks at the s
 
 Let's say you create this array:
 
+**Input:**
+
 ::
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can create a new array with the same data using:
 
+**Input:**
+
 ::
 
   b = a.view()
 
 Using the **copy** method will make a complete copy of the array and its data (a *deep copy*). To use this on your array, you could run:
+
+**Input:**
 
 ::
 
@@ -935,6 +984,8 @@ You can, of course, do more than just addition!
 
 Basic operations are simple with NumPy. If you want to find the sum of the elements in an array, you'd use **sum()**. This works for 1D arrays, 2D arrays, and arrays in higher dimentions.
 
+**Input:**
+
 ::
 
   a = np.array([1, 2, 3, 4])
@@ -952,11 +1003,15 @@ To add the rows or the columns in a 2D array, you would specify the axis.
 
 If you start with this array:
 
+**Input:**
+
 ::
 
   b = np.array([[1, 1], [2, 2]])
 
 You can sum the rows with:
+
+**Input:**
 
 ::
   
@@ -969,6 +1024,8 @@ You can sum the rows with:
   array([3, 3])
 
 You can sum the columns with:
+
+**Input:**
 
 ::
 
@@ -1027,6 +1084,8 @@ Let's start with this array, called "A"
 
 It's very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate of the entire array. To find the sum or the minimum of the elements in your array, run:
 
+**Input:**
+
 ::
 
   A.sum()
@@ -1050,6 +1109,8 @@ Or
   0.050935870838424435
 
 You can specify on which axis you want the aggregation function to be computed. For example, you can find the minimum value within each column by specifying **axis=0**.
+
+**Input:**
 
 ::
 
@@ -1082,11 +1143,15 @@ You can get the dimensions of a NumPy array any time using **ndarray.shape**. Nu
 
 For example, if you create this array:
 
+**Input:**
+
 ::
 
   np_arr = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can use **np.shape** to find the shape of your array.
+
+**Input:**
 
 ::
 
@@ -1102,6 +1167,8 @@ This output tells you that your array has three rows and four columns.
 
 You can find just the number of rows by specifying [0]:
 
+**Input:**
+
 ::
 
   num_of_rows = np_arr.shape[0]
@@ -1115,6 +1182,8 @@ You can find just the number of rows by specifying [0]:
   Number of Rows :  3
 
 Or just the number of columns by specifying [1]:
+
+**Input:**
 
 ::
 
@@ -1130,6 +1199,8 @@ Or just the number of columns by specifying [1]:
 
 It's also easy to find the total number of elements in your array:
 
+**Input:**
+
 ::
 
   print(np_arr.shape[0] * np_arr.shape[1])
@@ -1141,6 +1212,8 @@ It's also easy to find the total number of elements in your array:
   12
 
 You can use **np.shape()** with a 1D array as well. If you create this array:
+
+**Input:**
 
 ::
 
@@ -1163,6 +1236,8 @@ You can print the shape and then length of the array.
 
 You can get the dimensions of an array using **np.size()**.
 
+**Input:**
+
 ::
 
   # get number of rows in array
@@ -1183,6 +1258,8 @@ You can get the dimensions of an array using **np.size()**.
 
 You can print the total number of elements as well:
 
+**Input:**
+
 ::
   
   print('Total number of elements in  array : ', np.size(np_arr))
@@ -1195,12 +1272,16 @@ You can print the total number of elements as well:
 
 This also works for 3D arrays:
 
+**Input:**
+
 ::
 
   arr3D = np.array([ [[1, 1, 1, 1], [2, 2, 2, 2], [3, 3, 3, 3]],
                  [[4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6]] ])
 
 You can easily print the size of the axis:
+
+**Input:**
 
 ::
 
@@ -1218,6 +1299,8 @@ You can easily print the size of the axis:
 
 You can print the total number of elements:
 
+**Input:**
+
 ::
 
   print(np.size(arr3D))
@@ -1229,6 +1312,8 @@ You can print the total number of elements:
   24
 
 You can also use **np.size()** with 1D arrays:
+
+**Input:**
 
 ::
 
@@ -1304,7 +1389,9 @@ You can do these arithmetic operations on matrices of different sizes, but only 
 
 .. image:: images/np_matrix_broadcasting.png
 
-Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. That means that 
+Be aware that when NumPy prints N-Dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. That means that:
+
+**Input:** 
 
 ::
 
@@ -1354,6 +1441,8 @@ With Generator.integers, you can generate random integers from low (remember tha
 
 You can generate a 2 x 4 array of random integers between 0 and 4 with
 
+**Input:**
+
 ::
 
   rng.integers(5, size=(2, 4))
@@ -1390,11 +1479,15 @@ You can find the unique elements in an array easily with **np.unique**.
 
 For example, if you start with this array:
 
+**Input:**
+
 ::
 
   a = np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
 
 you can use **np.unique**
+
+**Input:**
 
 ::
 
@@ -1409,6 +1502,8 @@ you can use **np.unique**
 
 To get the indices of unique values in a NumPy array (an array of first index positions of unique values in the array), just pass the **return_index** argument in **np.unique()** as well as your array.
 
+**Input:**
+
 ::
 
   indices_list = np.unique(a, return_index=True)
@@ -1421,6 +1516,8 @@ To get the indices of unique values in a NumPy array (an array of first index po
   [ 0  2  3  4  5  6  7 12 13 14]
 
 You can pass the **return_counts** argument in **np.unique()** along with your array to get the frequency count of unique values in a NumPy array.
+
+**Input:**
 
 ::
 
@@ -1435,11 +1532,15 @@ You can pass the **return_counts** argument in **np.unique()** along with your a
 
 This also works with 2D arrays. If you start with this array:
 
+**Input:**
+
 ::
 
   a2D = np.array([[1, 2, 3, 4] ,[5, 6, 7, 8] , [9, 10, 11, 12],  [1, 2, 3, 4]])
 
 You can find the unique values with:
+
+**Input:**
 
 ::
 
@@ -1456,6 +1557,8 @@ If the axis argument isn't passed, your 2D array will be flattened.
 
 To get the unique rows or columns, make sure to pass the **axis** argument. To find the unique rows, speciify **axis=0** and for columns, specify **axis=1**.
 
+**Input:**
+
 ::
 
   unique_rows = np.unique(a2D, axis=0)
@@ -1470,6 +1573,8 @@ To get the unique rows or columns, make sure to pass the **axis** argument. To f
    [ 9 10 11 12]]
 
 To get the unique rows, occurrence count, and index position, you can use:
+
+**Input:**
 
 ::
 
@@ -1532,6 +1637,8 @@ NumPy's **np.flip()** function allows you to flip, or reverse, the contents of a
 
 If you begin with a 1D array like this one:
 
+**Input:**
+
 ::
 
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
@@ -1543,6 +1650,8 @@ You can reverse it with:
   reversed_arr = np.flip(arr)
 
 If you want to print your reversed array, you can run:
+
+**Input:**
 
 ::
 
@@ -1560,11 +1669,15 @@ A 2D array works much the same way.
 
 If you start with this array:
 
+**Input:**
+
 ::
 
   arr2D = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
 You can reverse the content in all of the rows and all of the columns with:
+
+**Input:**
 
 ::
 
@@ -1584,6 +1697,8 @@ You can reverse the content in all of the rows and all of the columns with:
 
 You can easily reverse only the rows with:
 
+**Input:**
+
 ::
 
   reversed_arr_rows = np.flip(arr2D, axis=0)
@@ -1601,6 +1716,8 @@ You can easily reverse only the rows with:
    [ 1  2  3  4]]
 
 Or reverse only the columns with:
+
+**Input:**
 
 ::
 
@@ -1620,6 +1737,8 @@ Or reverse only the columns with:
 
 You can also reverse the contents of only one column or row. For example, you can reverse the contents of the row at index position 1 (the second row):
 
+**Input:**
+
 ::
 
   arr2D[1] = np.flip(arr2D[1])
@@ -1637,6 +1756,8 @@ You can also reverse the contents of only one column or row. For example, you ca
    [ 9 10 11 12]]
 
 You can also reverse the column at index position 1 (the second column):
+
+**Input:**
 
 ::
 
@@ -1674,6 +1795,8 @@ If you start with this array:
 
 You can use **flatten** to flatten your array into a 1D array.
 
+**Input:**
+
 ::
 
   array.flatten()
@@ -1687,6 +1810,8 @@ You can use **flatten** to flatten your array into a 1D array.
 When you use **flatten**, changes to your new array won't change the parent array.
 
 For example:
+
+**Input:**
 
 ::
 
@@ -1712,6 +1837,8 @@ For example:
 But when you use **ravel**, the changes you make to the new array will affect the parent array.
 
 For example:
+
+**Input:**
 
 ::
 
@@ -2071,6 +2198,8 @@ You can use **np.load()** to reconstruct your array.
 
 If you want to check your array, you can run:
 
+**Input:**
+
 ::
 
   print(b)
@@ -2167,6 +2296,8 @@ You can also save your array with the NumPy "savetxt" method.
 
 Read your saved CSV any time with a command such as
 
+**Input:**
+
 ::
 
   cat np.csv
@@ -2204,6 +2335,8 @@ If you already have Matplotlib installed, you can import it with
 
 All you need to do to plot your values is run
 
+**Input:**
+
 ::
 
   plt.plot(A)
@@ -2214,6 +2347,8 @@ All you need to do to plot your values is run
 .. image:: images/np_matplotlib.png
 
 For example, you can plot a 1D array like this:
+
+**Input:**
 
 ::
 
