@@ -74,6 +74,8 @@ An array can be indexed by a tuple of nonnegative integers, by booleans, by anot
 
 One way we can initialize NumPy arrays is from nested Python lists. 
 
+**Input:**
+
 ::
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
@@ -100,13 +102,15 @@ More information about arrays
 
 ------
 
-You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A **vector** is an array with a single column, while a **matrix** refers to an array with multiple columns.
+You might occasionally hear an array referred to as an "ndarray," which is shorthand for "N-dimensional array." An N-dimensional array is simply an array with any number of dimensions. You might also hear **1-D**, or one-dimensional array, **2-D**, or two-dimensional array, and so on. The numpy `ndarray` class is used to represent both matrices and vectors. A **vector** is an array with a single column, while a **matrix** refers to an array with multiple columns.
 
 **What are the attributes of an array?**
 
 An array is usually a fixed-size container of items of the same type and size. The number of dimensions and items in an array is defined by its shape. The shape of an array is a tuple of non-negative integers that specify the sizes of each dimension. 
 
 In NumPy, dimensions are called **axes**. This means that if you have a 2D array that looks like this:
+
+**Input:**
 
 ::
 
@@ -142,11 +146,12 @@ To create a NumPy array, you can use the function **np.array()**.
 
 All you need to do to create a simple array is pass a list to it. If you choose to, you can also specify the type of data in your list. `You can find more information about data types here <https://numpy.org/devdocs/user/quickstart.html#arrays-dtypes>`_.
 
+**Input:**
+
 ::
 
     import numpy as np
 
-    # create a 1-D array
     a = np.array([1, 2, 3])
 
 You can visualize your array this way:
@@ -154,6 +159,8 @@ You can visualize your array this way:
 .. image:: images/np_array.png
 
 Besides creating an array from a sequence of elements, you can easily create an array filled with 0s:
+
+**Input:**
 
 ::
 
@@ -168,6 +175,8 @@ Besides creating an array from a sequence of elements, you can easily create an 
 
 Or an array filled with 1s:
 
+**Input:**
+
 ::
 
   # Create a 1D array with 2 elements, both 1s
@@ -181,12 +190,16 @@ Or an array filled with 1s:
   
 Or even an empty array! The function *empty* creates an array whose initial content is random and depends on the state of the memory. 
 
+**Input:**
+
 ::
 
   # Create an empty array with 2 elements
   np.empty(2)
 
 You can create an array with a range of elements:
+
+**Input:**
 
 ::
 
@@ -201,6 +214,8 @@ You can create an array with a range of elements:
 
 And even an array that contains a range of evenly spaced interval. To do this, you will specify the **first number**, **last number**, and the **step size**.
 
+**Input:**
+
 ::
 
   np.arange(2,9,2)
@@ -212,6 +227,8 @@ And even an array that contains a range of evenly spaced interval. To do this, y
   array([2, 4, 6, 8])
 
 You can also use **np.linspace()** to create an array with values that are spaced linearly in a specified interval:
+
+**Input:**
 
 ::
 
@@ -226,6 +243,8 @@ You can also use **np.linspace()** to create an array with values that are space
 **Specifying your data type**
 
 While the default data type is floating point (**float64**), you can expecity specify which data type you want using **dtype**.
+
+**Input:**
 
 ::
 
@@ -255,14 +274,17 @@ Adding, removing, and sorting elements
 
 If you start with this array:
 
+**Input:**
+
 ::
 
   arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
  
 
-**Append**
-
 You can add elements to your array any time with **np.append()**. Make sure to specify the array and the elements you want to include.
+
+**Input:**
+
 ::
 
   np.append(arr, [1,2])
@@ -273,9 +295,9 @@ You can add elements to your array any time with **np.append()**. Make sure to s
 
   array([1, 2, 3, 4, 5, 6, 7, 8, 1, 2])
 
-**Delete**
-
 You can delete an element with **np.delete()**. If you want to delete the element in position 1 of your array, you can run:
+
+**Input:**
 
 ::
 
@@ -286,6 +308,8 @@ You can delete an element with **np.delete()**. If you want to delete the elemen
 ::
 
   array([1, 3, 4, 5, 6, 7, 8])
+
+`Read more about appending an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.append.html>`_ and `deleting elements here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.delete.html>`_.
 
 **Sort**
 
@@ -386,6 +410,7 @@ And to find the shape of your array, run:
 
   (3,2,4)
 
+`Read more about dimensions here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.ndim.html>`_, `size here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.size.html>`_, and `shape here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html>`_.
 
 Can you reshape an array?
 -------------------------
