@@ -158,7 +158,6 @@ Besides creating an array from a sequence of elements, you can easily create an 
 
 ::
 
-  # Create a 1D array with 2 elements, both 0s
   np.zeros(2)
 
 **Output:**
@@ -173,7 +172,6 @@ Or an array filled with 1s:
 
 ::
 
-  # Create a 1D array with 2 elements, both 1s
   np.ones(2)
 
 **Output:**
@@ -197,7 +195,6 @@ You can create an array with a range of elements:
 
 ::
 
-  # Create a 1D array containing the numbers 0,1,2,3
   np.arange(4)
 
 **Output:**
@@ -236,7 +233,7 @@ You can also use **np.linspace()** to create an array with values that are space
 
 **Specifying your data type**
 
-While the default data type is floating point (**float64**), you can expecity specify which data type you want using **dtype**.
+While the default data type is floating point (**float64**), you can explicitly specify which data type you want using **dtype**.
 
 **Input:**
 
@@ -589,6 +586,8 @@ You can add an axis at index position 0 with:
 
   (1, 6)
 
+`Find more information about newaxis here <https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#index-1>`_ and `expand_dims here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.expand_dims.html>`_.
+
 Indexing and slicing
 --------------------
 
@@ -785,7 +784,7 @@ If the element you're looking for doesn't exist in the array, then the returned 
 
 `Learn more about indexing and slicing here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#indexing-slicing-and-iterating>`_ and `here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.indexing.html>`_.
 
-`Read more about the where function here <https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.where.html>`_.
+`Read more about using the where function here <https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.where.html>`_.
 
 
 How to create an array from existing data
@@ -876,8 +875,6 @@ Or stack them horizontally with **hstack**:
   array([[1, 1, 3, 3],
        [2, 2, 4, 4]])
 
-`Learn more about stacking and splitting arrays here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#stacking-together-different-arrays>`_.
-
 You can split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns *after* which the division should occur.
 
 Let's say you have this array:
@@ -921,7 +918,9 @@ If you wanted to split your array after the third and fourth column, you'd run:
         [16]]), array([[ 5,  6,  7,  8,  9, 10, 11, 12],
         [17, 18, 19, 20, 21, 22, 23, 24]])]
 
-You can use the **view** method to create a new array object that looks at the same data (a *shallow copy*)
+`Learn more about stacking and splitting arrays here <https://docs.scipy.org/doc/numpy-1.17.0/user/quickstart.html#stacking-together-different-arrays>`_.
+
+You can use the **view** method to create a new array object that looks at the same data as the original array (a *shallow copy*)
 
 Let's say you create this array:
 
@@ -931,7 +930,7 @@ Let's say you create this array:
 
   a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-You can create a new array with the same data using:
+You can create a new array object that looks at the same data using:
 
 **Input:**
 
@@ -1051,7 +1050,7 @@ There are times when you might want to carry out an operation between an array a
 
 .. image:: images/np_multiply_broadcasting.png
 
-NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**. Broadcasting is a mechanism that allows NumPy to perform operations n arrays of different shapes. The dimensions of your array must be compatible, for example when they're equal or when one of them is 1. If the dimensions are not compatible, you will get a value error. 
+NumPy understands that the multiplication should happen with each cell. That concept is called **broadcasting**. Broadcasting is a mechanism that allows NumPy to perform operations on arrays of different shapes. The dimensions of your array must be compatible, for example, when the dimensions of both arrays are equal or when one of them is 1. If the dimensions are not compatible, you will get a value error. 
 
 `Learn more about broadcasting here <https://docs.scipy.org/doc/numpy-1.17.0/user/basics.broadcasting.html>`_.
 
@@ -1331,6 +1330,8 @@ You can also use **np.size()** with 1D arrays:
 
 *Remember that if you check the size of your array and it equals 0, your array is empty.*
 
+Learn more about `finding the size of an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.size.html>`_ and the `shape of an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html>`_.
+
 
 Creating matrices
 -----------------
@@ -1430,6 +1431,9 @@ There are often instances where we want NumPy to initialize the values of an arr
   
 .. image:: images/np_ones_zeros_random.png
 
+Read more about initializing the values of an array with `ones here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ones.html>`_, `zeros here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html>`_, and `initializing empty arrays here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html>`_.
+
+
 Generating random numbers
 -------------------------
 
@@ -1464,6 +1468,8 @@ You can also use the **ones()**, **zeros()**, and **random()** methods to create
   np.random.random((3,2)
 
 .. image:: images/np_ones_zeros_matrix.png
+
+`Read more about Random Generator here <https://docs.scipy.org/doc/numpy/reference/random/generator.html>`_.
 
 
 How to get the unique items and the counts
@@ -1596,6 +1602,8 @@ To get the unique rows, occurrence count, and index position, you can use:
   Indices:  
    [2 1 1]
 
+`Learn more about finding the unique elements in an array here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.unique.html>`_.
+
 
 Transposing and reshaping a matrix
 ----------------------------------
@@ -1620,6 +1628,40 @@ You may also need to switch the dimensions of a matrix. This can happen when, fo
   data.reshape(3,2)
 
 .. image:: images/np_reshape.png
+
+You can also use **np.transpose** to reverse or change the axes of an array according to the values you specify.
+
+If you start with this array:
+
+**Input:**
+
+::
+
+  array = np.arange(6).reshape((2,3))
+  array
+
+**Output:**
+
+::
+
+  array([[0, 1, 2],
+        [3, 4, 5]])
+
+You can transpose your array with **np.transpose**.
+
+**Input:**
+
+::
+
+  np.transpose(array)
+
+::
+
+  array([[0, 3],
+       [1, 4],
+       [2, 5]])
+
+`Learn more about transposing a matrix here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html>`_ and `reshaping a matrix here <>`_.
 
 How to reverse an array
 -----------------------
