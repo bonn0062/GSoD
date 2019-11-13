@@ -770,7 +770,7 @@ Here, you grabbed a section of your array from index position 3 through index po
 
 You can also stack two existing arrays, both vertically and horizontally. Let's say you have two arrays: 
 
-a_1
+a_1:
 
 ::
 
@@ -2214,18 +2214,6 @@ With Matplotlib, you have access to an enormous number of visualization options.
 
 To read more about Matplotlib and what it can do, take a look at `the official documentation <https://matplotlib.org/>`_. For directions regarding installing Matplotlib, see the official `installation section <https://matplotlib.org/users/installing.html>`_.
 
-
-
-More useful functions
----------------------
-
-- np.clip
-
-- np.digitize
-
-- np.bincount
-
-- np.histogram
 
 
 
