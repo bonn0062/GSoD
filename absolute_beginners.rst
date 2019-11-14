@@ -1612,7 +1612,8 @@ Transposing and reshaping a matrix
 ::
 
   np.reshape()
-  T
+  np.transpose()
+  np.T()
 
 -----
 
@@ -1637,8 +1638,8 @@ If you start with this array:
 
 ::
 
-  array = np.arange(6).reshape((2,3))
-  array
+  arr = np.arange(6).reshape((2,3))
+  arr
 
 **Output:**
 
@@ -1647,13 +1648,15 @@ If you start with this array:
   array([[0, 1, 2],
         [3, 4, 5]])
 
-You can transpose your array with **np.transpose**.
+You can transpose your array with **np.transpose()**.
 
 **Input:**
 
 ::
 
-  np.transpose(array)
+  np.transpose(arr)
+
+**Output:**
 
 ::
 
@@ -1661,7 +1664,8 @@ You can transpose your array with **np.transpose**.
        [1, 4],
        [2, 5]])
 
-`Learn more about transposing a matrix here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html>`_ and `reshaping a matrix here <>`_.
+`Learn more about transposing a matrix here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html>`_ and `reshaping a matrix here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html>`_.
+
 
 How to reverse an array
 -----------------------
@@ -1817,6 +1821,8 @@ You can also reverse the column at index position 1 (the second column):
    [ 5  6  7  8]
    [ 9  2 11 12]]
 
+`Read more about reversing arrays here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.flip.html>`_.
+
 
 Reshaping and flattening multidimensional arrays
 ------------------------------------------------
@@ -1901,6 +1907,9 @@ For example:
    [  9  10  11  12]]
   New array: 
   [101   2   3   4   5   6   7   8   9  10  11  12]
+
+`Read more about flatten here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flatten.html>`_ and `ravel here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel.html>`_.
+
 
 How to access the docstring for more information
 ---------------------------------------------------
@@ -2175,6 +2184,7 @@ and
 Have the same output because they were compiled in a programming language other than Python.
 
 
+
 Working with mathematical formulas
 ----------------------------------
 
@@ -2267,7 +2277,22 @@ You can easily save it as a .csv file with the name "new_file.csv" like this:
 
   np.savetxt('new_file.csv', csv_arr)
 
-The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are faster to retrieve.
+You can quickly and easily load your saved text file using **loadtxt()**:
+
+**Input:**
+
+::
+
+  np.loadtxt('new_file.csv')
+
+**Output:**
+
+::
+
+  array([1., 2., 3., 4., 5., 6., 7., 8.])
+
+
+The **savetxt()** and **loadtxt()** functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are faster to retrieve. If you need a more sophisticated handling of your text file (for example, if you need to work with lines that contain missing values), you will want to use the  `genfromtxt function <https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt>`_.
 
 With savetxt, you can specify headers, footers, comments, and more. `Read more about savetxt here <https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html>`_.
 
@@ -2282,7 +2307,7 @@ Learn more about `input and output routines here <https://docs.scipy.org/doc/num
 Importing and exporting a CSV
 -----------------------------
 
-It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.
+It's simple to read in a CSV that contains existing information. The best and easiest way to do this is to use `Pandas <https://pandas.pydata.org/getpandas.html>`_.
 
 ::
 
@@ -2353,6 +2378,8 @@ Read your saved CSV any time with a command such as
   0.99,1.17,0.94,-0.15
   0.77,0.81,-0.95,0.12
   0.20,0.35,1.97,0.52
+
+If you're interested in learning more about Pandas, take a look at the `official Pandas documentation <https://pandas.pydata.org/index.html>`_. Learn how to install Pandas with the `official Pandas installation information <https://pandas.pydata.org/pandas-docs/stable/install.html>`_.
 
 
 Plotting arrays with Matplotlib
