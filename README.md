@@ -7,12 +7,12 @@
 ![NumPy_logo](images/NumPy_logo.svg)
 
 
-In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54).
+In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
 
 If you're interested in the process of building this tutorial and the steps involved, take a look through the [pull request](https://github.com/numpy/numpy/pull/14546).
 
 
-Here's an exerpt from the Medium article introducing the project:
+Here's an exerpt from the article introducing the project:
 
 **From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375):**
 
@@ -79,10 +79,13 @@ The official technical writer selected by SciPy during Season of Docs is Maja Gw
 Maja has done some knockout research, which you can find here. She has not only had significant experience with SciPy, but she's well aware of what a difference great documentation and guides can make.
 
 [Read more about Maja here!](https://towardsdatascience.com/scipy-meet-maja-gwozdz-61616cc35c08)
+[Read more about Maja's survey here!](https://towardsdatascience.com/get-involved-with-scipy-5daf700c83ad)
 
 #### Anne Bonner
 Yours truly (yay!) was the official selection for NumPy, with the project proposal, "Making 'The Basics' a Little More Basic: Improving the Introductory NumPy Sections." Since there's nothing that makes me happier than helping beginners understand complex information and technologies, NumPy is the perfect challenge!
 I'm excited to dig into the introductory NumPy materials to create something more accessible for people with little or no experience. NumPy is in such an interesting position: it's incredibly complex, but it's also one of the most important libraries for beginners who are interested in working with data. I'll be creating beginner-level documentation of basic concepts in NumPy that can function as a stepping stone for people who want to use NumPy, not necessarily study it.
+
+You can find  the Absolute Beginner's tutorial  [here](https://github.com/bonn0062/GSoD/blob/master/absolute_beginners.rst) and on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54).
 
 #### Shekhar Rajak
 Shekhar Rajak was selected for "Numpy.org redesign and high-level documentation restructuring for end-user focus." His goals for the project include:
