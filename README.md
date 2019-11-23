@@ -4,7 +4,7 @@
 ##### This tutorial was built in collaboration with NumPy through Google Season of Docs 2019 . Please feel free to reach out with any ideas or suggestions!
 
 
-![numpy_cat](images/numpy_cat.jpg)
+![numpy_cat](images/NumPy_logo.svg)
 
 
 In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a Medium subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
