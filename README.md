@@ -16,12 +16,12 @@ Here's an exerpt from the Medium article introducing the project:
 
 **From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375):**
 
-## What do You Want to See in the NumPy Docs?
-### Behind the scenes at NumPy and SciPy with Google Season of Docs
+# What do You Want to See in the NumPy Docs?
+## Behind the scenes at NumPy and SciPy with Google Season of Docs
 
-Season of Docs has begun!!!
+#### Season of Docs has begun!!!
 
-## Google Season of Docs?
+### Google Season of Docs?
 
 Google did an amazing thing by creating Season of Docs. It built real opportunities for technical writers to collaborate with open source organizations.
 Season of Docs is a three-month mentoring program. It pairs technical writers with open source organizations. Writers have the opportunity to work with well-known and highly-regarded organizations. Open source organizations (who often don't have a budget for technical writers) have the opportunity to work with experienced technical writers to improve and expand their existing documentation.
@@ -38,7 +38,7 @@ Together, we raise public awareness of open source docs, of technical writing, a
 
 It's a win-win!
 
-## What is NumPy?
+### What is NumPy?
 
 At it's most basic level, NumPy is numeric, or numerical (**Num**) Python (**Py**).
 
@@ -49,7 +49,7 @@ It's a hugely important open source Python library. It's the core library for sc
 
 The ancestor of NumPy (Numeric) was originally created by Jim Hugunin. By 2000, interest in creating a complete environment for scientific and technical computing was growing. In 2001, Travis Oliphant, Eric Jones, and Pearu Peterson merged code they had written and called the resulting package SciPy. In 2005, Travis Oliphant created NumPy. He did this by incorporating features of Numarray into Numeric with tons of modifications. In early 2005, he wanted to unify the community around a single array package. As a result, he released NumPy 1.0 in 2006. This project was part of SciPy. To avoid installing the large SciPy package just to get an array object, this new package was separated and called NumPy.
 
-## What's SciPy?
+### What's SciPy?
 It's scientific (Sci) Python (Py)! SciPy is a free and open source Python library. It's used for scientific computing and technical computing. It contains modules for optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and other tasks common in science and engineering. SciPy uses NumPy arrays as the basic data structure. It has modules for various commonly used tasks in scientific programming. These tasks include integration (calculus), ordinary differential equation solving, and signal processing.
 
 SciPy builds on the NumPy array object. It's part of the NumPy stack. The stack includes tools like Matplotlib, Pandas, and SymPy, and an expanding set of scientific computing libraries. Its users come from all fields of science, engineering and beyond. Python has one of the largest, if not the largest, scientific user communities. Similar communities are R, Julia and Matlab.
@@ -61,7 +61,7 @@ Google announced Season of Docs in March 2019. In April, open source organizatio
 On August 6, Google announced the accepted writing projects!
 The program received more than 700 technical writing project proposals from nearly 450 technical writers. Each organization was able to select one technical writer for an approved project. The NumPy/SciPy team, however, decided to go above and beyond by securing funding for an additional three writers outside of Season of Docs. The team believes so strongly in moving their documentation forward that they found additional funding. This allowed them to include three more writers under the same conditions as Season of Docs.
 
-## Where did the funding come from?
+### Where did the funding come from?
 NumPy received two grants that are kind of a package deal (you can read about them here and here). Funds were awarded by the Moore and Sloan foundations for $1.3M to the Berkeley Institute of Data Science (BIDS) to support the development of NumPy. The funding period runs from April 2018 to Oct 2020. (Stéfan van der Walt, a NumPy Steering Council member, agreed to provide the funds from that grant.)
 
 Ralf Gommers, one of the core programmers behind NumPy and SciPy and the Director of Quansight Labs, is the point of contact for both organizations. Ralf is an incredible person, and he had this to say about Season of Docs:
@@ -71,30 +71,30 @@ Then, it turned out that there was a lot of interest, and the quality of applica
 
 NumPy has a significant active grant, so I discussed the possibility of using some of that grant funding for the extra Season of Docs projects with Stéfan. Stéfan is awesome, and he also sees the value of both the proposed projects and of building a team of writers. So he agreed to reserve some funds for this purpose. So here we are today - excited to get started!"
 
-## Who are the writers?
+### Who are the writers?
 The writers selected for the NumPy/SciPy documentation projects are amazing, and you need to know who they are!
 
-### Maja Gwozdz
+#### Maja Gwozdz
 The official technical writer selected by SciPy during Season of Docs is Maja Gwozdz. Her project proposal is called "User-oriented documentation and thorough restructuring." You can read all about it here, but essentially, Maja intends to work on the refactoring of the existing documentation, so that it would be easily accessible by users with different needs.
 Maja has done some knockout research, which you can find here. She has not only had significant experience with SciPy, but she's well aware of what a difference great documentation and guides can make.
 
 [Read more about Maja here!](https://towardsdatascience.com/scipy-meet-maja-gwozdz-61616cc35c08)
 
-### Anne Bonner
+#### Anne Bonner
 Yours truly (yay!) was the official selection for NumPy, with the project proposal, "Making 'The Basics' a Little More Basic: Improving the Introductory NumPy Sections." Since there's nothing that makes me happier than helping beginners understand complex information and technologies, NumPy is the perfect challenge!
 I'm excited to dig into the introductory NumPy materials to create something more accessible for people with little or no experience. NumPy is in such an interesting position: it's incredibly complex, but it's also one of the most important libraries for beginners who are interested in working with data. I'll be creating beginner-level documentation of basic concepts in NumPy that can function as a stepping stone for people who want to use NumPy, not necessarily study it.
 
-### Shekhar Rajak
+#### Shekhar Rajak
 Shekhar Rajak was selected for "Numpy.org redesign and high-level documentation restructuring for end-user focus." His goals for the project include:
 Designing and developing better UI for www.numpy.org
 Enhancing and modifying the contents of www.numpy.org: NumPy User Guide, NumPy Benchmarking, F2Py Guide, NumPy Developer Guide, Building and Extending the Documentation, NumPy Reference, About NumPy, Reporting bugs and all other related to Development pages.
 Adding contents about when to use NumPy and when to use XND, Dask array Python libraries, which provides similar APIs.
 Preserving the Python API documentation.
 
-### Brandon David
+#### Brandon David
 Brandon David was selected for his project "Improve the documentation of scipy.stats." Brandon plans to fill out missing functions as well as add examples and internal links. His goal is to clear up ambiguity and work through issues on GitHub.
 
-### Christina Lee
+#### Christina Lee
 Christina Lee was selected for her proposal, "SciPy documentation: Design, Usability and Content." She is a recent addition, and I'm looking forward to sharing her work with you soon!
 Harivallabha Rangarajan
 Harivallabha Rangarajan is planning to contribute to the documentation and complement the work of the writers selected for Season of Docs in any way he can. He's particularly interested in writing end-to-end tutorials for the scipy.stats module. He writes that "having more comprehensive tutorials will help users get a better idea of how and where the available methods may be used in the pipeline."
