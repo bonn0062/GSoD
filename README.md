@@ -20,8 +20,9 @@ Here's an exerpt from [an article introducing the project](https://towardsdatasc
 
 #### Season of Docs has begun!!!
 
+![NumPy_logo](images/NumPy_logo.svg)
 
-! [numpy_fish](images/numpy_fish.jpg)
+![numpy_fish](images/numpy_fish.jpg)
 
 ### Google Season of Docs?
 
