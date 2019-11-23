@@ -4,17 +4,16 @@
 ##### This tutorial was built in collaboration with NumPy through Google Season of Docs 2019 . Please feel free to reach out with any ideas or suggestions!
 
 
-![NumPy_logo](images/NumPy_logo.svg)
+![numpy_cat](images/numpy_cat.jpg)
 
 
-In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
+In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a Medium subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
 
 If you're interested in the process of building this tutorial and the steps involved, take a look through the [pull request](https://github.com/numpy/numpy/pull/14546).
 
 
-Here's an exerpt from the article introducing the project:
+Here's an exerpt from [an article introducing the project](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375):
 
-**From [Medium](https://towardsdatascience.com/what-do-you-want-to-see-in-the-numpy-docs-de73efb80375):**
 
 # What do You Want to See in the NumPy Docs?
 ## Behind the scenes at NumPy and SciPy with Google Season of Docs
@@ -107,7 +106,7 @@ Harivallabha Rangarajan is planning to contribute to the documentation and compl
 **Welcome to Season of Docs!!!**
 
 It's incredible to be involved in the inner workings of NumPy and SciPy. So far, we've been joining meetings with the team, getting to know the core players, and learning the workflow. I can't wait to keep you guys updated with our projects as they develop!
-Photo by Pineapple Supply Co. from PexelsGet involved!
+
 
 Now that you know the major players on the writing side, don't be afraid to reach out and let us know if there's information you want to see in the official documentation! Who knows, we might just be able to give you what you want to see.
 
