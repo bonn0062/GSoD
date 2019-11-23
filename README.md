@@ -1,6 +1,14 @@
 # Google Summer of Docs: NumPy Beginner's Tutorial
 
-This repository is where you can find work in progress for the new absolute beginner's tutorial I'm building for NumPy. Please feel free to reach out with any ideas or suggestions!
+Welcome to the repository for the Absolute Beginner's Guide to NumPy! This tutorial was built in collaboration with NumPy through Google Season of Docs 2019 . Please feel free to reach out with any ideas or suggestions!
+
+In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54).
+
+If you're interested in the process of building this tutorial and the steps involved, take a look through the [pull request](https://github.com/numpy/numpy/pull/14546).
+
+
+![NumPy_logo](images/NumPy_logo.svg)
+
 
 Here's an exerpt from the Medium article introducing the project:
 
