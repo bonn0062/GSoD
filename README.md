@@ -9,7 +9,7 @@
 
 In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a Medium subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
 
-![numpy_tutorial](images/numpy_TDS_article.png)(https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54)
+![numpy_tutorial](images/numpy_TDS_article.png)[The Ultimate Beginner's Guide to NumPy](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54)
 
 If you're interested in the process of building this tutorial and the steps involved, take a look through the [pull request](https://github.com/numpy/numpy/pull/14546).
 
