@@ -1,7 +1,7 @@
 # Google Summer of Docs: NumPy Beginner's Tutorial
 
 ## Welcome to the repository for the Absolute Beginner's Guide to NumPy! 
-##### This tutorial was built in collaboration with NumPy through Google Season of Docs 2019 . Please feel free to reach out with any ideas or suggestions!
+##### This tutorial was built in collaboration with [NumPy](https://numpy.org/) through [Google Season of Docs 2019](https://developers.google.com/season-of-docs). Please feel free to reach out with any ideas or suggestions!
 
 
 ![NumPy_logo](images/NumPy_logo.svg)

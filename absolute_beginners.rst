@@ -2449,5 +2449,5 @@ To read more about Matplotlib and what it can do, take a look at `the official d
 
 -------------------------------------------------------
 
-*Image credits: Jay Alammar http://jalammar.github.io/*
+*Image credits: Jay Alammar http://jalammar.github.io/ and Anne Bonner https://github.com/bonn0062*
 
