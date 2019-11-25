@@ -7,11 +7,9 @@
 ![NumPy_logo](images/NumPy_logo.svg)
 
 
-In addition to GitHub, you can find the tutorial on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a Medium subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
+In addition to GitHub, you can find the Absolute Beginner's Guide to NumPy on [Towards Data Science](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54). If you don't have a Medium subscription, you can read the tutorial for free [here](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54?source=friends_link&sk=3f1183e1f6ac8a42979c1976ca8a0f1a)!
 
-![numpy_tutorial](images/numpy_TDS_article.png)
-
-[The Ultimate Beginner's Guide to NumPy](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54)
+![numpy_tutorial](images/numpy_TDS_article.png) [Read the article!](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54)
 
 If you're interested in the process of building this tutorial and the steps involved, take a look through the [pull request](https://github.com/numpy/numpy/pull/14546).
 
@@ -24,11 +22,8 @@ Here's an exerpt from [an article introducing the project](https://towardsdatasc
 
 #### Season of Docs has begun!!!
 
-![numpy_fish](images/numpy_fish.jpg)
 
-### Google Season of Docs?
-
-Google did an amazing thing by creating Season of Docs. It built real opportunities for technical writers to collaborate with open source organizations.
+Google has done an amazing thing by creating Season of Docs. It built real opportunities for technical writers to collaborate with open source organizations.
 Season of Docs is a three-month mentoring program. It pairs technical writers with open source organizations. Writers have the opportunity to work with well-known and highly-regarded organizations. Open source organizations (who often don't have a budget for technical writers) have the opportunity to work with experienced technical writers to improve and expand their existing documentation.
 
 It's pretty incredible.
