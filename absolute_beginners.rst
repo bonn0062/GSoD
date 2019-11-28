@@ -1934,7 +1934,7 @@ Will return
       the provided iterable is empty.
       With two or more arguments, return the largest argument.
 
-Because access to additional information is so useful, IPython uses the **?** character as a shorthand for accessing this documentation along with other relevant information.
+Because access to additional information is so useful, IPython uses the **?** character as a shorthand for accessing this documentation along with other relevant information. IPython is a command shell for interactive computing in multiple languages.`You can find more information about IPython here <https://ipython.org/>`_. 
 
 For example,
 
@@ -2186,6 +2186,14 @@ For example, this is the mean square error formula (a central formula used in su
 Implementing this formula is simple and straightforward in NumPy:
 
 .. image:: images/np_MSE_implementation.png
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+$$\frac{1}{n}\sum_{t=1}^{n}e_t^2$$
+
+ $$MSE =
+ \frac{\mathrm{1} }{\mathrm{n}}  
+ \sum\nolimits_{i=1}^{n} 
+(predictions -labels)^{2}$$ 
 
 What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
 
