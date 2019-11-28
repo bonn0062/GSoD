@@ -2190,11 +2190,11 @@ Implementing this formula is simple and straightforward in NumPy:
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 $$\frac{1}{n}\sum_{t=1}^{n}e_t^2$$
 
-::
-  $$MSE =
+.. math::
+  MSE =
   \frac{\mathrm{1} }{\mathrm{n}}  
   \sum\nolimits_{i=1}^{n} 
-  (predictions -labels)^{2}$$ 
+  (predictions -labels)^{2}
 
 What makes this work so well is that `predictions` and `labels` can contain one or a thousand values. They only need to be the same size. 
 
