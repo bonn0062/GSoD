@@ -2183,6 +2183,14 @@ For example, this is the mean square error formula (a central formula used in su
 
 .. image:: images/np_MSE_formula.png
 
+.. math::
+
+    MSE = { \color{green} \frac{1}{n} }
+    { \color{blue} \sum\nolimits_{i=1}^{n} } 
+    { \color{red} (predictions - }
+    { \color{purple} labels) }
+    { \color{yellow} ^{2} }
+
 Implementing this formula is simple and straightforward in NumPy:
 
 .. image:: images/np_MSE_implementation.png
