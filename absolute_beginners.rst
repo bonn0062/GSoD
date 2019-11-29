@@ -2184,8 +2184,8 @@ For example, this is the mean square error formula (a central formula used in su
 .. image:: images/np_MSE_formula.png
 
 .. math::
-
-  MeanSquareError = \color{green}{\frac{1}{n}}
+  
+  \texttt{ error = MeanSquareError = \color{green}{\frac{1}{n}}
   \color{blue}{\sum{i=1}^{n}} (
   \color{red}{predictions} - 
   \color{purple}{labels} )
